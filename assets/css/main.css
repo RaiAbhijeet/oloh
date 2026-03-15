@@ -1,0 +1,991 @@
+/* ==========================================================================
+   ONE LOVE ONE HEART e.V. — Main Stylesheet
+   ==========================================================================
+   TABLE OF CONTENTS:
+   1. CSS Variables (colors, fonts, spacing)
+   2. Reset & Base
+   3. Typography
+   4. Layout Utilities
+   5. Navigation
+   6. Hero Section
+   7. Project Cards (with grayscale hover effect)
+   8. Section Styles
+   9. Buttons
+   10. Footer
+   11. Responsive / Mobile
+   ========================================================================== */
+
+
+/* ─────────────────────────────────────────────
+   1. CSS VARIABLES
+   To change colors/fonts sitewide, edit here.
+   ───────────────────────────────────────────── */
+:root {
+  /* Brand Colors */
+  --sand:        #f5f0e8;       /* main background — sandy warm */
+  --sand-dark:   #e8dfc8;       /* slightly darker sand for sections */
+  --sand-border: #d4c9b0;       /* borders */
+  --brown:       #8b6914;       /* accent — warm brown/gold */
+  --brown-dark:  #5c4510;       /* darker brown for hover */
+  --text:        #2c2416;       /* dark warm text */
+  --text-muted:  #7a6a50;       /* muted body text */
+  --white:       #ffffff;
+  --red-accent:  #c0392b;       /* used for highlights per PDF */
+
+  /* Typography */
+  --font-serif:  'Playfair Display', Georgia, serif;
+  --font-sans:   'Open Sans', Arial, sans-serif;
+
+  /* Spacing */
+  --section-pad: 5rem 5%;
+  --card-radius: 6px;
+  --transition:  0.35s ease;
+}
+
+
+/* ─────────────────────────────────────────────
+   2. RESET & BASE
+   ───────────────────────────────────────────── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--sand);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--brown);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--brown-dark);
+}
+
+ul {
+  list-style: none;
+}
+
+
+/* ─────────────────────────────────────────────
+   3. TYPOGRAPHY
+   ───────────────────────────────────────────── */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-serif);
+  color: var(--text);
+  line-height: 1.2;
+}
+
+h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); }
+h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); }
+h4 { font-size: 1.1rem; }
+
+p {
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Section label (small uppercase text above headings) */
+.section-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--brown);
+  margin-bottom: 0.5rem;
+}
+
+/* Section heading */
+.section-title {
+  font-family: var(--font-serif);
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+/* Red highlight — used per PDF design */
+.highlight-red {
+  color: var(--red-accent);
+}
+
+
+/* ─────────────────────────────────────────────
+   4. LAYOUT UTILITIES
+   ───────────────────────────────────────────── */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.section {
+  padding: var(--section-pad);
+}
+
+/* Sand alternating sections */
+.section--sand {
+  background-color: var(--sand);
+}
+
+.section--sand-dark {
+  background-color: var(--sand-dark);
+}
+
+.section--white {
+  background-color: var(--white);
+}
+
+.section--brown {
+  background-color: var(--brown-dark);
+  color: var(--white);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Reveal animation — applied via JS */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ─────────────────────────────────────────────
+   5. NAVIGATION
+   Edit nav links in: components/nav.html
+   ───────────────────────────────────────────── */
+#topbar {
+  background: var(--brown-dark);
+  padding: 0.4rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.7);
+}
+
+#topbar a {
+  color: rgba(255,255,255,0.7);
+}
+
+#topbar a:hover {
+  color: var(--white);
+}
+
+.lang-switcher {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.lang-switcher button {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.7);
+  padding: 0.15rem 0.5rem;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 0.72rem;
+  transition: var(--transition);
+}
+
+.lang-switcher button.active,
+.lang-switcher button:hover {
+  background: var(--brown);
+  border-color: var(--brown);
+  color: var(--white);
+}
+
+#navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--sand);
+  border-bottom: 2px solid var(--sand-border);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nav-logo img {
+  height: 52px;
+  width: auto;
+}
+
+.nav-logo-text {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.nav-logo-text span {
+  color: var(--brown);
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+  padding: 0.4rem 0.75rem;
+  border-radius: 3px;
+  letter-spacing: 0.3px;
+  transition: var(--transition);
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%; right: 50%;
+  height: 2px;
+  background: var(--brown);
+  transition: var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--brown);
+  background: rgba(139,105,20,0.07);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  left: 0.75rem;
+  right: 0.75rem;
+}
+
+/* Donate button in nav */
+.nav-donate {
+  background: var(--brown) !important;
+  color: var(--white) !important;
+  padding: 0.5rem 1.1rem !important;
+  border-radius: 4px;
+}
+
+.nav-donate:hover {
+  background: var(--brown-dark) !important;
+}
+
+.nav-donate::after {
+  display: none !important;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+
+/* ─────────────────────────────────────────────
+   6. HERO SECTION
+   ───────────────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--sand-dark);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.55) sepia(0.3);
+  transition: transform 8s ease;
+}
+
+.hero:hover .hero-bg {
+  transform: scale(1.03);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(44,36,22,0.75) 0%,
+    rgba(92,69,16,0.45) 60%,
+    transparent 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+  padding: 4rem 5%;
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--brown);
+  background: rgba(255,255,255,0.9);
+  padding: 0.3rem 0.8rem;
+  border-radius: 2px;
+  margin-bottom: 1.25rem;
+}
+
+.hero h1 {
+  color: var(--white);
+  margin-bottom: 1.25rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: #f5d78e;
+}
+
+.hero-sub {
+  color: rgba(255,255,255,0.8);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+
+/* ─────────────────────────────────────────────
+   7. PROJECT CARDS — Grayscale → Color on hover
+   This is the key visual effect from the PDF.
+   ───────────────────────────────────────────── */
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.project-card {
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--sand-border);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  transition: transform var(--transition), box-shadow var(--transition);
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* The image wrapper — enforces aspect ratio */
+.project-card__img-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+/* START grayscale — goes color on hover */
+.project-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.project-card:hover .project-card__img-wrap img {
+  filter: grayscale(0%);
+  transform: scale(1.04);
+}
+
+/* Category badge on image */
+.project-card__badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: var(--brown);
+  color: var(--white);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0.25rem 0.7rem;
+  border-radius: 2px;
+  z-index: 2;
+}
+
+.project-card__body {
+  padding: 1.25rem;
+}
+
+.project-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.project-card__desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+.project-card__footer {
+  padding: 0.75rem 1.25rem;
+  border-top: 1px solid var(--sand-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-card__link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--brown);
+  transition: var(--transition);
+}
+
+.project-card:hover .project-card__link {
+  color: var(--brown-dark);
+}
+
+
+/* ─────────────────────────────────────────────
+   8. SECTION STYLES
+   ───────────────────────────────────────────── */
+
+/* Frauenprojekt / ILA SINNING section */
+.ila-section {
+  background: var(--sand-dark);
+  padding: var(--section-pad);
+}
+
+.ila-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.ila-img-wrap {
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  border: 3px solid var(--sand-border);
+}
+
+.ila-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.ila-img-wrap:hover img {
+  filter: grayscale(0%);
+}
+
+.ila-content .section-label {
+  margin-bottom: 0.5rem;
+}
+
+.ila-content h2 {
+  margin-bottom: 1rem;
+}
+
+.products-list {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.products-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.products-list li::before {
+  content: '→';
+  color: var(--brown);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* Wer wir sind (About) section */
+.about-section {
+  padding: var(--section-pad);
+  background: var(--white);
+}
+
+.about-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.about-quote {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--brown);
+  border-left: 3px solid var(--brown);
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+  line-height: 1.6;
+}
+
+/* Spenden (Donate) CTA */
+.donate-section {
+  background: var(--brown-dark);
+  padding: var(--section-pad);
+  text-align: center;
+}
+
+.donate-section h2 {
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+.donate-section p {
+  color: rgba(255,255,255,0.7);
+  max-width: 540px;
+  margin: 0 auto 2rem;
+}
+
+.donate-options {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.donate-option-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--card-radius);
+  padding: 1.5rem 2rem;
+  min-width: 200px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.donate-option-card:hover {
+  background: rgba(255,255,255,0.14);
+  transform: translateY(-3px);
+}
+
+.donate-option-card h4 {
+  color: var(--white);
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.donate-option-card p {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+/* Gallery strip */
+.gallery-strip {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+}
+
+.gallery-strip__item {
+  aspect-ratio: 1;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery-strip__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.gallery-strip__item:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.06);
+}
+
+/* Stats band */
+.stats-band {
+  background: var(--brown);
+  padding: 3rem 5%;
+}
+
+.stats-band .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+.stat-block__num {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1;
+}
+
+.stat-block__label {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.65);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0.3rem;
+}
+
+
+/* ─────────────────────────────────────────────
+   9. BUTTONS
+   ───────────────────────────────────────────── */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.3px;
+  transition: var(--transition);
+  cursor: pointer;
+  text-align: center;
+  border: 2px solid transparent;
+}
+
+/* Primary: brown filled */
+.btn-primary {
+  background: var(--brown);
+  color: var(--white);
+  border-color: var(--brown);
+}
+
+.btn-primary:hover {
+  background: var(--brown-dark);
+  border-color: var(--brown-dark);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* Outline: bordered */
+.btn-outline {
+  background: transparent;
+  color: var(--brown);
+  border-color: var(--brown);
+}
+
+.btn-outline:hover {
+  background: var(--brown);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* White variant (for dark backgrounds) */
+.btn-white {
+  background: var(--white);
+  color: var(--brown-dark);
+  border-color: var(--white);
+}
+
+.btn-white:hover {
+  background: var(--sand);
+  transform: translateY(-2px);
+}
+
+/* Ghost white (for dark backgrounds) */
+.btn-ghost-white {
+  background: transparent;
+  color: var(--white);
+  border-color: rgba(255,255,255,0.5);
+}
+
+.btn-ghost-white:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: var(--white);
+}
+
+
+/* ─────────────────────────────────────────────
+   10. FOOTER
+   Edit content in: components/footer.html
+   ───────────────────────────────────────────── */
+.site-footer {
+  background: var(--text);
+  padding: 4rem 5% 0;
+}
+
+.footer-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-brand__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.footer-brand__logo img {
+  height: 44px;
+  width: auto;
+}
+
+.footer-brand__name {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.footer-brand p {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.7;
+}
+
+.footer-col h4 {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--brown);
+  margin-bottom: 1.2rem;
+}
+
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-col ul li a {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  transition: var(--transition);
+}
+
+.footer-col ul li a:hover {
+  color: var(--white);
+  padding-left: 4px;
+}
+
+.footer-contact-item {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.5);
+}
+
+.footer-contact-item a {
+  color: rgba(255,255,255,0.5);
+}
+
+.footer-contact-item a:hover {
+  color: var(--white);
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.3);
+}
+
+.social-links {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.social-link {
+  width: 34px;
+  height: 34px;
+  border-radius: 4px;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.social-link:hover {
+  border-color: var(--brown);
+  color: var(--brown);
+  transform: translateY(-2px);
+}
+
+
+/* ─────────────────────────────────────────────
+   11. RESPONSIVE / MOBILE
+   ───────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .project-cards { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .gallery-strip { grid-template-columns: repeat(3, 1fr); }
+  .stats-band .container { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  /* Nav mobile */
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 72px; left: 0; right: 0;
+    background: var(--sand);
+    flex-direction: column;
+    padding: 1.5rem 5%;
+    gap: 0.25rem;
+    border-bottom: 2px solid var(--sand-border);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  }
+  .nav-links.open { display: flex; }
+  .hamburger { display: flex; }
+
+  .grid-2 { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .project-cards { grid-template-columns: 1fr; }
+  .ila-grid { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .gallery-strip { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  :root { --section-pad: 3rem 4%; }
+  .gallery-strip { grid-template-columns: repeat(2, 1fr); }
+  .donate-options { flex-direction: column; align-items: center; }
+}
+
+
+/* ─────────────────────────────────────────────
+   ANIMATIONS
+   ───────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

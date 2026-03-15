@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spenden — One Love One Heart e.V.</title>
+  <meta name="description" content="Unterstützen Sie One Love One Heart e.V. mit einer Spende. Spendenkonto, PayPal und eBay Charity."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../../assets/css/main.css"/>
+</head>
+<body>
+
+  <div id="topbar">
+    <span>✉️ <a href="mailto:info@oneloveoneheart.com">info@oneloveoneheart.com</a></span>
+    <div class="lang-switcher">
+      <button data-lang="de" onclick="switchLang('de')" class="active">DE</button>
+      <button data-lang="en" onclick="switchLang('en')">EN</button>
+    </div>
+  </div>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="../../index.html" class="nav-logo">
+        <img src="../../assets/images/logo.png" alt="One Love One Heart Logo"/>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../../index.html" data-de="Startseite" data-en="Home">Startseite</a></li>
+        <li><a href="../projekte/index.html" data-de="Projekte" data-en="Projects">Projekte</a></li>
+        <li><a href="../wer-wir-sind/index.html" data-de="Wer wir sind" data-en="About Us">Wer wir sind</a></li>
+        <li><a href="../produkte/index.html" data-de="Produkte" data-en="Products">Produkte</a></li>
+        <li><a href="../aktuelles/index.html" data-de="Aktuelles" data-en="News">Aktuelles</a></li>
+        <li><a href="../mitmachen/index.html" data-de="Mitmachen" data-en="Get Involved">Mitmachen</a></li>
+        <li><a href="index.html" class="nav-donate active" data-de="Spenden" data-en="Donate">Spenden</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="donate-section" style="min-height:50vh;display:flex;flex-direction:column;justify-content:center;">
+    <h2 data-de="Jetzt spenden" data-en="Donate Now">Jetzt spenden</h2>
+    <p data-de="Jede Spende — egal wie groß — macht einen echten Unterschied im Leben von Menschen in Gambia."
+       data-en="Every donation — no matter how large — makes a real difference in the lives of people in Gambia.">
+      Jede Spende — egal wie groß — macht einen echten Unterschied.
+    </p>
+
+    <div class="donate-options">
+
+      <!-- BANK TRANSFER -->
+      <div class="donate-option-card">
+        <h4 data-de="Spendenkonto" data-en="Bank Transfer">Spendenkonto</h4>
+        <p style="font-size:0.82rem;margin-top:0.75rem;color:rgba(255,255,255,0.7);">
+          <!-- UPDATE with real bank details -->
+          <strong data-de="Kontoinhaber:" data-en="Account holder:">Kontoinhaber:</strong><br>
+          One Love One Heart e.V.<br><br>
+          <strong>IBAN:</strong><br>
+          DE[XX XXXX XXXX XXXX XXXX XX]<br><br>
+          <strong>BIC:</strong><br>
+          [XXXXXXXX]<br><br>
+          <strong data-de="Verwendungszweck:" data-en="Reference:">Verwendungszweck:</strong><br>
+          Spende
+        </p>
+      </div>
+
+      <!-- PAYPAL -->
+      <div class="donate-option-card">
+        <h4>PayPal</h4>
+        <p style="color:rgba(255,255,255,0.7);font-size:0.85rem;margin-top:0.75rem;"
+           data-de="Schnell, sicher und einfach über PayPal spenden."
+           data-en="Donate quickly, securely and easily via PayPal.">
+          Schnell und sicher über PayPal.
+        </p>
+        <!-- UPDATE with real PayPal donation link -->
+        <a href="https://www.paypal.com/donate/?hosted_button_id=XXXXXXXXXX"
+           class="btn btn-white" style="margin-top:1rem;"
+           target="_blank" rel="noopener">
+          PayPal →
+        </a>
+      </div>
+
+      <!-- EBAY CHARITY -->
+      <div class="donate-option-card">
+        <h4>eBay Charity</h4>
+        <p style="color:rgba(255,255,255,0.7);font-size:0.85rem;margin-top:0.75rem;"
+           data-de="Kaufen oder verkaufen Sie bei eBay und unterstützen Sie uns dabei."
+           data-en="Buy or sell on eBay and support us at the same time.">
+          Kaufen &amp; dabei Gutes tun.
+        </p>
+        <!-- UPDATE with real eBay charity link -->
+        <a href="https://www.ebay-kleinanzeigen.de/l-organisation/[XXXX].html"
+           class="btn btn-white" style="margin-top:1rem;"
+           target="_blank" rel="noopener">
+          eBay Charity →
+        </a>
+      </div>
+
+    </div>
+
+    <p style="color:rgba(255,255,255,0.5);font-size:0.8rem;margin-top:1rem;"
+       data-de="* Auf Wunsch stellen wir Ihnen eine Spendenquittung aus."
+       data-en="* We can provide a donation receipt upon request.">
+      * Auf Wunsch stellen wir Ihnen eine Spendenquittung aus.
+    </p>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-bottom" style="max-width:1200px;margin:0 auto;padding:1.5rem 5%;">
+      <span>© 2025 One Love One Heart e.V.</span>
+      <a href="../../index.html" data-de="← Zurück zur Startseite" data-en="← Back to Home">← Zurück zur Startseite</a>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

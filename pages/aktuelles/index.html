@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Aktuelles — One Love One Heart e.V.</title>
+  <meta name="description" content="Neuigkeiten, Berichte und Updates von One Love One Heart e.V."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../../assets/css/main.css"/>
+</head>
+<body>
+  <div id="topbar">
+    <span>✉️ <a href="mailto:info@oneloveoneheart.com">info@oneloveoneheart.com</a></span>
+    <div class="lang-switcher">
+      <button data-lang="de" onclick="switchLang('de')" class="active">DE</button>
+      <button data-lang="en" onclick="switchLang('en')">EN</button>
+    </div>
+  </div>
+  <nav id="navbar"><div class="nav-inner">
+    <a href="../../index.html" class="nav-logo"><img src="../../assets/images/logo.png" alt="Logo"/></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../../index.html" data-de="Startseite" data-en="Home">Startseite</a></li>
+      <li><a href="../projekte/index.html" data-de="Projekte" data-en="Projects">Projekte</a></li>
+      <li><a href="../wer-wir-sind/index.html" data-de="Wer wir sind" data-en="About Us">Wer wir sind</a></li>
+      <li><a href="../produkte/index.html" data-de="Produkte" data-en="Products">Produkte</a></li>
+      <li><a href="index.html" class="active" data-de="Aktuelles" data-en="News">Aktuelles</a></li>
+      <li><a href="../mitmachen/index.html" data-de="Mitmachen" data-en="Get Involved">Mitmachen</a></li>
+      <li><a href="../spenden/index.html" class="nav-donate" data-de="Spenden" data-en="Donate">Spenden</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+  </div></nav>
+
+  <section class="section section--sand" style="padding-top:8rem;">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:3rem;">
+        <span class="section-label" data-de="Neuigkeiten" data-en="News">Neuigkeiten</span>
+        <h1 data-de="Aktuelles" data-en="News &amp; Updates">Aktuelles</h1>
+      </div>
+
+      <!-- NEWS ARTICLES GRID -->
+      <!-- To add a news item: copy one article.news-item block -->
+      <div class="project-cards">
+
+        <article class="project-card reveal">
+          <div class="project-card__img-wrap">
+            <img src="../../assets/images/photo-cooking.jpg" alt="Neuigkeit" loading="lazy"/>
+            <span class="project-card__badge">November 2025</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">[Titel des Berichts / Neuigkeit einfügen]</h3>
+            <p class="project-card__desc">[Kurze Zusammenfassung des Berichts. Beschreiben Sie, was passiert ist, was erreicht wurde, oder was geplant ist. 2–3 Sätze reichen.]</p>
+          </div>
+          <div class="project-card__footer">
+            <span style="font-size:0.78rem;color:var(--text-muted);">November 2025</span>
+            <span class="project-card__link" data-de="Mehr lesen →" data-en="Read more →">Mehr lesen →</span>
+          </div>
+        </article>
+
+        <!-- Add more news articles by copying the article block above -->
+
+      </div>
+
+      <div class="text-center" style="margin-top:3rem;">
+        <p style="color:var(--text-muted);"
+           data-de="Mehr Neuigkeiten folgen bald. Schauen Sie regelmäßig vorbei!"
+           data-en="More news coming soon. Check back regularly!">
+          Mehr Neuigkeiten folgen bald. Schauen Sie regelmäßig vorbei!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-bottom" style="max-width:1200px;margin:0 auto;padding:1.5rem 5%;">
+      <span>© 2025 One Love One Heart e.V.</span>
+      <a href="../../index.html" data-de="← Zurück zur Startseite" data-en="← Back to Home">← Zurück zur Startseite</a>
+    </div>
+  </footer>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

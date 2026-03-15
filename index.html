@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ SEO META TAGS — Edit these for each page ═══ -->
+  <title>One Love One Heart e.V. — NGO für Frauen & Kinder in Gambia</title>
+  <meta name="description" content="One Love One Heart e.V. ist eine deutsch-gambische NGO, die Frauen und Kinder in Gambia durch Bildung, Gesundheit und wirtschaftliche Stärkung unterstützt." />
+  <meta name="keywords" content="NGO, Gambia, Frauen, Bildung, Hilfe, One Love One Heart, Spenden" />
+  <meta property="og:title" content="One Love One Heart e.V." />
+  <meta property="og:description" content="Gemeinsam für ein besseres Leben an der Smiling Coast of Africa." />
+  <meta property="og:image" content="assets/images/logo.png" />
+  <meta name="theme-color" content="#8b6914" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       TOPBAR — Language + Contact info
+       Edit: change email, phone, or add social links
+  ════════════════════════════════════════════════════ -->
+  <div id="topbar">
+    <span>
+      ✉️ <a href="mailto:info@oneloveoneheart.com">info@oneloveoneheart.com</a>
+      &nbsp;·&nbsp;
+      📞 <a href="tel:0176111111111">0176 111 111 111</a>
+      &nbsp;·&nbsp;
+      📍 Berlin &amp; Gambia
+    </span>
+    <!-- Language Switcher: DE / EN -->
+    <div class="lang-switcher">
+      <button data-lang="de" onclick="switchLang('de')" class="active">DE</button>
+      <button data-lang="en" onclick="switchLang('en')">EN</button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       NAVIGATION
+       To add a page: copy one <li><a> and update href
+       To remove a page: delete the <li>
+  ════════════════════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Hauptnavigation">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo" aria-label="One Love One Heart – Startseite">
+        <img src="assets/images/logo.png" alt="One Love One Heart Logo" />
+      </a>
+
+      <!-- Nav Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active"
+               data-de="Startseite" data-en="Home">Startseite</a></li>
+        <li><a href="pages/projekte/index.html"
+               data-de="Projekte" data-en="Projects">Projekte</a></li>
+        <li><a href="pages/wer-wir-sind/index.html"
+               data-de="Wer wir sind" data-en="About Us">Wer wir sind</a></li>
+        <li><a href="pages/produkte/index.html"
+               data-de="Produkte" data-en="Products">Produkte</a></li>
+        <li><a href="pages/aktuelles/index.html"
+               data-de="Aktuelles" data-en="News">Aktuelles</a></li>
+        <li><a href="pages/mitmachen/index.html"
+               data-de="Mitmachen" data-en="Get Involved">Mitmachen</a></li>
+        <li>
+          <a href="pages/spenden/index.html" class="nav-donate"
+             data-de="Spenden" data-en="Donate">Spenden</a>
+        </li>
+      </ul>
+
+      <!-- Mobile Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════════
+       HERO SECTION
+       To change background image: update hero-bg style
+  ════════════════════════════════════════════════════ -->
+  <section class="hero" id="home" aria-label="Hero">
+    <!-- Background image — replace src below to change hero photo -->
+    <div class="hero-bg"
+         style="background-image: url('assets/images/photo-fruits.jpg');"
+         role="img"
+         aria-label="Frau aus Gambia hält einen Teller mit frischen Früchten">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow"
+            data-de="Berlin · Gambia · NGO"
+            data-en="Berlin · Gambia · NGO">Berlin · Gambia · NGO</span>
+      <h1>
+        <em data-de="One Love — One Heart" data-en="One Love — One Heart">One Love — One Heart</em><br>
+        <span data-de="e.V." data-en="e.V.">e.V.</span>
+      </h1>
+      <p class="hero-sub"
+         data-de="Gemeinsam für Bildung, Gesundheit und ein selbstbestimmtes Leben an der Smiling Coast of Africa."
+         data-en="Together for education, health, and self-determined lives on the Smiling Coast of Africa.">
+        Gemeinsam für Bildung, Gesundheit und ein selbstbestimmtes Leben an der Smiling Coast of Africa.
+      </p>
+      <div class="hero-btns">
+        <a href="pages/projekte/index.html" class="btn btn-white"
+           data-de="Unsere Projekte" data-en="Our Projects">Unsere Projekte</a>
+        <a href="pages/spenden/index.html" class="btn btn-ghost-white"
+           data-de="Jetzt spenden" data-en="Donate Now">Jetzt spenden</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       PROJECT CARDS SECTION
+       To add a project: copy one .project-card block
+       To remove: delete the .project-card block
+       Images: place in assets/images/ and update src
+  ════════════════════════════════════════════════════ -->
+  <section class="section section--sand" id="projekte" aria-labelledby="projekte-title">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:2.5rem;">
+        <span class="section-label"
+              data-de="Was wir tun" data-en="What We Do">Was wir tun</span>
+        <h2 id="projekte-title"
+            data-de="Unsere Projekte" data-en="Our Projects">Unsere Projekte</h2>
+        <p style="max-width:560px;margin:0 auto;"
+           data-de="Drei Bereiche — ein Ziel: ein würdevolles Leben für alle."
+           data-en="Three areas — one goal: a dignified life for everyone.">
+          Drei Bereiche — ein Ziel: ein würdevolles Leben für alle.
+        </p>
+      </div>
+
+      <div class="project-cards">
+
+        <!-- ── CARD 1: Patenkinder / Schule ── -->
+        <!-- To change: update badge, title, desc, image src, and link href -->
+        <article class="project-card reveal" aria-label="Projekt: Patenkinder & Schule">
+          <div class="project-card__img-wrap">
+            <img src="assets/images/photo-children.jpg"
+                 alt="Annette mit Schulkindern in Gambia"
+                 loading="lazy" />
+            <span class="project-card__badge"
+                  data-de="Bildung" data-en="Education">Bildung</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title"
+                data-de="Patenkinder &amp; Schule" data-en="Sponsorships &amp; School">
+              Patenkinder &amp; Schule
+            </h3>
+            <p class="project-card__desc"
+               data-de="Wir ermöglichen Kindern aus einkommensschwachen Familien den Schulbesuch durch Patenschaften und direkte Unterstützung."
+               data-en="We enable children from low-income families to attend school through sponsorships and direct support.">
+              Wir ermöglichen Kindern aus einkommensschwachen Familien den Schulbesuch durch Patenschaften und direkte Unterstützung.
+            </p>
+          </div>
+          <div class="project-card__footer">
+            <a href="pages/projekte/index.html#schule" class="project-card__link"
+               data-de="Mehr erfahren →" data-en="Learn more →">Mehr erfahren →</a>
+          </div>
+        </article>
+
+        <!-- ── CARD 2: Gesundheit / Ernährungssicherheit ── -->
+        <article class="project-card reveal" aria-label="Projekt: Gesundheit">
+          <div class="project-card__img-wrap">
+            <img src="assets/images/photo-fruits.jpg"
+                 alt="Siré mit frischen Früchten am Strand"
+                 loading="lazy" />
+            <span class="project-card__badge"
+                  data-de="Gesundheit" data-en="Health">Gesundheit</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title"
+                data-de="Gesundheit &amp; Ernährungssicherheit"
+                data-en="Health &amp; Food Security">
+              Gesundheit &amp; Ernährungssicherheit
+            </h3>
+            <p class="project-card__desc"
+               data-de="Zugang zu Gesundheitsversorgung und ausgewogener Ernährung für Familien in Gambia — besonders für Mütter und Kinder."
+               data-en="Access to healthcare and balanced nutrition for families in Gambia — especially for mothers and children.">
+              Zugang zu Gesundheitsversorgung und ausgewogener Ernährung für Familien in Gambia — besonders für Mütter und Kinder.
+            </p>
+          </div>
+          <div class="project-card__footer">
+            <a href="pages/projekte/index.html#gesundheit" class="project-card__link"
+               data-de="Mehr erfahren →" data-en="Learn more →">Mehr erfahren →</a>
+          </div>
+        </article>
+
+        <!-- ── CARD 3: Grundstück / Kultur ── -->
+        <article class="project-card reveal" aria-label="Projekt: Grundstück & Kultur">
+          <div class="project-card__img-wrap">
+            <img src="assets/images/photo-cooking.jpg"
+                 alt="Frauen beim gemeinsamen Kochen in Gambia"
+                 loading="lazy" />
+            <!-- TODO: Replace with actual Grundstück/Kultur photo when available -->
+            <span class="project-card__badge"
+                  data-de="Kultur" data-en="Culture">Kultur</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title"
+                data-de="Grundstück &amp; Kultur: Im Aufbau"
+                data-en="Land &amp; Culture: In Development">
+              Grundstück &amp; Kultur: Im Aufbau
+            </h3>
+            <p class="project-card__desc"
+               data-de="Ein eigenes Vereinsgrundstück als Treffpunkt, Kulturzentrum und Basis für unsere Arbeit vor Ort — aktuell im Aufbau."
+               data-en="Our own association land as a meeting point, cultural centre, and base for our work on the ground — currently being developed.">
+              Ein eigenes Vereinsgrundstück als Treffpunkt, Kulturzentrum und Basis für unsere Arbeit vor Ort — aktuell im Aufbau.
+            </p>
+          </div>
+          <div class="project-card__footer">
+            <a href="pages/projekte/index.html#kultur" class="project-card__link"
+               data-de="Mehr erfahren →" data-en="Learn more →">Mehr erfahren →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       ILA SINNING — Frauenprojekt Section
+  ════════════════════════════════════════════════════ -->
+  <section class="ila-section" id="ila-sinning" aria-labelledby="ila-title">
+    <div class="ila-grid">
+
+      <!-- Photo: replace src to change the ILA SINNING image -->
+      <div class="ila-img-wrap reveal">
+        <img src="assets/images/photo-jars.jpg"
+             alt="Fatou hält selbstgemachte Produkte des Frauenprojekts ILA SINNING"
+             loading="lazy" />
+      </div>
+
+      <div class="ila-content reveal">
+        <span class="section-label">ILA SINNING</span>
+        <h2 id="ila-title"
+            data-de="Frauenprojekt ILA SINNING" data-en="Women's Project ILA SINNING">
+          Frauenprojekt ILA SINNING
+        </h2>
+        <p data-de="ILA SINNING ist unser Herzensprojekt zur wirtschaftlichen Stärkung von Frauen in Gambia. Gemeinsam entwickeln wir Produkte, die auf lokalen Märkten und online verkauft werden — für mehr Unabhängigkeit und Würde."
+           data-en="ILA SINNING is our passion project for the economic empowerment of women in Gambia. Together we develop products sold on local markets and online — for more independence and dignity.">
+          ILA SINNING ist unser Herzensprojekt zur wirtschaftlichen Stärkung von Frauen in Gambia. Gemeinsam entwickeln wir Produkte, die auf lokalen Märkten und online verkauft werden — für mehr Unabhängigkeit und Würde.
+        </p>
+
+        <h4 data-de="Unsere Produkte:" data-en="Our Products:">Unsere Produkte:</h4>
+        <!-- To add a product: copy one <li> and update content -->
+        <ul class="products-list">
+          <li data-de="Handgemachte Chutneys &amp; Saucen" data-en="Handmade chutneys &amp; sauces">
+            Handgemachte Chutneys &amp; Saucen
+          </li>
+          <li data-de="Frische Früchte &amp; Naturprodukte" data-en="Fresh fruits &amp; natural products">
+            Frische Früchte &amp; Naturprodukte
+          </li>
+          <li data-de="Textilien &amp; Handarbeiten" data-en="Textiles &amp; handcrafts">
+            Textilien &amp; Handarbeiten
+          </li>
+          <li data-de="Weitere Produkte in Entwicklung …" data-en="More products in development …">
+            Weitere Produkte in Entwicklung …
+          </li>
+        </ul>
+
+        <a href="pages/produkte/index.html" class="btn btn-primary"
+           data-de="Zu unseren Produkten →" data-en="See Our Products →">
+          Zu unseren Produkten →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       STATS BAND
+       Update numbers to reflect real impact data
+  ════════════════════════════════════════════════════ -->
+  <div class="stats-band" aria-label="Unsere Zahlen">
+    <div class="container">
+      <div class="stat-block">
+        <div class="stat-block__num">50+</div>
+        <div class="stat-block__label"
+             data-de="Patenkinder" data-en="Sponsored Children">Patenkinder</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-block__num">3</div>
+        <div class="stat-block__label"
+             data-de="Aktive Projekte" data-en="Active Projects">Aktive Projekte</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-block__num">2</div>
+        <div class="stat-block__label"
+             data-de="Länder" data-en="Countries">Länder</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-block__num">∞</div>
+        <div class="stat-block__label"
+             data-de="Herz &amp; Engagement" data-en="Heart &amp; Commitment">Herz &amp; Engagement</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════
+       ABOUT SNIPPET (Wer wir sind — preview)
+  ════════════════════════════════════════════════════ -->
+  <section class="about-section" id="ueber-uns" aria-labelledby="about-title">
+    <div class="about-grid">
+      <div class="reveal">
+        <span class="section-label"
+              data-de="Wer wir sind" data-en="About Us">Wer wir sind</span>
+        <h2 id="about-title"
+            data-de="Was führt uns nach Gambia?" data-en="What Brings Us to Gambia?">
+          Was führt uns nach Gambia?
+        </h2>
+        <blockquote class="about-quote"
+                    data-de="Meet the locals, live with the locals!"
+                    data-en="Meet the locals, live with the locals!">
+          "Meet the locals, live with the locals!"
+        </blockquote>
+        <p data-de="Wir, das ist eine Gruppe europäischer und gambischer Vereinsmitglieder. Unsere NGO 'One Love - One Heart e.V.' gibt es unter diesem Namen sowohl in Gambia als auch in Deutschland. Wir haben entschieden, uns mit unserem Projekt an der Smiling Coast of Africa niederzulassen, denn das englischsprachige Land wird nicht umsonst so genannt — die Freundlichkeit der Menschen hier ist sprichwörtlich!"
+           data-en="We are a group of European and Gambian association members. Our NGO 'One Love – One Heart e.V.' exists under this name both in Gambia and in Germany. We have chosen to base our project on the Smiling Coast of Africa — this English-speaking country is not called so for nothing; the friendliness of the people here is proverbial!">
+          Wir, das ist eine Gruppe europäischer und gambischer Vereinsmitglieder. Unsere NGO "One Love - One Heart e.V." gibt es unter diesem Namen sowohl in Gambia als auch in Deutschland.
+        </p>
+        <p data-de="Wir verstehen uns als ein schwarz-weißes Gemeinschaftsprojekt mit der Utopie, auf Augenhöhe zu agieren."
+           data-en="We see ourselves as a Black-and-White community project with the utopia of acting as equals.">
+          Wir verstehen uns als ein schwarz-weißes Gemeinschaftsprojekt mit der Utopie, auf Augenhöhe zu agieren.
+        </p>
+        <a href="pages/wer-wir-sind/index.html" class="btn btn-outline"
+           style="margin-top:1rem;"
+           data-de="Mehr über uns" data-en="More About Us">Mehr über uns</a>
+      </div>
+
+      <!-- Photo: replace src to change the About image -->
+      <div class="reveal">
+        <img src="assets/images/photo-food.jpg"
+             alt="Kind aus Gambia mit Lebensmitteln, die durch das Projekt bereitgestellt wurden"
+             style="border-radius:6px; width:100%; object-fit:cover; max-height:480px;"
+             loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       DONATE CTA SECTION
+  ════════════════════════════════════════════════════ -->
+  <section class="donate-section" id="spenden-cta" aria-labelledby="donate-title">
+    <h2 id="donate-title"
+        data-de="Jetzt helfen &amp; spenden" data-en="Help &amp; Donate Now">
+      Jetzt helfen &amp; spenden
+    </h2>
+    <p data-de="Ihre Spende erreicht die Menschen direkt — transparent, persönlich und mit Herz."
+       data-en="Your donation reaches people directly — transparently, personally, and with heart.">
+      Ihre Spende erreicht die Menschen direkt — transparent, persönlich und mit Herz.
+    </p>
+
+    <!-- Donation options — add or remove cards here -->
+    <div class="donate-options">
+      <div class="donate-option-card">
+        <h4 data-de="Spendenkonto" data-en="Bank Transfer">Spendenkonto</h4>
+        <p data-de="Direkte Banküberweisung an unseren Verein."
+           data-en="Direct bank transfer to our association.">
+          Direkte Banküberweisung
+        </p>
+      </div>
+      <div class="donate-option-card">
+        <h4>PayPal</h4>
+        <p data-de="Schnell und sicher via PayPal spenden."
+           data-en="Donate quickly and securely via PayPal.">
+          Schnell und sicher via PayPal
+        </p>
+      </div>
+      <div class="donate-option-card">
+        <h4>eBay Charity</h4>
+        <p data-de="Unterstützen Sie uns auf eBay Charity."
+           data-en="Support us on eBay Charity.">
+          Unterstützen Sie uns auf eBay Charity
+        </p>
+      </div>
+    </div>
+
+    <a href="pages/spenden/index.html" class="btn btn-white"
+       data-de="Alle Spendenoptionen ansehen" data-en="See All Donation Options">
+      Alle Spendenoptionen ansehen
+    </a>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       PHOTO GALLERY STRIP
+       To add photos: copy a .gallery-strip__item block
+       To remove: delete a block
+  ════════════════════════════════════════════════════ -->
+  <div class="gallery-strip" aria-label="Fotogalerie">
+    <div class="gallery-strip__item">
+      <img src="assets/images/photo-children.jpg"
+           alt="Kinder in Gambia" loading="lazy" />
+    </div>
+    <div class="gallery-strip__item">
+      <img src="assets/images/photo-fruits.jpg"
+           alt="Frau mit Früchten am Strand" loading="lazy" />
+    </div>
+    <div class="gallery-strip__item">
+      <img src="assets/images/photo-jars.jpg"
+           alt="Handgemachte Produkte von ILA SINNING" loading="lazy" />
+    </div>
+    <div class="gallery-strip__item">
+      <img src="assets/images/photo-cooking.jpg"
+           alt="Frauen beim Kochen" loading="lazy" />
+    </div>
+    <div class="gallery-strip__item">
+      <img src="assets/images/photo-food.jpg"
+           alt="Kind mit Lebensmitteln" loading="lazy" />
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+       Edit: address, links, social URLs
+  ════════════════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-grid">
+
+      <!-- Brand column -->
+      <div class="footer-brand">
+        <div class="footer-brand__logo">
+          <img src="assets/images/logo.png" alt="One Love One Heart Logo" />
+          <div class="footer-brand__name">One Love<br>One Heart e.V.</div>
+        </div>
+        <p data-de="Eine deutsch-gambische NGO für Bildung, Gesundheit und Würde an der Smiling Coast of Africa."
+           data-en="A German-Gambian NGO for education, health, and dignity on the Smiling Coast of Africa.">
+          Eine deutsch-gambische NGO für Bildung, Gesundheit und Würde an der Smiling Coast of Africa.
+        </p>
+        <div class="social-links">
+          <!-- Update href links to real social media pages -->
+          <a href="#" class="social-link" aria-label="Facebook">f</a>
+          <a href="#" class="social-link" aria-label="Instagram">in</a>
+          <a href="#" class="social-link" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+
+      <!-- Pages column -->
+      <div class="footer-col">
+        <h4 data-de="Seiten" data-en="Pages">Seiten</h4>
+        <ul>
+          <li><a href="pages/projekte/index.html"
+                 data-de="Projekte" data-en="Projects">Projekte</a></li>
+          <li><a href="pages/wer-wir-sind/index.html"
+                 data-de="Wer wir sind" data-en="About Us">Wer wir sind</a></li>
+          <li><a href="pages/produkte/index.html"
+                 data-de="Produkte" data-en="Products">Produkte</a></li>
+          <li><a href="pages/aktuelles/index.html"
+                 data-de="Aktuelles" data-en="News">Aktuelles</a></li>
+          <li><a href="pages/mitmachen/index.html"
+                 data-de="Mitmachen" data-en="Get Involved">Mitmachen</a></li>
+          <li><a href="pages/spenden/index.html"
+                 data-de="Spenden" data-en="Donate">Spenden</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal column -->
+      <div class="footer-col">
+        <h4 data-de="Rechtliches" data-en="Legal">Rechtliches</h4>
+        <ul>
+          <li><a href="pages/impressum.html"
+                 data-de="Impressum" data-en="Imprint">Impressum</a></li>
+          <li><a href="pages/datenschutz.html"
+                 data-de="Datenschutz" data-en="Privacy Policy">Datenschutz</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact column -->
+      <div class="footer-col">
+        <h4 data-de="Kontakt" data-en="Contact">Kontakt</h4>
+        <div class="footer-contact-item">
+          ✉️ <a href="mailto:info@oneloveoneheart.com">info@oneloveoneheart.com</a>
+        </div>
+        <div class="footer-contact-item">
+          📞 <a href="tel:0176111111111">0176 111 111 111</a>
+        </div>
+        <div class="footer-contact-item">
+          📍 Berlin, Deutschland
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 One Love One Heart e.V.</span>
+      <span data-de="Gemacht mit ❤️ für Gambia" data-en="Made with ❤️ for Gambia">
+        Gemacht mit ❤️ für Gambia
+      </span>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
