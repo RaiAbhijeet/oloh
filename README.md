@@ -5,6 +5,7 @@
 ---
 
 ## Table of Contents
+
 1. [Project Structure](#1-project-structure)
 2. [How to Edit Content](#2-how-to-edit-content)
 3. [How to Add a New Section](#3-how-to-add-a-new-section)
@@ -26,30 +27,41 @@ oloh/
 │
 ├── assets/
 │   ├── css/
-│   │   └── main.css            ← ALL styles — one file, well commented
+│   │   └── main.css            ← All site CSS
 │   ├── js/
-│   │   └── main.js             ← All JS — nav, scroll reveal, lightbox, language
+│   │   └── main.js             ← Main JS: nav, scroll reveal, language, lightbox
 │   └── images/
-│       ├── logo.png            ← Replace with real logo
-│       ├── photo-children.jpg
+│       ├── LogoBG.png
+│       ├── photo-schule-bildung.jpg
 │       ├── photo-fruits.jpg
 │       ├── photo-jars.jpg
 │       ├── photo-cooking.jpg
-│       └── photo-food.jpg
+│       └── ...
 │
 ├── pages/
 │   ├── projekte/
-│   │   └── index.html          ← Projekte page
+│   │   ├── index.html          ← Projects overview page
+│   │   ├── schule/
+│   │   │   └── index.html      ← School project detail page
+│   │   ├── gesundheit/
+│   │   │   └── index.html      ← Health & nutrition project detail page
+│   │   ├── grundstueck/
+│   │   │   └── index.html      ← Land & culture project detail page
+│   │   └── ila-sinning/
+│   │       └── index.html      ← Women's project detail page
 │   ├── spenden/
-│   │   └── index.html          ← Spenden page
+│   │   └── index.html          ← Donations page
 │   ├── aktuelles/
-│   │   └── index.html          ← Aktuelles / News page
+│   │   └── index.html          ← News page
 │   ├── produkte/
-│   │   └── index.html          ← Produkte / ILA SINNING page
+│   │   └── index.html          ← Products page
 │   ├── wer-wir-sind/
-│   │   └── index.html          ← Wer wir sind / About page
+│   │   └── index.html          ← About page
 │   └── mitmachen/
-│       └── index.html          ← Mitmachen / Get Involved page
+│       └── index.html          ← Get involved page
+│
+├── docs/
+│   └── project-subproject-tree-map.md  ← Project/subproject page map
 │
 └── README.md                   ← This file
 ```
@@ -59,42 +71,58 @@ oloh/
 ## 2. How to Edit Content
 
 ### Change text on any page
+
 Open the relevant `.html` file and look for the text you want to change.
 
 All bilingual text uses `data-de="..."` and `data-en="..."` attributes:
+
 ```html
 <h2 data-de="Unsere Projekte" data-en="Our Projects">Unsere Projekte</h2>
 ```
+
 Edit both attributes AND the fallback text between the tags.
 
 ### Change the hero background image
+
 In `index.html`, find the `.hero-bg` div:
+
 ```html
-<div class="hero-bg" style="background-image: url('assets/images/photo-fruits.jpg');"></div>
+<div
+  class="hero-bg"
+  style="background-image: url('assets/images/photo-fruits.jpg');"
+></div>
 ```
+
 Replace `photo-fruits.jpg` with any image from `assets/images/`.
 
 ### Change NGO name, email, or phone
+
 Search for `info@oneloveoneheart.com` and `0176 111 111 111` across all HTML files and replace.
 
 ### Change colors sitewide
+
 Open `assets/css/main.css` and edit the `:root` block at the top:
+
 ```css
 :root {
-  --sand:        #f5f0e8;   /* main background */
-  --brown:       #8b6914;   /* accent color */
+  --sand: #f5f0e8; /* main background */
+  --brown: #8b6914; /* accent color */
   /* ... etc */
 }
 ```
 
 ### Add a news article (Aktuelles)
+
 Open `pages/aktuelles/index.html`, find the `project-cards` div, and copy-paste an `<article>` block.
 
 ### Add a product (Produkte)
+
 Open `pages/produkte/index.html`, find the `project-cards` div, and copy-paste an `<article>` block.
 
 ### Update donation links (Spenden)
+
 Open `pages/spenden/index.html`:
+
 - Replace `DE[XX XXXX XXXX XXXX XXXX XX]` with real IBAN
 - Replace the PayPal `hosted_button_id=XXXXXXXXXX` with real button ID
 - Replace eBay charity link with real URL
@@ -109,16 +137,18 @@ To add a section to any page, insert this template block:
 <!-- ═══ SECTION: [Your Section Name] ═══ -->
 <section class="section section--sand" id="your-section-id">
   <div class="container">
-
     <!-- Section header -->
     <div class="text-center" style="margin-bottom:2.5rem;">
-      <span class="section-label" data-de="Kategorie DE" data-en="Category EN">Kategorie</span>
+      <span class="section-label" data-de="Kategorie DE" data-en="Category EN"
+        >Kategorie</span
+      >
       <h2 data-de="Überschrift DE" data-en="Heading EN">Überschrift</h2>
       <p data-de="Beschreibung DE" data-en="Description EN">Beschreibung</p>
     </div>
 
     <!-- Your content goes here -->
-    <div class="grid-2"> <!-- or grid-3 for 3 columns -->
+    <div class="grid-2">
+      <!-- or grid-3 for 3 columns -->
       <div class="reveal">
         <!-- Left content -->
       </div>
@@ -126,12 +156,12 @@ To add a section to any page, insert this template block:
         <!-- Right content -->
       </div>
     </div>
-
   </div>
 </section>
 ```
 
 **Available section background classes:**
+
 - `section--sand` — warm sandy background (default)
 - `section--sand-dark` — slightly darker sand
 - `section--white` — pure white
@@ -142,6 +172,7 @@ To add a section to any page, insert this template block:
 ## 4. How to Add a New Page
 
 **Step 1** — Create the folder and file:
+
 ```
 pages/new-page/index.html
 ```
@@ -149,16 +180,31 @@ pages/new-page/index.html
 **Step 2** — Copy the structure from an existing page (e.g. `pages/aktuelles/index.html`)
 
 **Step 3** — Update the CSS/JS paths (count `../` relative to root):
+
 ```html
-<link rel="stylesheet" href="../../assets/css/main.css"/>
+<link rel="stylesheet" href="../../assets/css/main.css" />
 <script src="../../assets/js/main.js"></script>
-<img src="../../assets/images/logo.png" .../>
+<img src="../../assets/images/logo.png" ... />
+```
+
+For nested pages inside `pages/projekte/<project>/`, add one more `../`:
+
+```html
+<link rel="stylesheet" href="../../../assets/css/main.css" />
+<script src="../../../assets/js/main.js"></script>
+<img src="../../../assets/images/logo.png" ... />
 ```
 
 **Step 4** — Add the page to the nav in EVERY `.html` file:
+
 ```html
-<li><a href="pages/new-page/index.html" data-de="Neue Seite" data-en="New Page">Neue Seite</a></li>
+<li>
+  <a href="pages/new-page/index.html" data-de="Neue Seite" data-en="New Page"
+    >Neue Seite</a
+  >
+</li>
 ```
+
 For pages inside `/pages/`, use relative paths like `../new-page/index.html`.
 
 **Step 5** — Add it to the footer links in `index.html`.
@@ -178,11 +224,13 @@ For pages inside `/pages/`, use relative paths like `../new-page/index.html`.
 The site supports German/English switching with zero JavaScript frameworks.
 
 **How it works:**
+
 1. Add `data-de="..."` and `data-en="..."` to any element
 2. The JS reads these on load and on toggle
 3. Language preference is saved in `localStorage`
 
 **Example:**
+
 ```html
 <p data-de="Hallo Welt" data-en="Hello World">Hallo Welt</p>
 ```
@@ -194,6 +242,7 @@ The site supports German/English switching with zero JavaScript frameworks.
 ## 7. How to Deploy to GitHub Pages
 
 **Option A — Drag & Drop (no terminal needed):**
+
 1. Go to github.com → Create new repository named `oneloveoneheart`
 2. Click "uploading an existing file"
 3. Drag the entire `oloh/` folder contents (not the folder itself)
@@ -202,6 +251,7 @@ The site supports German/English switching with zero JavaScript frameworks.
 6. Site live at: `https://yourusername.github.io/oneloveoneheart`
 
 **Option B — Git (recommended for ongoing updates):**
+
 ```bash
 cd oloh/
 git init
@@ -210,15 +260,18 @@ git commit -m "Initial website"
 git remote add origin https://github.com/yourusername/oneloveoneheart.git
 git push -u origin main
 ```
+
 Then enable GitHub Pages in repo Settings.
 
 **For future updates:**
+
 ```bash
 # Edit files, then:
 git add .
 git commit -m "Updated news section"
 git push
 ```
+
 Site updates automatically within ~60 seconds.
 
 ---
@@ -245,6 +298,7 @@ Site updates automatically within ~60 seconds.
 10. Enable "Always use HTTPS" in Cloudflare SSL settings
 
 **Free Cloudflare protections enabled automatically:**
+
 - DDoS protection
 - CDN (faster worldwide loading)
 - SSL certificate
@@ -261,6 +315,7 @@ Site updates automatically within ~60 seconds.
 4. Update the `src` attribute and `alt` text in the relevant HTML file
 
 **Photo naming convention:**
+
 ```
 photo-[description]-[year].jpg
 e.g. photo-annette-schule-2025.jpg
@@ -281,4 +336,4 @@ e.g. photo-annette-schule-2025.jpg
 
 ---
 
-*One Love One Heart e.V. — Berlin & Gambia*
+_One Love One Heart e.V. — Berlin & Gambia_
