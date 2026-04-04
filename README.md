@@ -4,7 +4,7 @@
 
 ---
 
-## Table of Contents
+## Table of Contents :
 
 1. [Project Structure](#1-project-structure)
 2. [How to Edit Content](#2-how-to-edit-content)
