@@ -90,6 +90,12 @@
         padding: 2px 8px;
         margin-bottom: 0.8rem;
       }
+
+      /* ── Real photos ── */
+      .story-photo { display: block; width: 100%; height: auto; border-radius: 6px; }
+      .story-photo--narrow { max-width: 420px; margin: 0 auto; }
+      .story-photo--portrait { max-width: 320px; margin: 0 auto; }
+      .story-photo--wide { max-width: 720px; margin: 0 auto; }
     </style>
   </head>
   <body>
@@ -195,230 +201,225 @@
     <section class="section section--sand">
       <div class="container grid-2">
         <div class="reveal">
-          <div class="photo-placeholder" style="min-height:320px;">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="3" y="3" width="18" height="18" rx="2"/>
-              <circle cx="8.5" cy="8.5" r="1.5"/>
-              <path d="m21 15-5-5L5 21"/>
-            </svg>
-            <span data-de="Foto von Marion" data-en="Photo by Marion">Foto von Marion</span>
-          </div>
+          <div class="photo-placeholder" style="min-height:320px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span data-de="Foto von Marion" data-en="Photo by Marion">Foto von Marion</span></div>
         </div>
         <div class="reveal">
           <span class="section-label" data-de="a) Gesundheit" data-en="a) Health">a) Gesundheit</span>
-          <h2 data-de="Traditionelle Heilung und Schulmedizin" data-en="Traditional Healing and Modern Medicine">
-            Traditionelle Heilung und Schulmedizin
-          </h2>
+          <h2 data-de="Traditionelle Heilung und Schulmedizin" data-en="Traditional Healing and Modern Medicine">Traditionelle Heilung und Schulmedizin</h2>
           <p
-            data-de="In Gambia gibt es viele traditionelle Heiler mit altem Wissen über Nutzpflanzen und wenig Schulmedizin. Beide haben ihre Berechtigung, aber in manchen Fällen sind Antibiose oder eine Operation unumgänglich."
-            data-en="In Gambia there are many traditional healers with ancient knowledge of medicinal plants and little access to conventional medicine. Both approaches have their place, but in some cases antibiotics or surgery are unavoidable."
-          >
-            In Gambia gibt es viele traditionelle Heiler mit altem Wissen über Nutzpflanzen und wenig Schulmedizin. Beide haben ihre Berechtigung, aber in manchen Fällen sind Antibiose oder eine Operation unumgänglich.
-          </p>
-          <p style="margin-top:1rem;"
-            data-de="Viele Verletzungen enden in Amputation oder Schlimmerem. Das Wissen um die Möglichkeiten der modernen Medizin, wo sie zu finden ist und wie man sie finanzieren kann, ist oftmals gering. In Gambia gibt es immer noch viele Menschen ohne Schulbildung, nicht alphabetisiert und ohne Grundwissen über Hygiene und Wundheilung."
-            data-en="Many injuries end in amputation or worse. Knowledge about modern medicine — where to find it and how to finance it — is often very limited. In Gambia there are still many people without schooling, unable to read, and lacking basic knowledge of hygiene and wound care."
-          >
-            Viele Verletzungen enden in Amputation oder Schlimmerem. Das Wissen um die Möglichkeiten der modernen Medizin, wo sie zu finden ist und wie man sie finanzieren kann, ist oftmals gering. In Gambia gibt es immer noch viele Menschen ohne Schulbildung, nicht alphabetisiert und ohne Grundwissen über Hygiene und Wundheilung.
-          </p>
-          <p style="margin-top:1rem;"
-            data-de="Uns ist es ein Anliegen, dieses Wissen zu verbessern und weiterzugeben, ohne die hier gängigen Methoden außer Acht zu lassen."
-            data-en="It is our concern to improve and share this knowledge, without disregarding the methods that are common here."
-          >
-            Uns ist es ein Anliegen, dieses Wissen zu verbessern und weiterzugeben, ohne die hier gängigen Methoden außer Acht zu lassen.
-          </p>
+  data-de="In Gambia gibt es viele traditionelle Heiler mit altem Wissen über Nutzpflanzen und wenig Schulmedizin. Beide haben ihre Berechtigung, aber in manchen Fällen sind Antibiose oder eine Operation unumgänglich."
+  data-en="In Gambia there are many traditional healers with ancient knowledge of medicinal plants, and very little conventional medicine. Both have their place, but in some cases antibiotics or surgery are unavoidable."
+>
+  In Gambia gibt es viele traditionelle Heiler mit altem Wissen über Nutzpflanzen und wenig Schulmedizin. Beide haben ihre Berechtigung, aber in manchen Fällen sind Antibiose oder eine Operation unumgänglich.
+</p>
+<p style="margin-top:1rem;"
+  data-de="Viele Verletzungen enden in Amputation oder Schlimmerem."
+  data-en="Many injuries end in amputation or worse."
+>
+  Viele Verletzungen enden in Amputation oder Schlimmerem.
+</p>
+<p style="margin-top:1rem;"
+  data-de="Osteomyelitis ist ein großes Problem in Gambia. Sie wird nicht erkannt, also auch nicht behandelt und führt oft zu Amputation."
+  data-en="Osteomyelitis is a major problem in Gambia. It goes unrecognised, so it is not treated, and it often leads to amputation."
+>
+  Osteomyelitis ist ein großes Problem in Gambia. Sie wird nicht erkannt, also auch nicht behandelt und führt oft zu Amputation.
+</p>
         </div>
       </div>
     </section>
 
     <!-- ══════════════════════════════════════
-         OUMIE
+         OUMIE (Osteomyelitis)
     ══════════════════════════════════════ -->
     <section class="section section--sand-dark">
-      <div class="container grid-2">
-        <div class="reveal" style="order:2;">
-          <!-- X-ray placeholder -->
-          <div class="photo-placeholder" style="min-height:280px;">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="3" y="3" width="18" height="18" rx="2"/>
-              <line x1="9" y1="3" x2="9" y2="21"/>
-              <line x1="15" y1="3" x2="15" y2="21"/>
-            </svg>
-            <span data-de="Röntgenaufnahme Oumies Bein" data-en="X-ray of Oumie's leg">Röntgenaufnahme<br>Oumies Bein</span>
+      <div class="container">
+        <div class="grid-2" style="align-items:center;">
+          <div class="reveal" style="order:2;">
+            <!-- Doc image 1: knee of Oumie (medical image, NOT published without consent) -->
+            <div class="photo-placeholder" style="min-height:280px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span data-de="Foto: Oumies Knie" data-en="Photo: Oumie&#x27;s knee">Foto: Oumies Knie</span></div>
+          </div>
+          <div class="reveal" style="order:1;">
+            <span class="section-label" data-de="Geschichte" data-en="Story">Geschichte</span>
+            <p class="story-name">Oumie</p>
+            <span class="diagnosis-badge" data-de="Osteomyelitis" data-en="Osteomyelitis">Osteomyelitis</span>
+            <p style="margin-top:.8rem;"
+  data-de="Das hier ist das Knie unserer 13-jährigen Osteomyelitis-Patientin. Seit vielen Jahren leidet sie an einer Osteomyelitis, die zu spät erkannt und behandelt wurde. Die dunkle Stelle im Knochen über dem Knie zeigt die Größe der betroffenen Stelle an."
+  data-en="This is the knee of our 13-year-old osteomyelitis patient. She has suffered from osteomyelitis for many years because it was recognised and treated too late. The dark spot in the bone above the knee shows the size of the affected area."
+>
+  Das hier ist das Knie unserer 13-jährigen Osteomyelitis-Patientin. Seit vielen Jahren leidet sie an einer Osteomyelitis, die zu spät erkannt und behandelt wurde. Die dunkle Stelle im Knochen über dem Knie zeigt die Größe der betroffenen Stelle an.
+</p>
+            <p style="margin-top:1rem;"
+  data-de="Wir haben uns an das britische GLOVE-Project gewandt, da wir Aufwand, Kosten und Versorgung nicht leisten konnten. Unter deren liebevoller Obhut wurde sie operiert und nach der OP versorgt."
+  data-en="We turned to the British GLOVE Project because we could not manage the effort, the costs and the care ourselves. Under their loving care she was operated on and looked after following the surgery."
+>
+  Wir haben uns an das britische GLOVE-Project gewandt, da wir Aufwand, Kosten und Versorgung nicht leisten konnten. Unter deren liebevoller Obhut wurde sie operiert und nach der OP versorgt.
+</p>
+            <p style="margin-top:1rem;"
+  data-de="Die OP war gut verlaufen und sie konnte langsam wieder laufen lernen. Allerdings sind die Wachstumsfugen im Knochen zerstört, was bedeutet, dass er an dieser Stelle nicht mehr wachsen kann. Oumie wird im Laufe ihres Wachstums also immer mehr humpeln, da sie ungleich lange Beine haben wird. Für Ausgleich muss immer wieder gesorgt werden."
+  data-en="The operation went well and she slowly learned to walk again. However, the growth plates in the bone have been destroyed, which means the bone can no longer grow at that spot. As Oumie grows, she will therefore limp more and more, because her legs will be of unequal length. Compensation will have to be provided again and again."
+>
+  Die OP war gut verlaufen und sie konnte langsam wieder laufen lernen. Allerdings sind die Wachstumsfugen im Knochen zerstört, was bedeutet, dass er an dieser Stelle nicht mehr wachsen kann. Oumie wird im Laufe ihres Wachstums also immer mehr humpeln, da sie ungleich lange Beine haben wird. Für Ausgleich muss immer wieder gesorgt werden.
+</p>
           </div>
         </div>
-        <div class="reveal" style="order:1;">
-          <span class="section-label" data-de="Geschichte" data-en="Story">Geschichte</span>
-          <p class="story-name">Oumie</p>
-          <span class="diagnosis-badge" data-de="Osteomyelitis" data-en="Osteomyelitis">Osteomyelitis</span>
-          <p
-            data-de="Das ist Oumie. Seit vielen Jahren leidet sie an einer Osteomyelitis, die zu spät erkannt und behandelt wurde."
-            data-en="This is Oumie. For many years she has been suffering from osteomyelitis that was recognised and treated too late."
-          >
-            Das ist Oumie. Seit vielen Jahren leidet sie an einer Osteomyelitis, die zu spät erkannt und behandelt wurde.
-          </p>
+        <div class="grid-2" style="align-items:center;margin-top:2.5rem;">
+          <div class="reveal">
+            <!-- Doc image 2: wound / leg of Oumie (medical image, NOT published without consent) -->
+            <div class="photo-placeholder" style="min-height:240px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span data-de="Foto: Oumies Bein" data-en="Photo: Oumie&#x27;s leg">Foto: Oumies Bein</span></div>
+          </div>
+          <div class="reveal">
+            <p
+  data-de="Leider hat sich 15 Monate nach der Operation die Osteomyelitis wieder gezeigt. Nur durch Antibiose war das Problem in den Griff zu bekommen – vorläufig! Wie es weitergeht, ist völlig unklar. Wir hoffen inständig, dass sie ihr Bein nicht verliert!"
+  data-en="Sadly, 15 months after the operation the osteomyelitis returned. Only antibiotics got the problem under control – for now! How things will go from here is completely unclear. We sincerely hope she will not lose her leg!"
+>
+  Leider hat sich 15 Monate nach der Operation die Osteomyelitis wieder gezeigt. Nur durch Antibiose war das Problem in den Griff zu bekommen – vorläufig! Wie es weitergeht, ist völlig unklar. Wir hoffen inständig, dass sie ihr Bein nicht verliert!
+</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ══════════════════════════════════════
-         LAMIN
+         SECHSJÄHRIGER JUNGE (Osteomyelitis)
     ══════════════════════════════════════ -->
     <section class="section section--sand">
       <div class="container">
         <div class="reveal">
           <span class="section-label" data-de="Geschichte" data-en="Story">Geschichte</span>
-          <p class="story-name">Lamin</p>
           <span class="diagnosis-badge" data-de="Osteomyelitis" data-en="Osteomyelitis">Osteomyelitis</span>
         </div>
 
-        <!-- Before / After photos -->
+        <!-- Doc images 3-4: boy on toy car / boy on bike (NOT published without consent) -->
         <div class="reveal before-after">
-          <div class="photo-placeholder">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="3" y="3" width="18" height="18" rx="2"/>
-              <circle cx="8.5" cy="8.5" r="1.5"/>
-              <path d="m21 15-5-5L5 21"/>
-            </svg>
-            <span data-de="Lamin — vorher" data-en="Lamin — before">Lamin — vorher</span>
-          </div>
-          <div class="photo-placeholder">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="3" y="3" width="18" height="18" rx="2"/>
-              <circle cx="8.5" cy="8.5" r="1.5"/>
-              <path d="m21 15-5-5L5 21"/>
-            </svg>
-            <span data-de="Lamin — nachher" data-en="Lamin — after">Lamin — nachher</span>
-          </div>
+          <div class="photo-placeholder" style="min-height:180px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span data-de="Foto: Der Sechsjährige auf dem Rutschauto" data-en="Photo: The six-year-old on the toy car">Foto: Der Sechsjährige auf dem Rutschauto</span></div>
+          <div class="photo-placeholder" style="min-height:180px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span data-de="Foto: Der Junge mit seinem Fahrrad" data-en="Photo: The boy with his bicycle">Foto: Der Junge mit seinem Fahrrad</span></div>
         </div>
 
         <div class="reveal">
           <p
-            data-de="Lamin haben wir auf ein Rutschauto gekauert vorgefunden. Er war dazu verurteilt, sich den ganzen Tag mit diesem Kinderfahrzeug fortzubewegen, da er nur eine Hand benutzen konnte. Er konnte seinen Compound nicht verlassen und verbrachte seine Zeit mit den Müttern und Kleinkindern. Er war in sich gekehrt und teilnahmslos."
-            data-en="We found Lamin crouched on a wheeled toy car. He was forced to move around all day on this children's vehicle because he could only use one hand. He could not leave his compound and spent his days among mothers and small children. He was withdrawn and detached."
-          >
-            Lamin haben wir auf ein Rutschauto gekauert vorgefunden. Er war dazu verurteilt, sich den ganzen Tag mit diesem Kinderfahrzeug fortzubewegen, da er nur eine Hand benutzen konnte. Er konnte seinen Compound nicht verlassen und verbrachte seine Zeit mit den Müttern und Kleinkindern. Er war in sich gekehrt und teilnahmslos.
-          </p>
-          <p style="margin-top:1rem;"
-            data-de="Zunächst haben wir ihm einen Rollstuhl besorgt und ihn an einer Schule angemeldet. Jeden Tag hat ONE LOVE – ONE HEART – Fahrer Sheriffo ihn mit dem Auto zur Schule gebracht und abgeholt."
-            data-en="First we got him a wheelchair and enrolled him in a school. Every day ONE LOVE – ONE HEART driver Sheriffo drove him to school and back."
-          >
-            Zunächst haben wir ihm einen Rollstuhl besorgt und ihn an einer Schule angemeldet. Jeden Tag hat ONE LOVE – ONE HEART – Fahrer Sheriffo ihn mit dem Auto zur Schule gebracht und abgeholt.
-          </p>
-          <p style="margin-top:1rem;"
-            data-de="Er wurde an das britische GLOVE-Projekt weitervermittelt, die sich um kleine Osteomyelitis-Patienten in Gambia engagieren. In deren Obhut konnte er genesen, kräftiger werden und laufen lernen. Seither geht er alleine zur Schule und spielt mit den gleichaltrigen Nachbarjungs."
-            data-en="He was referred to the British GLOVE project, which supports young osteomyelitis patients in Gambia. In their care he recovered, grew stronger, and learned to walk. Since then he goes to school on his own and plays with the neighbourhood boys his age."
-          >
-            Er wurde an das britische GLOVE-Projekt weitervermittelt, die sich um kleine Osteomyelitis-Patienten in Gambia engagieren. In deren Obhut konnte er genesen, kräftiger werden und laufen lernen. Seither geht er alleine zur Schule und spielt mit den gleichaltrigen Nachbarjungs.
-          </p>
+  data-de="So haben wir den Sechsjährigen vorgefunden: teilnahms- und hoffnungslos saß er zusammengekauert auf einem Rutschauto für Kleinkinder. Aufgrund von Verletzungen im Kleinkindalter war auch er von Osteomyelitis bedroht. Er konnte nicht laufen und sich nur schiebend vorwärtsbewegen. Er verbrachte den ganzen Tag in sich gekehrt bei den Müttern und Kleinkindern seines Compounds. Er schaute sehnsüchtig den Gleichaltrigen hinterher, wenn sie spielen gingen. Sein größter Wunsch war, zur Schule gehen zu können, wie alle anderen in seinem Alter auch."
+  data-en="This is how we found the six-year-old: apathetic and without hope, he sat huddled on a toy ride-on car meant for toddlers. Because of injuries in early childhood, he too was at risk of osteomyelitis. He could not walk and could only move forward by pushing himself along. He spent the whole day withdrawn among the mothers and small children of his compound. He gazed longingly after children his age when they went off to play. His greatest wish was to be able to go to school like everyone else his age."
+>
+  So haben wir den Sechsjährigen vorgefunden: teilnahms- und hoffnungslos saß er zusammengekauert auf einem Rutschauto für Kleinkinder. Aufgrund von Verletzungen im Kleinkindalter war auch er von Osteomyelitis bedroht. Er konnte nicht laufen und sich nur schiebend vorwärtsbewegen. Er verbrachte den ganzen Tag in sich gekehrt bei den Müttern und Kleinkindern seines Compounds. Er schaute sehnsüchtig den Gleichaltrigen hinterher, wenn sie spielen gingen. Sein größter Wunsch war, zur Schule gehen zu können, wie alle anderen in seinem Alter auch.
+</p>
+<p style="margin-top:1rem;"
+  data-de="Von einem älteren Jungen, ebenfalls gehbehindert, bekamen wir kurzfristig einen Rollstuhl zur Verfügung gestellt, den er nicht mehr brauchte. Daraufhin war es möglich, ihn an einer Schule anzumelden. ONE LOVE – ONE HEART Gambia hat ihn jeden Tag zur Schule gebracht und abgeholt."
+  data-en="An older boy, who also has a walking disability, lent us a wheelchair at short notice that he no longer needed. That made it possible to enrol him in a school. ONE LOVE – ONE HEART Gambia took him to school and picked him up every day."
+>
+  Von einem älteren Jungen, ebenfalls gehbehindert, bekamen wir kurzfristig einen Rollstuhl zur Verfügung gestellt, den er nicht mehr brauchte. Daraufhin war es möglich, ihn an einer Schule anzumelden. ONE LOVE – ONE HEART Gambia hat ihn jeden Tag zur Schule gebracht und abgeholt.
+</p>
+<p style="margin-top:1rem;"
+  data-de="Weil seine Behandlung unseren Rahmen sprengte, haben wir ihn an das britische GLOVE-Project weitervermittelt. Dort wurde er monatelang behandelt und gepflegt."
+  data-en="Because his treatment was beyond our means, we referred him to the British GLOVE Project. There he was treated and cared for for months."
+>
+  Weil seine Behandlung unseren Rahmen sprengte, haben wir ihn an das britische GLOVE-Project weitervermittelt. Dort wurde er monatelang behandelt und gepflegt.
+</p>
+<p style="margin-top:1rem;"
+  data-de="Als er nach Hause zurückkehrte, konnte er am Rollator laufen. Die konsequente Physiotherapie hat sich als hilfreich erwiesen. Im Anschluss trainierte er, mittlerweile sieben Jahre alt geworden und ein aufgeweckter Junge, jeden Tag hartnäckig, um wieder alleine laufen zu lernen."
+  data-en="When he returned home, he could walk with a walker. Consistent physiotherapy proved helpful. Afterwards, now seven years old and a lively boy, he trained stubbornly every day to learn to walk on his own again."
+>
+  Als er nach Hause zurückkehrte, konnte er am Rollator laufen. Die konsequente Physiotherapie hat sich als hilfreich erwiesen. Im Anschluss trainierte er, mittlerweile sieben Jahre alt geworden und ein aufgeweckter Junge, jeden Tag hartnäckig, um wieder alleine laufen zu lernen.
+</p>
+<p style="margin-top:1rem;"
+  data-de="Das gelingt ihm. Er kann nun alleine kurze Strecken zurücklegen – zwar wird er immer hinken, aber das hindert ihn überhaupt nicht daran, auf Bäume zu klettern und mit seinen Freunden zu spielen."
+  data-en="He succeeded. He can now walk short distances on his own – he will always limp, but that does not stop him at all from climbing trees and playing with his friends."
+>
+  Das gelingt ihm. Er kann nun alleine kurze Strecken zurücklegen – zwar wird er immer hinken, aber das hindert ihn überhaupt nicht daran, auf Bäume zu klettern und mit seinen Freunden zu spielen.
+</p>
+<p style="margin-top:1rem;"
+  data-de="ONE LOVE – ONE HEART Gambia hat dem heute Neunjährigen ein Fahrrad besorgt. Seither fährt er damit mit seinen Freunden zur Schule."
+  data-en="ONE LOVE – ONE HEART Gambia got a bicycle for him, now nine years old. Since then he rides it to school with his friends."
+>
+  ONE LOVE – ONE HEART Gambia hat dem heute Neunjährigen ein Fahrrad besorgt. Seither fährt er damit mit seinen Freunden zur Schule.
+</p>
         </div>
       </div>
     </section>
 
     <!-- ══════════════════════════════════════
-         ISATOU
+         14-JÄHRIGE (Myasthenia Gravis)
     ══════════════════════════════════════ -->
     <section class="section section--sand-dark">
       <div class="container grid-2">
         <div class="reveal">
-          <div class="photo-placeholder" style="min-height:360px;">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="3" y="3" width="18" height="18" rx="2"/>
-              <circle cx="8.5" cy="8.5" r="1.5"/>
-              <path d="m21 15-5-5L5 21"/>
-            </svg>
-            <span data-de="Foto: Isatou" data-en="Photo: Isatou">Foto: Isatou</span>
-          </div>
+          <!-- Doc image 5: 14-year-old with Myasthenia Gravis (NOT published without consent) -->
+          <div class="photo-placeholder" style="min-height:360px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span data-de="Foto: Die 14-Jährige mit Myasthenia Gravis" data-en="Photo: The 14-year-old with Myasthenia Gravis">Foto: Die 14-Jährige mit Myasthenia Gravis</span></div>
         </div>
         <div class="reveal">
           <span class="section-label" data-de="Geschichte" data-en="Story">Geschichte</span>
-          <p class="story-name">Isatou</p>
           <span class="diagnosis-badge" data-de="Myasthenia Gravis" data-en="Myasthenia Gravis">Myasthenia Gravis</span>
           <p style="margin-top:.8rem;"
-            data-de="Isatou leidet seit einem schlimmen Fieber an Myasthenia Gravis, einer unheilbaren Autoimmunerkrankung. Unser Team von ONE LOVE – ONE HEART e.V. fand sie geschwächt und unterernährt vor. Sie konnte ab Mittag kaum mehr die Augen öffnen, geschweige denn die Arme heben, denn diese Erkrankung geht mit einer starken Fatigue einher."
-            data-en="Isatou has been suffering from Myasthenia Gravis — an incurable autoimmune disease — since a severe fever. Our ONE LOVE – ONE HEART e.V. team found her weakened and malnourished. By midday she could barely open her eyes, let alone raise her arms, as this condition is accompanied by severe fatigue."
-          >
-            Isatou leidet seit einem schlimmen Fieber an Myasthenia Gravis, einer unheilbaren Autoimmunerkrankung. Unser Team von ONE LOVE – ONE HEART e.V. fand sie geschwächt und unterernährt vor. Sie konnte ab Mittag kaum mehr die Augen öffnen, geschweige denn die Arme heben, denn diese Erkrankung geht mit einer starken Fatigue einher.
-          </p>
+  data-de="Die 14-Jährige leidet seit einem schlimmen Fieber an Myasthenia Gravis, einer unheilbaren Autoimmunerkrankung. Unser Team von ONE LOVE – ONE HEART e.V. fand sie geschwächt und unterernährt vor. Sie konnte kaum die Augen öffnen, geschweige denn die Arme heben, denn diese Erkrankung geht mit einer starken Fatigue einher. Ein von uns organisierter und finanzierter Besuch in der Kinderklinik Banjul brachte endlich die richtige Diagnose und ein Rezept für ein Medikament, das in Gambia nicht erhältlich ist und wir über Dakar/Senegal aus Frankreich importieren mussten. Seit sie damit versorgt ist, kann sie zur Schule gehen und ist ein ganz normaler wissbegieriger Teenager."
+  data-en="The 14-year-old has suffered from Myasthenia Gravis, an incurable autoimmune disease, since a severe fever. Our ONE LOVE – ONE HEART e.V. team found her weakened and malnourished. She could hardly open her eyes, let alone raise her arms, because this illness comes with severe fatigue. A visit to the children&#x27;s clinic in Banjul, organised and paid for by us, finally brought the right diagnosis and a prescription for a medication that is not available in Gambia and that we had to import from France via Dakar/Senegal. Since she has been receiving it, she can go to school and is a completely normal, curious teenager."
+>
+  Die 14-Jährige leidet seit einem schlimmen Fieber an Myasthenia Gravis, einer unheilbaren Autoimmunerkrankung. Unser Team von ONE LOVE – ONE HEART e.V. fand sie geschwächt und unterernährt vor. Sie konnte kaum die Augen öffnen, geschweige denn die Arme heben, denn diese Erkrankung geht mit einer starken Fatigue einher. Ein von uns organisierter und finanzierter Besuch in der Kinderklinik Banjul brachte endlich die richtige Diagnose und ein Rezept für ein Medikament, das in Gambia nicht erhältlich ist und wir über Dakar/Senegal aus Frankreich importieren mussten. Seit sie damit versorgt ist, kann sie zur Schule gehen und ist ein ganz normaler wissbegieriger Teenager.
+</p>
           <p style="margin-top:1rem;"
-            data-de="Ein von uns organisierter und finanzierter Besuch in der Kinderklinik Banjul brachte endlich die richtige Diagnose und ein Rezept über ein Medikament, das in Gambia nicht erhältlich ist und wir über Dakar/Senegal aus Frankreich importieren mussten."
-            data-en="A visit to the children's clinic in Banjul, organised and funded by us, finally produced the correct diagnosis and a prescription for a medication not available in Gambia, which we had to import from France via Dakar/Senegal."
-          >
-            Ein von uns organisierter und finanzierter Besuch in der Kinderklinik Banjul brachte endlich die richtige Diagnose und ein Rezept über ein Medikament, das in Gambia nicht erhältlich ist und wir über Dakar/Senegal aus Frankreich importieren mussten.
-          </p>
+  data-de="Da Myasthenia Gravis eine progressive Erkrankung ist, muss sie ein Leben lang mit diesem Medikament versorgt werden. Wenn nicht, wird ihre Muskulatur weiterhin abnehmen. Das kann dazu führen, dass auch die Lunge nicht mehr richtig arbeiten kann."
+  data-en="Because Myasthenia Gravis is a progressive disease, she must be supplied with this medication for the rest of her life. If not, her muscles will continue to waste away. This can lead to the lungs no longer working properly either."
+>
+  Da Myasthenia Gravis eine progressive Erkrankung ist, muss sie ein Leben lang mit diesem Medikament versorgt werden. Wenn nicht, wird ihre Muskulatur weiterhin abnehmen. Das kann dazu führen, dass auch die Lunge nicht mehr richtig arbeiten kann.
+</p>
           <p style="margin-top:1rem;"
-            data-de="Seit sie damit versorgt ist, kann sie zur Schule gehen und ist ein ganz normaler Teenager."
-            data-en="Since she has been receiving the medication, she can go to school and is a completely normal teenager."
-          >
-            Seit sie damit versorgt ist, kann sie zur Schule gehen und ist ein ganz normaler Teenager.
-          </p>
+  data-de="Wir besorgen das Medikament derzeit in Europa und nehmen es ihr mit nach Gambia."
+  data-en="We currently obtain the medication in Europe and take it to her in Gambia."
+>
+  Wir besorgen das Medikament derzeit in Europa und nehmen es ihr mit nach Gambia.
+</p>
         </div>
       </div>
     </section>
 
     <!-- ══════════════════════════════════════
-         KUMBA
+         KLEINES MÄDCHEN (Trisomie 21)
     ══════════════════════════════════════ -->
     <section class="section section--sand">
       <div class="container grid-2">
         <div class="reveal">
           <span class="section-label" data-de="Geschichte" data-en="Story">Geschichte</span>
-          <p class="story-name">Kumba</p>
           <span class="diagnosis-badge" data-de="Trisomie 21 · Gangstörung" data-en="Down Syndrome · Gait Disorder">Trisomie 21 · Gangstörung</span>
           <p style="margin-top:.8rem;"
-            data-de="Kumba wurde mit Trisomie 21 geboren. Zusätzlich leidet sie an einer Störung des Gangapparates. Die Vermittlung in Physiotherapie hat wahre Wunder bewirkt. Im Alter von zwei Jahren hat sie nun laufen gelernt."
-            data-en="Kumba was born with Down syndrome. She additionally suffers from a gait disorder. Referral to physiotherapy worked wonders. At the age of two she has now learned to walk."
-          >
-            Kumba wurde mit Trisomie 21 geboren. Zusätzlich leidet sie an einer Störung des Gangapparates. Die Vermittlung in Physiotherapie hat wahre Wunder bewirkt. Im Alter von zwei Jahren hat sie nun laufen gelernt.
-          </p>
+  data-de="Das kleine Mädchen wurde mit Trisomie 21 geboren. Zusätzlich leidet sie an einer Störung des Gangapparates. Die Vermittlung in Physiotherapie hat wahre Wunder bewirkt. Im Alter von zwei Jahren hat sie nun laufen gelernt."
+  data-en="The little girl was born with Down syndrome. In addition, she suffers from a disorder of the gait apparatus. Referral to physiotherapy has worked wonders. At the age of two, she has now learned to walk."
+>
+  Das kleine Mädchen wurde mit Trisomie 21 geboren. Zusätzlich leidet sie an einer Störung des Gangapparates. Die Vermittlung in Physiotherapie hat wahre Wunder bewirkt. Im Alter von zwei Jahren hat sie nun laufen gelernt.
+</p>
         </div>
         <div class="reveal">
-          <div class="photo-placeholder" style="min-height:260px;">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="3" y="3" width="18" height="18" rx="2"/>
-              <circle cx="8.5" cy="8.5" r="1.5"/>
-              <path d="m21 15-5-5L5 21"/>
-            </svg>
-            <span data-de="Foto: Kumba" data-en="Photo: Kumba">Foto: Kumba</span>
-          </div>
+          <!-- Doc image 6: girl with Trisomy 21 and mother (NOT published without consent) -->
+          <div class="photo-placeholder" style="min-height:260px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span data-de="Foto: Das kleine Mädchen mit Trisomie 21" data-en="Photo: The little girl with Down syndrome">Foto: Das kleine Mädchen mit Trisomie 21</span></div>
         </div>
       </div>
     </section>
 
     <!-- ══════════════════════════════════════
-         REICHWEITE + KLINIK-GRUPPENFOTO
+         REICHWEITE + KLINIK-GRUPPENFOTOS
     ══════════════════════════════════════ -->
     <section class="section section--sand-dark">
       <div class="container">
         <div class="reveal" style="max-width:780px;margin:0 auto;text-align:center;">
           <span class="section-label" data-de="Unsere Reichweite" data-en="Our Reach">Unsere Reichweite</span>
-          <h2 data-de="Viele Kinder brauchen unsere Hilfe" data-en="Many Children Need Our Help">
-            Viele Kinder brauchen unsere Hilfe
-          </h2>
+          <h2 data-de="Viele Kinder brauchen unsere Hilfe" data-en="Many Children Need Our Help">Viele Kinder brauchen unsere Hilfe</h2>
           <p
-            data-de="Solche Kinder gibt es in Gambia unzählige. Das sind nur ein paar besonders prägnante Fälle aus der Nachbarschaft des gambischen Vereinssitzes von ONE LOVE – ONE HEART e.V. in Tanjeh und Umgebung. Wir möchten noch viel mehr Kinder unterstützen. Fast täglich wenden sich Eltern an uns und bitten um Unterstützung."
-            data-en="There are countless children like these in Gambia. These are just a few particularly striking cases from the neighbourhood of ONE LOVE – ONE HEART e.V.'s Gambian base in Tanjeh and surrounding areas. We want to support many more children. Almost every day parents come to us asking for help."
-          >
-            Solche Kinder gibt es in Gambia unzählige. Das sind nur ein paar besonders prägnante Fälle aus der Nachbarschaft des gambischen Vereinssitzes von ONE LOVE – ONE HEART e.V. in Tanjeh und Umgebung. Wir möchten noch viel mehr Kinder unterstützen. Fast täglich wenden sich Eltern an uns und bitten um Unterstützung.
-          </p>
+  data-de="Solche Kinder gibt es in Gambia unzählige. Das sind nur ein paar besonders prägnante Fälle aus der Nachbarschaft unseres gambischen Vereinssitzes von ONE LOVE – ONE HEART e.V. in Tanji und Umgebung. Wir möchten noch viel mehr Kinder unterstützen. Fast täglich wenden sich Eltern an uns und bitten um Unterstützung. Das Wissen um die Möglichkeiten der modernen Medizin, wo sie zu finden ist und wie man sie finanzieren kann, ist oftmals gering. In Gambia gibt es immer noch viele Menschen ohne Schulbildung, nicht alphabetisiert und ohne Grundwissen über Hygiene und Wundheilung. Uns ist es ein Anliegen, dieses Wissen zu verbessern und weiterzugeben, ohne die hier gängigen Naturheilmethoden außer Acht zu lassen."
+  data-en="There are countless children like these in Gambia. These are just a few particularly striking cases from the neighbourhood of the Gambian base of ONE LOVE – ONE HEART e.V. in Tanji and the surrounding area. We would like to support many more children. Almost every day, parents turn to us and ask for support. Knowledge about the possibilities of modern medicine, where to find it and how to pay for it, is often limited. In Gambia there are still many people without schooling, who cannot read or write and have no basic knowledge of hygiene and wound healing. It is important to us to improve and pass on this knowledge, without disregarding the natural healing methods that are common here."
+>
+  Solche Kinder gibt es in Gambia unzählige. Das sind nur ein paar besonders prägnante Fälle aus der Nachbarschaft unseres gambischen Vereinssitzes von ONE LOVE – ONE HEART e.V. in Tanji und Umgebung. Wir möchten noch viel mehr Kinder unterstützen. Fast täglich wenden sich Eltern an uns und bitten um Unterstützung. Das Wissen um die Möglichkeiten der modernen Medizin, wo sie zu finden ist und wie man sie finanzieren kann, ist oftmals gering. In Gambia gibt es immer noch viele Menschen ohne Schulbildung, nicht alphabetisiert und ohne Grundwissen über Hygiene und Wundheilung. Uns ist es ein Anliegen, dieses Wissen zu verbessern und weiterzugeben, ohne die hier gängigen Naturheilmethoden außer Acht zu lassen.
+</p>
         </div>
 
-        <!-- Clinic group photo -->
-        <div class="reveal" style="margin-top:2rem;">
-          <div class="photo-placeholder" style="min-height:300px;">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="3" y="3" width="18" height="18" rx="2"/>
-              <circle cx="8.5" cy="8.5" r="1.5"/>
-              <path d="m21 15-5-5L5 21"/>
-            </svg>
-            <span
-              data-de="Gruppenfoto an der Edward Francis Clinic in Banjul — mit Kindern und Müttern an der Kinderklinik in der Hauptstadt"
-              data-en="Group photo at the Edward Francis Clinic in Banjul — with children and mothers at the children's hospital in the capital"
-            >
-              Gruppenfoto an der Edward Francis Clinic in Banjul<br>
-              mit Kindern und Müttern an der Kinderklinik in der Hauptstadt
-            </span>
-          </div>
+        <!-- Doc images 7-8: clinic group photos with children (NOT published without consent) -->
+        <div class="reveal before-after" style="margin-top:2rem;">
+          <div class="photo-placeholder" style="min-height:300px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span data-de="Foto: Gruppenfoto an der Edward Francis Clinic in Banjul (1)" data-en="Photo: Group photo at the Edward Francis Clinic in Banjul (1)">Foto: Gruppenfoto an der Edward Francis Clinic in Banjul (1)</span></div>
+          <div class="photo-placeholder" style="min-height:300px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span data-de="Foto: Gruppenfoto an der Edward Francis Clinic in Banjul (2)" data-en="Photo: Group photo at the Edward Francis Clinic in Banjul (2)">Foto: Gruppenfoto an der Edward Francis Clinic in Banjul (2)</span></div>
+        </div>
+        <div class="reveal" style="text-align:center;">
+          <p style="font-style:italic;font-size:.9rem;"
+  data-de="Vereinsleiter Sheriffo Baldeh mit unseren Schützlingen an der Edward Francis Clinic in Banjul"
+  data-en="Association leader Sheriffo Baldeh with the children in our care at the Edward Francis Clinic in Banjul"
+>
+  Vereinsleiter Sheriffo Baldeh mit unseren Schützlingen an der Edward Francis Clinic in Banjul
+</p>
         </div>
       </div>
     </section>
@@ -427,57 +428,98 @@
          b) ERNÄHRUNG
     ══════════════════════════════════════ -->
     <section class="section section--sand">
-      <div class="container grid-2">
-        <div class="reveal">
+      <div class="container">
+        <div class="reveal" style="max-width:780px;margin:0 auto;text-align:center;">
           <span class="section-label" data-de="b) Ernährung" data-en="b) Nutrition">b) Ernährung</span>
           <h2 data-de="Diskrete Hilfe mit Würde" data-en="Discreet Help with Dignity">Diskrete Hilfe mit Würde</h2>
-          <p
-            data-de="Uns ist wichtig, die Würde unserer Spendenempfänger zu wahren. Deswegen überbringen wir die Nahrungsmittelspenden oft nachts oder am frühen Morgen, wenn Nachbarn es nicht mitbekommen. Das erklärt die manchmal schlechte Bildqualität."
-            data-en="Preserving the dignity of those we help is very important to us. This is why we often deliver food donations at night or early in the morning, when neighbours cannot notice. This also explains the sometimes poor image quality."
-          >
-            Uns ist wichtig, die Würde unserer Spendenempfänger zu wahren. Deswegen überbringen wir die Nahrungsmittelspenden oft nachts oder am frühen Morgen, wenn Nachbarn es nicht mitbekommen. Das erklärt die manchmal schlechte Bildqualität.
-          </p>
-          <p style="margin-top:1rem;"
-            data-de="Ein weiterer Unterschied ist, dass es hierzulande üblich ist, diskret zu spenden: Eine der fünf Säulen des Islam ist Spenden – aber nicht, um sich damit hervorzuheben, sondern um der Unterstützung der Menschen wegen. Wir versuchen uns an diese Kultur zu halten. Deswegen sind wir auf den meisten Fotos nicht zu sehen, nur die Spenden oder die Beschenkten."
-            data-en="Another difference is that here it is customary to donate discreetly: one of the five pillars of Islam is giving — not to draw attention to oneself, but for the sake of supporting people. We try to follow this culture. That is why we are not visible in most photos — only the donations or the recipients."
-          >
-            Ein weiterer Unterschied ist, dass es hierzulande üblich ist, diskret zu spenden: Eine der fünf Säulen des Islam ist Spenden – aber nicht, um sich damit hervorzuheben, sondern um der Unterstützung der Menschen wegen. Wir versuchen uns an diese Kultur zu halten. Deswegen sind wir auf den meisten Fotos nicht zu sehen, nur die Spenden oder die Beschenkten.
-          </p>
-          <p style="margin-top:1rem;"
-            data-de="Die meisten der hier abgebildeten Personen sind alleinerziehende Mütter, Witwen mit vielen Kindern oder einkommensschwache Familien, in denen der Haupternährer krank ist."
-            data-en="Most of the people depicted are single mothers, widows with many children, or low-income families in which the main breadwinner is ill."
-          >
-            Die meisten der hier abgebildeten Personen sind alleinerziehende Mütter, Witwen mit vielen Kindern oder einkommensschwache Familien, in denen der Haupternährer krank ist.
-          </p>
         </div>
-        <!-- Photo strip -->
-        <div class="reveal">
-          <div class="photo-strip">
-            <div class="photo-placeholder">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-                <path d="m21 15-5-5L5 21"/>
-              </svg>
-              <span data-de="Nahrungsmittelspende" data-en="Food donation">Nahrungsmittelspende</span>
-            </div>
-            <div class="photo-placeholder">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-                <path d="m21 15-5-5L5 21"/>
-              </svg>
-              <span data-de="Nahrungsmittelspende" data-en="Food donation">Nahrungsmittelspende</span>
-            </div>
-            <div class="photo-placeholder">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-                <path d="m21 15-5-5L5 21"/>
-              </svg>
-              <span data-de="Nahrungsmittelspende" data-en="Food donation">Nahrungsmittelspende</span>
-            </div>
+        <div class="grid-2" style="align-items:center;margin-top:3rem;">
+          <div class="reveal"><img class="story-photo" src="../../../assets/images/photo-ernaehrung-lebensmittel-transport-2026.jpg" alt="Transporter mit Lebensmittelspenden (Reis, Zwiebeln, Öl) auf dem Dachgepäckträger" loading="lazy" /></div>
+          <div class="reveal">
+<p
+  data-de="ONE LOVE – ONE HEART Gambia-Vereinsleiter Sheriffo Baldeh verteilt kurz vor Ramadan Lebensmittelspenden an unsere Zuwendungsempfänger. Reis, Zwiebeln und Öl sind die wichtigsten Lebensmittel hier. Im Ramadan sorgen auch Bohnen, Nudeln und Zucker für Abwechslung im einfachen Speiseplan der Menschen."
+  data-en="ONE LOVE – ONE HEART Gambia association leader Sheriffo Baldeh distributes food donations to our beneficiaries shortly before Ramadan. Rice, onions and oil are the most important foods here. During Ramadan, beans, pasta and sugar also add variety to people&#x27;s simple diet."
+>
+  ONE LOVE – ONE HEART Gambia-Vereinsleiter Sheriffo Baldeh verteilt kurz vor Ramadan Lebensmittelspenden an unsere Zuwendungsempfänger. Reis, Zwiebeln und Öl sind die wichtigsten Lebensmittel hier. Im Ramadan sorgen auch Bohnen, Nudeln und Zucker für Abwechslung im einfachen Speiseplan der Menschen.
+</p>
           </div>
+        </div>
+        <div class="grid-2" style="align-items:center;margin-top:3rem;">
+          <div class="reveal">
+<p
+  data-de="Ernährungssicherheit ist ein großes Thema in Gambia. Die meisten Kinder sind unter- oder mangelernährt, Hauptnahrungsmittel sind Reis, Zwiebeln und Fisch. Es wird gemeinsam aus einer großen Schüssel auf dem Boden gegessen und dabei gerecht geteilt. Für viele Familien heißt das, dass sie nicht essen können, bis sie satt sind, sondern halb hungrig den Löffel weglegen – wenn sie nicht ohnehin mit der Hand gegessen haben."
+  data-en="Food security is a major issue in Gambia. Most children are under- or malnourished; the staple foods are rice, onions and fish. People eat together from one large bowl on the floor and share fairly. For many families this means they cannot eat until they are full, but put down the spoon still half hungry – if they have not been eating with their hands anyway."
+>
+  Ernährungssicherheit ist ein großes Thema in Gambia. Die meisten Kinder sind unter- oder mangelernährt, Hauptnahrungsmittel sind Reis, Zwiebeln und Fisch. Es wird gemeinsam aus einer großen Schüssel auf dem Boden gegessen und dabei gerecht geteilt. Für viele Familien heißt das, dass sie nicht essen können, bis sie satt sind, sondern halb hungrig den Löffel weglegen – wenn sie nicht ohnehin mit der Hand gegessen haben.
+</p>
+          </div>
+          <div class="reveal"><img class="story-photo story-photo--narrow" src="../../../assets/images/photo-ernaehrung-kinder-reis-2026.jpg" alt="Drei Kinder sitzen vor einem Sack Reis, einer Packung Nudeln, einem Kanister Öl und einem Sack Zwiebeln" loading="lazy" /></div>
+        </div>
+        <div class="grid-2" style="align-items:center;margin-top:3rem;">
+          <div class="reveal"><img class="story-photo story-photo--portrait" src="../../../assets/images/photo-ernaehrung-familie-1-2026.jpg" alt="Lächelndes Mädchen mit Lebensmittelspenden (Zwiebeln, Nudeln, Öl), im Hintergrund weitere Familienmitglieder" loading="lazy" /></div>
+          <div class="reveal">
+<p
+  data-de="Die meisten der hier abgebildeten Personen sind alleinerziehende Mütter, Witwen mit vielen Kindern oder einkommensschwache Familien, in denen der/die Haupternährer/in krank ist oder gänzlich fehlt."
+  data-en="Most of the people shown here are single mothers, widows with many children, or low-income families in which the main breadwinner is ill or missing altogether."
+>
+  Die meisten der hier abgebildeten Personen sind alleinerziehende Mütter, Witwen mit vielen Kindern oder einkommensschwache Familien, in denen der/die Haupternährer/in krank ist oder gänzlich fehlt.
+</p>
+          </div>
+        </div>
+        <div class="grid-2" style="align-items:center;margin-top:3rem;">
+          <div class="reveal">
+<p
+  data-de="Sirre ist Witwe und lebt mit ihren acht Kindern in einem selbstgezimmerten Wellblechhaus. Sie ist eine zupackende Frau, die einen Gemüsegarten auf einem Stück Land betreibt, das ihr von einem freundlichen Nachbarn zur Verfügung gestellt wurde. Denn auch das ist Gambia: Man hilft sich, jeder wie er eben kann. Ihre älteren Kinder unterstützen ihre Mutter mit dem Gemüseverkauf auf dem Markt. Wir haben ihr ein Fahrrad besorgt, damit sie die Waren leichter transportieren können."
+  data-en="Sirre is a widow and lives with her eight children in a self-built corrugated-iron house. She is a hands-on woman who runs a vegetable garden on a piece of land provided by a friendly neighbour – because that, too, is Gambia: people help each other, each as best they can. Her older children support their mother by selling vegetables at the market. We got her a bicycle so that they can transport the goods more easily."
+>
+  Sirre ist Witwe und lebt mit ihren acht Kindern in einem selbstgezimmerten Wellblechhaus. Sie ist eine zupackende Frau, die einen Gemüsegarten auf einem Stück Land betreibt, das ihr von einem freundlichen Nachbarn zur Verfügung gestellt wurde. Denn auch das ist Gambia: Man hilft sich, jeder wie er eben kann. Ihre älteren Kinder unterstützen ihre Mutter mit dem Gemüseverkauf auf dem Markt. Wir haben ihr ein Fahrrad besorgt, damit sie die Waren leichter transportieren können.
+</p>
+<p style="margin-top:1rem;"
+  data-de="Uns ist wichtig, die Würde unserer Spendenempfänger zu wahren. Deswegen überbringen wir diskret die Nahrungsmittelspenden oft nachts oder am frühen Morgen, wenn Nachbarn es nicht mitbekommen. Ein weiterer Unterschied liegt in der Religionszugehörigkeit: eine der fünf Säulen des Islam ist Spenden – aber nicht, um sich damit zu zeigen, sondern schlicht um der Menschen willen. Wir versuchen uns an diese Kultur zu halten."
+  data-en="It is important to us to preserve the dignity of those who receive our donations. That is why we deliver food donations discreetly, often at night or early in the morning, when neighbours do not notice. Another difference lies in religion: one of the five pillars of Islam is giving – but not to show off, simply for the sake of people. We try to respect this culture."
+>
+  Uns ist wichtig, die Würde unserer Spendenempfänger zu wahren. Deswegen überbringen wir diskret die Nahrungsmittelspenden oft nachts oder am frühen Morgen, wenn Nachbarn es nicht mitbekommen. Ein weiterer Unterschied liegt in der Religionszugehörigkeit: eine der fünf Säulen des Islam ist Spenden – aber nicht, um sich damit zu zeigen, sondern schlicht um der Menschen willen. Wir versuchen uns an diese Kultur zu halten.
+</p>
+          </div>
+          <div class="reveal"><img class="story-photo" src="../../../assets/images/photo-ernaehrung-sirre-familie-2026.jpg" alt="Sirre mit ihren Kindern vor ihrem Wellblechhaus, davor ein Sack Reis und ein Fahrrad" loading="lazy" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         c) ZAHNGESUNDHEIT
+    ══════════════════════════════════════ -->
+    <section class="section section--sand-dark" id="zahngesundheit">
+      <div class="container">
+        <div class="grid-2" style="align-items:center;">
+          <div class="reveal">
+            <img class="story-photo story-photo--narrow" src="../../../assets/images/photo-zahngesundheit-1-2026.jpg" alt="Kind beim Zähneputzen, dahinter weitere Kinder mit Zahnbürsten" loading="lazy" />
+          </div>
+          <div class="reveal">
+            <span class="section-label" data-de="c) Zahngesundheit" data-en="c) Dental Health">c) Zahngesundheit</span>
+            <h2 data-de="Zahngesundheit" data-en="Dental Health">Zahngesundheit</h2>
+            <p
+  data-de="Die Zahngesundheit ist ein Stiefkind der Medizin in Gambia. Oft ziehen sich die Menschen schmerzende Zähne in ihrer Verzweiflung selbst, mit äußerst primitiven Methoden. Prävention oder auch nur der Erhalt von Zähnen sind den Wohlhabenderen vorbehalten. Also ist die gängigste Art der Behandlung das Zähneziehen – bei einer Art Bader und ohne Narkose. Hatte ein Patient eine Zahnwurzelentzündung, kann es nach einer solchen Behandlung passieren, dass er stirbt, da Eiter in die Blutbahn gelangt und eine Sepsis entsteht."
+  data-en="Dental health is the stepchild of medicine in Gambia. In their desperation, people often pull aching teeth themselves, using extremely primitive methods. Prevention, or even just keeping one&#x27;s teeth, is reserved for the better-off. So the most common form of treatment is pulling teeth – at the hands of a kind of barber, and without anaesthesia. If a patient had an infected tooth root, such treatment can result in death, as pus enters the bloodstream and causes sepsis."
+>
+  Die Zahngesundheit ist ein Stiefkind der Medizin in Gambia. Oft ziehen sich die Menschen schmerzende Zähne in ihrer Verzweiflung selbst, mit äußerst primitiven Methoden. Prävention oder auch nur der Erhalt von Zähnen sind den Wohlhabenderen vorbehalten. Also ist die gängigste Art der Behandlung das Zähneziehen – bei einer Art Bader und ohne Narkose. Hatte ein Patient eine Zahnwurzelentzündung, kann es nach einer solchen Behandlung passieren, dass er stirbt, da Eiter in die Blutbahn gelangt und eine Sepsis entsteht.
+</p>
+<p style="margin-top:1rem;"
+  data-de="Umso wichtiger ist die Zahnhygiene. In Gambia werden Zähne normalerweise mit einem Stöckchen des Miswagbaumes geputzt."
+  data-en="Dental hygiene is all the more important. In Gambia, teeth are normally cleaned with a small twig from the Miswak tree."
+>
+  Umso wichtiger ist die Zahnhygiene. In Gambia werden Zähne normalerweise mit einem Stöckchen des Miswagbaumes geputzt.
+</p>
+<p style="margin-top:1rem;"
+  data-de="Deswegen führen wir regelmäßig Zahnputzaktionen durch. Jedes Kind bekommt eine Zahnbürste, Zahncreme und eine gemeinschaftliche Schulung in Sachen Zähneputzen. Alle sind mit Spaß und Enthusiasmus dabei, Groß und Klein."
+  data-en="That is why we regularly run tooth-brushing campaigns. Every child gets a toothbrush, toothpaste and group training in how to brush. Everyone takes part with fun and enthusiasm, young and old."
+>
+  Deswegen führen wir regelmäßig Zahnputzaktionen durch. Jedes Kind bekommt eine Zahnbürste, Zahncreme und eine gemeinschaftliche Schulung in Sachen Zähneputzen. Alle sind mit Spaß und Enthusiasmus dabei, Groß und Klein.
+</p>
+          </div>
+        </div>
+        <div class="reveal" style="margin-top:2.5rem;">
+          <img class="story-photo story-photo--wide" src="../../../assets/images/photo-zahngesundheit-2-2026.jpg" alt="Kinder sitzen im Freien im Kreis und putzen sich gemeinsam die Zähne" loading="lazy" />
         </div>
       </div>
     </section>
