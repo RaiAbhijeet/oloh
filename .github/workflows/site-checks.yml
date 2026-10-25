@@ -1,0 +1,24 @@
+# Runs tests/check_site.py (broken links, HTML structure, DE/EN attributes,
+# footer, sitemap) on every push to any branch, on every pull request into
+# main, and after merges into main.
+name: Site checks
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check site
+        run: python tests/check_site.py

@@ -3,8 +3,9 @@
 # Enable once per clone with:  git config core.hooksPath .githooks
 # Skip in an emergency with:   git commit --no-verify
 
+# "python3" on Windows is often a Microsoft Store stub, so test that it runs.
 PY=python3
-command -v "$PY" >/dev/null 2>&1 || PY=python
+"$PY" -c "" >/dev/null 2>&1 || PY=python
 
 "$PY" "$(git rev-parse --show-toplevel)/tests/check_site.py" || {
   echo
