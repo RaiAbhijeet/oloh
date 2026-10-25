@@ -116,6 +116,14 @@ subpages were copied unadjusted from `index.html` and led to 404s;
 
 ## 5. Git workflow
 
+0. **Commit identity for this repo only:** all commits must use
+   `abhijeet.rai101@gmail.com` (name `RaiAbhijeet`). Set it with
+   `git config --local user.email "abhijeet.rai101@gmail.com"` — **never**
+   with `--global`, because the developer uses a different email for other
+   git projects on the same machine. Before committing, check
+   `git config --local user.email`; if it's empty or different, set it
+   locally first. Never pass `--author` or change the global config to work
+   around it.
 1. **Never commit content changes directly to `main`.** Create a feature
    branch first, e.g. `content-update-<short-date-or-topic>`.
 2. Make all edits on that branch.
@@ -149,10 +157,8 @@ subpages were copied unadjusted from `index.html` and led to 404s;
 
 ## 6. Reference info (source of truth lives in the code, but noted here since it's not obvious from files alone)
 
-- Contact email: `ilasinning@yahoo.de` on most pages, but the topbar on
-  `index.html` and `pages/spenden/` was switched to `ilasinning@yahoo.com`
-  directly on GitHub in October 2026. Which one is correct is still open —
-  ask the owner before changing either.
+- Contact email used sitewide: `ilasinning@yahoo.com` (confirmed October
+  2026 — the old `ilasinning@yahoo.de` is wrong and must not come back).
 - Legal address: Wiesenstr. 17, 58452 Witten (see `Beitrittserklärung.pdf`)
 - Org name in full: "One Love – One Heart e.V. — Gambia – Gomera – Germany"
 - The `changes/` folder is a scratch/inbox area for source documents the
