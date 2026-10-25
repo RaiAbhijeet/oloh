@@ -8,6 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../assets/css/main.css" />
+  <style>
+    /* photo strip at the end of the page: always in colour (main.css makes it grey until hover) */
+    .gallery-strip__item img { filter: none; }
+  </style>
 </head>
 <body>
 
@@ -37,9 +41,7 @@
     </div>
   </nav>
 
-  <section class="hero" style="min-height:40vh;">
-    <div class="hero-bg" style="background-image:url('../../assets/images/photo-children.jpg');"></div>
-    <div class="hero-overlay"></div>
+  <section class="hero hero--compact">
     <div class="hero-content">
       <h1 data-de="Wer wir sind" data-en="Who We Are">Wer wir sind</h1>
       <p class="hero-sub"
@@ -69,10 +71,6 @@
                     data-en="We see ourselves as a Black-and-White community project with the utopia of acting as equals. Meet the locals, live with the locals!">
           "Wir verstehen uns als ein schwarz-weißes Gemeinschaftsprojekt mit der Utopie, auf Augenhöhe zu agieren. Meet the locals, live with the locals!"
         </blockquote>
-        <p data-de="[Hier weiteren Text über die Gründung, das Team, die Vision einfügen …]"
-           data-en="[Insert further text about the founding, the team, the vision here …]">
-          [Hier weiteren Text über die Gründung, das Team, die Vision einfügen …]
-        </p>
       </div>
       <div class="reveal">
         <!-- Replace with team photo (Annette & Marion) when available -->
@@ -94,20 +92,35 @@
           Menschen hinter One Love One Heart
         </h2>
       </div>
-      <div class="project-cards" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));">
+      <div class="project-cards" style="grid-template-columns:repeat(auto-fit,minmax(240px,300px));justify-content:center;">
 
-        <!-- TEAM MEMBER — duplicate this block to add more -->
+        <!-- TEAM MEMBERS — duplicate a block to add more -->
         <div class="project-card reveal">
           <div class="project-card__img-wrap">
             <!-- Replace with actual person photo -->
             <div style="height:100%;background:var(--sand-dark);display:flex;align-items:center;justify-content:center;font-size:4rem;">👤</div>
           </div>
           <div class="project-card__body">
-            <h3 class="project-card__title">Annette [Nachname]</h3>
+            <h3 class="project-card__title">Annette Schilling</h3>
             <p class="project-card__desc"
-               data-de="Gründerin &amp; Vorsitzende — [Kurzbeschreibung einfügen]"
-               data-en="Founder &amp; Chairperson — [Insert short description]">
-              Gründerin &amp; Vorsitzende — [Kurzbeschreibung einfügen]
+               data-de="Vorsitzende"
+               data-en="Chairperson">
+              Vorsitzende
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card__img-wrap">
+            <!-- Replace with actual person photo -->
+            <div style="height:100%;background:var(--sand-dark);display:flex;align-items:center;justify-content:center;font-size:4rem;">👤</div>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Marion Losert</h3>
+            <p class="project-card__desc"
+               data-de="Vorsitzende"
+               data-en="Chairperson">
+              Vorsitzende
             </p>
           </div>
         </div>
