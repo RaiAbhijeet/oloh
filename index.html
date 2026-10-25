@@ -50,6 +50,12 @@
       .who-sub a:hover, .who-sub a:focus-visible { text-decoration: underline; }
       .who-photo { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center 30%; border-radius: 6px; }
       @media (max-width: 768px) { .who-grid { grid-template-columns: 1fr; gap: 2.5rem; } .who-photo { max-width: 420px; } }
+      /* Home page donate section: photo + bank details (replaces the three option cards) */
+      .donate-photo { display: block; width: 100%; max-width: 512px; height: auto; margin: 0 auto 1.75rem; border-radius: 8px; }
+      .donate-section .donate-bank { margin: 0 auto 2rem; }
+      .donate-section .donate-bank p { margin: 0 auto 0.35rem; color: rgba(255, 255, 255, 0.9); }
+      /* The sticky navigation bar must not cover the heading when a "Spenden" button jumps here */
+      #spenden-cta { scroll-margin-top: 5rem; }
       .gc-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; width: 2.8rem; height: 2.8rem; border: 0; border-radius: 50%; background: var(--brown-dark); color: var(--white); font-size: 1.8rem; line-height: 1; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
       .gc-arrow:hover, .gc-arrow:focus-visible { background: var(--brown); }
       .gc-prev { left: 0.75rem; }
@@ -146,7 +152,7 @@
           </li>
           <li>
             <a
-              href="pages/spenden/index.html"
+              href="#spenden-cta"
               class="nav-donate"
               data-de="Spenden"
               data-en="Donate"
@@ -212,7 +218,7 @@
             >Unsere Projekte</a
           >
           <a
-            href="pages/spenden/index.html"
+            href="#spenden-cta"
             class="btn btn-ghost-white"
             data-de="Jetzt spenden"
             data-en="Donate Now"
@@ -687,35 +693,26 @@
         mit Herz.
       </p>
 
-      <!-- Donation options — add or remove cards here -->
-      <div class="donate-options">
-        <div class="donate-option-card">
-          <h4 data-de="Spendenkonto" data-en="Bank Transfer">Spendenkonto</h4>
-          <p
-            data-de="Direkte Banküberweisung an unseren Verein."
-            data-en="Direct bank transfer to our association."
-          >
-            Direkte Banküberweisung
-          </p>
-        </div>
-        <div class="donate-option-card">
-          <h4>PayPal</h4>
-          <p
-            data-de="Schnell und sicher via PayPal spenden."
-            data-en="Donate quickly and securely via PayPal."
-          >
-            Schnell und sicher via PayPal
-          </p>
-        </div>
-        <div class="donate-option-card">
-          <h4>eBay Charity</h4>
-          <p
-            data-de="Unterstützen Sie uns auf eBay Charity."
-            data-en="Support us on eBay Charity."
-          >
-            Unterstützen Sie uns auf eBay Charity
-          </p>
-        </div>
+      <img
+        class="donate-photo"
+        src="assets/images/photo-spenden-cover-2026.jpg"
+        width="512"
+        height="239"
+        alt="Stapel von Geldscheinen"
+        loading="lazy"
+      />
+
+      <!-- Bank details -->
+      <div class="donate-bank">
+        <p
+          data-de="Kontonummer ONE LOVE – ONE HEART eV"
+          data-en="Account ONE LOVE – ONE HEART eV"
+        >
+          Kontonummer ONE LOVE – ONE HEART eV
+        </p>
+        <p>Commerzbank Witten</p>
+        <p>IBAN DE84 4524 0056 0420 3816 00</p>
+        <p>BIC COBADEFFXXX</p>
       </div>
 
       <a
