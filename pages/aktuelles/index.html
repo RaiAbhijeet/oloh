@@ -8,11 +8,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../../assets/css/main.css"/>
   <style>
-    .news-article { max-width: 900px; margin: 0 auto; text-align: center; }
-    .news-article h2 { margin-bottom: 1.5rem; }
-    .news-photos { display: grid; grid-template-columns: repeat(3, minmax(0, 260px)); gap: 1rem; justify-content: center; margin: 0 0 2rem; }
-    .news-photos img { width: 100%; height: auto; border-radius: 6px; display: block; }
-    .news-article p { margin: 0 auto 1rem; max-width: 640px; }
+    .news-article { max-width: 960px; margin: 0 auto; }
+    .news-head { text-align: center; margin-bottom: 2.5rem; }
+    .news-main { display: grid; grid-template-columns: 300px 1fr; gap: 2.5rem; align-items: center; margin-bottom: 2rem; }
+    .news-main img { display: block; width: 100%; height: auto; border-radius: 6px; }
+    .news-text p { margin-bottom: 1rem; }
+    .news-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .news-photos img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 6px; }
+    @media (max-width: 700px) {
+      .news-main { grid-template-columns: 1fr; gap: 1.5rem; }
+      .news-main img { max-width: 320px; margin: 0 auto; }
+      .news-photos { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -37,25 +44,34 @@
     <button class="hamburger" id="hamburger" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
   </div></nav>
 
-  <section class="section section--sand" style="padding-top:8rem;">
+  <section class="hero hero--compact">
+    <div class="hero-content">
+      <span class="hero-eyebrow" data-de="Neuigkeiten" data-en="News">Neuigkeiten</span>
+      <h1 data-de="Aktuelles" data-en="News &amp; Updates">Aktuelles</h1>
+    </div>
+  </section>
+
+  <section class="section section--sand">
     <div class="container">
-      <div class="text-center" style="margin-bottom:3rem;">
-        <span class="section-label" data-de="Neuigkeiten" data-en="News">Neuigkeiten</span>
-        <h1 data-de="Aktuelles" data-en="News &amp; Updates">Aktuelles</h1>
-      </div>
 
       <!-- NEWS ARTICLE (only one so far; to add another, copy this article block) -->
       <article class="news-article reveal">
-        <span class="section-label">2026</span>
-        <h2 data-de="Unser Hilfscontainer von Augsburg nach Gambia 2026" data-en="Our aid container from Augsburg to The Gambia 2026">Unser Hilfscontainer von Augsburg nach Gambia 2026</h2>
-        <div class="news-photos">
-          <img src="../../assets/images/photo-container-gokart-2026.jpg" alt="Hilfsgüter für Gambia, darunter ein Go-Kart, vor der Verladung in den Container" loading="lazy"/>
-          <img src="../../assets/images/photo-container-beladen-2026.jpg" alt="Der Hilfscontainer wird beladen" loading="lazy"/>
-          <img src="../../assets/images/photo-container-lkw-2026.jpg" alt="Der beladene Container auf dem LKW" loading="lazy"/>
+        <div class="news-head">
+          <span class="section-label">2026</span>
+          <h2 data-de="Unser Hilfscontainer von Augsburg nach Gambia 2026" data-en="Our aid container from Augsburg to The Gambia 2026">Unser Hilfscontainer von Augsburg nach Gambia 2026</h2>
         </div>
-        <p data-de="62 ccm und 40 Fuß Containerladung für die gambische Bevölkerung." data-en="A 62 cubic metre, 40-foot container load for the Gambian people.">62 ccm und 40 Fuß Containerladung für die gambische Bevölkerung.</p>
-        <p data-de="Unsere Container werden mit der finanziellen Unterstützung durch Engagement Global verschickt." data-en="Our containers are shipped with the financial support of Engagement Global.">Unsere Container werden mit der finanziellen Unterstützung durch Engagement Global verschickt.</p>
-        <p><a href="https://www.augsburger-allgemeine.de/augsburg-land/wie-eine-neusaesserin-menschen-in-afrika-hilft-115277144" target="_blank" rel="noopener">https://www.augsburger-allgemeine.de/augsburg-land/wie-eine-neusaesserin-menschen-in-afrika-hilft-115277144</a></p>
+        <div class="news-main">
+          <img src="../../assets/images/photo-container-beladen-2026.jpg" width="331" height="710" alt="Der Hilfscontainer wird beladen" loading="lazy"/>
+          <div class="news-text">
+            <p data-de="62 ccm und 40 Fuß Containerladung für die gambische Bevölkerung." data-en="A 62 cubic metre, 40-foot container load for the Gambian people.">62 ccm und 40 Fuß Containerladung für die gambische Bevölkerung.</p>
+            <p data-de="Unsere Container werden mit der finanziellen Unterstützung durch Engagement Global verschickt." data-en="Our containers are shipped with the financial support of Engagement Global.">Unsere Container werden mit der finanziellen Unterstützung durch Engagement Global verschickt.</p>
+            <a class="btn btn-primary" href="https://www.augsburger-allgemeine.de/augsburg-land/wie-eine-neusaesserin-menschen-in-afrika-hilft-115277144" target="_blank" rel="noopener" data-de="Mehr zur Förderung →" data-en="More about the funding →">Mehr zur Förderung →</a>
+          </div>
+        </div>
+        <div class="news-photos">
+          <img src="../../assets/images/photo-container-gokart-2026.jpg" alt="Hilfsgüter für Gambia, darunter ein Go-Kart, vor der Verladung in den Container" style="object-position: center 50%;" loading="lazy"/>
+          <img src="../../assets/images/photo-container-lkw-2026.jpg" alt="Der beladene Container auf dem LKW" style="object-position: center 65%;" loading="lazy"/>
+        </div>
       </article>
 
       <div class="text-center" style="margin-top:3rem;">
