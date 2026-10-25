@@ -96,14 +96,7 @@
       </div>
     </nav>
 
-    <section class="hero" style="min-height: 40vh">
-      <div
-        class="hero-bg"
-        style="
-          background-image: url(&quot;../../../assets/images/photo-schule-bildung.jpg&quot;);
-        "
-      ></div>
-      <div class="hero-overlay"></div>
+    <section class="hero" style="min-height: 40vh; background-color: var(--brown-dark)">
       <div class="hero-content">
         <span
           class="hero-eyebrow"
@@ -180,7 +173,7 @@
           <img
             src="../../../assets/images/photo-schule-sanyang-kinder-2026.jpg"
             alt="Kinder der AMIGOS DE GAMBIA Nursery and Primary School in Sanyang"
-            style="border-radius: 6px; width: 100%; object-fit: cover; max-height: 420px"
+            style="border-radius: 6px; width: 100%; object-fit: cover; object-position: center 20%; max-height: 420px"
             loading="lazy"
           />
           <figcaption
@@ -256,7 +249,7 @@
           <img
             src="../../../assets/images/photo-schule-fahrrad-kinder-2026.jpg"
             alt="Schulkinder mit Fahrrädern an der Tanje Lower Basic School"
-            style="border-radius: 6px; width: 100%; object-fit: cover; max-height: 380px"
+            style="border-radius: 6px; width: 100%; object-fit: cover; object-position: center top; max-height: 380px"
             loading="lazy"
           />
         </div>
@@ -316,32 +309,51 @@
           <h2 data-de="Unsere Patenkinder" data-en="Our Sponsored Children">Unsere Patenkinder</h2>
         </div>
       </div>
-      <div class="gallery-strip" aria-label="Fotogalerie Patenkinder">
-        <div class="gallery-strip__item"><img src="../../../assets/images/photo-schule-galerie-01-2026.jpg" alt="Patenkinder in Gambia, Foto 1" loading="lazy" /></div>
-        <div class="gallery-strip__item"><img src="../../../assets/images/photo-schule-galerie-02-2026.jpg" alt="Patenkinder in Gambia, Foto 2" loading="lazy" /></div>
-        <div class="gallery-strip__item"><img src="../../../assets/images/photo-schule-galerie-03-2026.jpg" alt="Patenkinder in Gambia, Foto 3" loading="lazy" /></div>
-        <div class="gallery-strip__item"><img src="../../../assets/images/photo-schule-galerie-04-2026.jpg" alt="Patenkinder in Gambia, Foto 4" loading="lazy" /></div>
-        <div class="gallery-strip__item"><img src="../../../assets/images/photo-schule-galerie-05-2026.jpg" alt="Patenkinder in Gambia, Foto 5" loading="lazy" /></div>
-        <div class="gallery-strip__item"><img src="../../../assets/images/photo-schule-galerie-06-2026.jpg" alt="Patenkinder in Gambia, Foto 6" loading="lazy" /></div>
-        <div class="gallery-strip__item"><img src="../../../assets/images/photo-schule-galerie-07-2026.jpg" alt="Patenkinder in Gambia, Foto 7" loading="lazy" /></div>
-        <div class="gallery-strip__item"><img src="../../../assets/images/photo-schule-galerie-08-2026.jpg" alt="Patenkinder in Gambia, Foto 8" loading="lazy" /></div>
-        <div class="gallery-strip__item"><img src="../../../assets/images/photo-schule-galerie-09-2026.jpg" alt="Patenkinder in Gambia, Foto 9" loading="lazy" /></div>
-        <div class="gallery-strip__item"><img src="../../../assets/images/photo-schule-galerie-10-2026.jpg" alt="Patenkinder in Gambia, Foto 10" loading="lazy" /></div>
+      <!-- Photo carousel: same component as the home page gallery (styles: main.css section 11, behaviour: main.js section 6) -->
+      <div class="gallery-carousel gallery-carousel--on-section gallery-carousel--faces" aria-label="Fotogalerie Patenkinder" data-carousel>
+        <button type="button" class="gc-arrow gc-prev" aria-label="Vorheriges Foto">&#8249;</button>
+        <div class="gc-viewport">
+          <div class="gc-track">
+          <button type="button" class="gc-item" aria-label="Foto vergrößern">
+            <img src="../../../assets/images/photo-schule-galerie-01-2026.jpg" width="747" height="1600" alt="Patenkinder in Gambia, Foto 1" loading="lazy" />
+          </button>
+          <button type="button" class="gc-item" aria-label="Foto vergrößern">
+            <img src="../../../assets/images/photo-schule-galerie-02-2026.jpg" width="747" height="1600" alt="Patenkinder in Gambia, Foto 2" loading="lazy" />
+          </button>
+          <button type="button" class="gc-item" aria-label="Foto vergrößern">
+            <img src="../../../assets/images/photo-schule-galerie-03-2026.jpg" width="747" height="1600" alt="Patenkinder in Gambia, Foto 3" loading="lazy" />
+          </button>
+          <button type="button" class="gc-item" aria-label="Foto vergrößern">
+            <img src="../../../assets/images/photo-schule-galerie-04-2026.jpg" width="747" height="1600" alt="Patenkinder in Gambia, Foto 4" loading="lazy" />
+          </button>
+          <button type="button" class="gc-item" aria-label="Foto vergrößern">
+            <img src="../../../assets/images/photo-schule-galerie-05-2026.jpg" width="765" height="1020" alt="Patenkinder in Gambia, Foto 5" loading="lazy" />
+          </button>
+          <button type="button" class="gc-item" aria-label="Foto vergrößern">
+            <img src="../../../assets/images/photo-schule-galerie-06-2026.jpg" width="747" height="1600" alt="Patenkinder in Gambia, Foto 6" loading="lazy" />
+          </button>
+          <button type="button" class="gc-item" aria-label="Foto vergrößern">
+            <img src="../../../assets/images/photo-schule-galerie-07-2026.jpg" width="747" height="1600" alt="Patenkinder in Gambia, Foto 7" loading="lazy" />
+          </button>
+          <button type="button" class="gc-item" aria-label="Foto vergrößern">
+            <img src="../../../assets/images/photo-schule-galerie-08-2026.jpg" width="460" height="1024" alt="Patenkinder in Gambia, Foto 8" loading="lazy" />
+          </button>
+          <button type="button" class="gc-item" aria-label="Foto vergrößern">
+            <img src="../../../assets/images/photo-schule-galerie-09-2026.jpg" width="747" height="1600" alt="Patenkinder in Gambia, Foto 9" loading="lazy" />
+          </button>
+          <button type="button" class="gc-item" aria-label="Foto vergrößern">
+            <img src="../../../assets/images/photo-schule-galerie-10-2026.jpg" width="747" height="1600" alt="Patenkinder in Gambia, Foto 10" loading="lazy" />
+          </button>
+          </div>
+        </div>
+        <button type="button" class="gc-arrow gc-next" aria-label="Nächstes Foto">&#8250;</button>
       </div>
-      <div class="container grid-3" style="margin-top: 2rem">
-        <figure class="reveal" style="margin: 0">
-          <img
-            src="../../../assets/images/photo-schule-galerie-11-2026.jpg"
-            alt="Patenkinder in Gambia, Foto 11"
-            style="border-radius: 6px; width: 100%; object-fit: cover; max-height: 380px"
-            loading="lazy"
-          />
-        </figure>
+      <div class="container grid-2" style="margin-top: 2rem">
         <figure class="reveal" style="margin: 0">
           <img
             src="../../../assets/images/photo-schule-galerie-12-2026.jpg"
             alt="Verteilung von Schultaschen an Kinder in Sanyang"
-            style="border-radius: 6px; width: 100%; object-fit: cover; max-height: 380px"
+            style="border-radius: 6px; width: 100%; aspect-ratio: 1080 / 608; object-fit: cover; object-position: center 25%"
             loading="lazy"
           />
           <figcaption
@@ -354,7 +366,7 @@
           <img
             src="../../../assets/images/photo-schule-kreide-herne-2026.jpg"
             alt="Kreide aus der Kolibri-Schule in Herne wird an Lehrer übergeben"
-            style="border-radius: 6px; width: 100%; object-fit: cover; max-height: 380px"
+            style="border-radius: 6px; width: 100%; aspect-ratio: 1080 / 608; object-fit: cover"
             loading="lazy"
           />
           <figcaption
