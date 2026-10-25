@@ -166,6 +166,16 @@ git push --force origin <feature-branch>:dev    # client sees it at /dev/
    she reviews the branch/PR, or explicitly tells you to merge). Merging
    into `main` publishes to https://oneloveoneheart.org/ automatically via
    the same workflow. Deploys are skipped if `tests/check_site.py` fails.
+
+   **Live on/off switch:** the main domain is only published while the
+   GitHub repository variable `PUBLISH_LIVE` is `true` (Settings → Secrets
+   and variables → Actions → Variables). If it's missing or anything else,
+   only `/dev/` is published, the main domain returns 404 and `robots.txt`
+   blocks all crawling. To go live: set `PUBLISH_LIVE` = `true`, then
+   Actions → "Deploy site" → "Run workflow". **Status since 25 October
+   2026: live site is OFF** (owner wants the next content round approved on
+   `/dev/` before anything is public again). Never set `PUBLISH_LIVE` to
+   `true` without the owner's explicit go-ahead.
 7. Use descriptive commit messages (what content changed, which page).
 8. Before starting, `git fetch` and branch from the current `origin/main` —
    the live site is sometimes edited directly on GitHub (e.g. the topbar
