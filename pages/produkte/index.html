@@ -13,6 +13,9 @@
     .product-photo{height:auto;max-height:420px;}
     .product-gallery--wide{grid-template-columns:1fr;}
     .product-gallery--wide img{height:auto;max-height:420px;}
+    .product-gallery--fit{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;}
+    .product-gallery--fit img{width:auto;height:420px;max-width:100%;object-fit:contain;}
+    @media (max-width:600px){.product-gallery--fit img{height:260px;}}
   </style>
 </head>
 <body>
@@ -86,7 +89,6 @@
           <img src="../../assets/images/photo-marmelade-frau-2026.jpg" alt="Frau mit Marmeladengläsern" loading="lazy"/>
           <img src="../../assets/images/photo-marmelade-4-2026.jpg" alt="Marmeladengläser des ILA SINNING Projekts" loading="lazy"/>
           <img src="../../assets/images/photo-marmelade-5-2026.jpg" alt="Marmeladengläser des ILA SINNING Projekts" loading="lazy"/>
-          <img src="../../assets/images/photo-marmelade-gomera-2026.jpg" alt="Marmeladenglas aus La Gomera" loading="lazy"/>
         </div>
     </div>
   </section>
@@ -140,8 +142,9 @@
       <div class="text-center" style="margin-bottom:2rem;">
         <h2 class="reveal" data-de="Imkerei-Produkte (Honig)" data-en="Beekeeping products (honey)">Imkerei-Produkte (Honig)</h2>
       </div>
-        <div class="product-gallery">
-          <img src="../../assets/images/photo-honig-2026.jpg" alt="Honig aus der ILA SINNING Imkerei" loading="lazy"/>
+        <div class="product-gallery product-gallery--fit">
+          <img src="../../assets/images/photo-honig-2026.jpg" width="338" height="724" alt="Honig aus der ILA SINNING Imkerei" loading="lazy"/>
+          <img src="../../assets/images/photo-marmelade-gomera-2026.jpg" width="653" height="826" alt="Glas mit Stoffdeckel vor dem Meer auf La Gomera" loading="lazy"/>
         </div>
     </div>
   </section>
