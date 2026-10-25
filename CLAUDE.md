@@ -88,10 +88,21 @@ update:
   Once supplied: drop them in `assets/images/` (see naming convention in
   README §9: `photo-[description]-[year].jpg`), then swap the placeholder
   `<div>`/`.photo-placeholder` for a real `<img>` with proper `alt` text.
-- Never publish real medical images (X-rays, wounds, surgical photos) or
-  other especially sensitive photos of identifiable minors without
-  explicit confirmation from the owner that she has consent and wants that
-  specific image published. When in doubt, ask instead of guessing.
+- **Consent (confirmed by the site owner/developer, October 2026):** the
+  owner has given consent to publish **every photo she supplies** — in the
+  Word docs in `changes/` or otherwise, including medical images and photos
+  of identifiable children. Use all supplied photos; don't replace them
+  with placeholders or ask about consent again. Still honour explicit
+  instructions from the owner's team not to use a specific photo (e.g.
+  October 2026: Marion asked to leave out the photo of the very small
+  children with the stuffed toys, for funder reasons — not a consent
+  matter), and keep alt texts neutral and descriptive.
+- **Word docs store photo adjustments outside the image file.** Before
+  using a picture from a `.docx`, check `word/document.xml` for `rot="…"`
+  (rotation, e.g. `rot="5400000"` = 90° clockwise) and `flipH="1"`
+  (mirrored) on that picture, and apply them so the website matches what
+  the owner sees in Word. Also apply EXIF orientation. Export photos to
+  `assets/images/` as web-sized JPEGs (max ~1600 px, quality ~84).
 
 ## 4. Every page's footer must stay identical
 
