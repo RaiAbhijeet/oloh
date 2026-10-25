@@ -147,11 +147,20 @@ subpages were copied unadjusted from `index.html` and led to 404s;
      matters — count `../` carefully, see README §4).
    - Footer renders fully and identically on every page.
    - No layout breakage / no visual theme drift.
-5. Report back to the owner what changed and how to test it, and only merge
-   to `main` after she confirms it looks right (either she reviews the
-   branch/PR, or explicitly tells you to merge).
-6. Use descriptive commit messages (what content changed, which page).
-7. Before starting, `git fetch` and branch from the current `origin/main` —
+5. **Preview for the owner:** push the feature branch to the `dev` branch
+   (`git push --force origin <feature-branch>:dev`). `.github/workflows/deploy.yml`
+   then publishes it at **https://oneloveoneheart.org/dev/** within ~1–2
+   minutes, with a red "VORSCHAU / PREVIEW" banner and `noindex` on every
+   page (only on `/dev`, never on the live site). The preview is public
+   but unlisted — no password — so don't put anything there that must not
+   be seen yet (e.g. photos without consent). Send the owner the
+   `/dev/` link of the changed pages and how to switch DE/EN.
+6. Only merge to `main` after she confirms the preview looks right (either
+   she reviews the branch/PR, or explicitly tells you to merge). Merging
+   into `main` publishes to https://oneloveoneheart.org/ automatically via
+   the same workflow. Deploys are skipped if `tests/check_site.py` fails.
+7. Use descriptive commit messages (what content changed, which page).
+8. Before starting, `git fetch` and branch from the current `origin/main` —
    the live site is sometimes edited directly on GitHub (e.g. the topbar
    email change in October 2026).
 
