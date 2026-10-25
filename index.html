@@ -31,6 +31,24 @@
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      /* Home page photo gallery: one row of equal-size tiles starting at the left (newest first); the tile in the middle of
+         the visible row is shown bigger. Moves only when the visitor uses the arrows / swipes / scrolls (no automatic movement). */
+      .gallery-carousel { position: relative; background: var(--sand); padding: 2.5rem 0; --gc-h: clamp(220px, 34vw, 400px); }
+      .gc-viewport { overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding-block: calc(var(--gc-h) * 0.1 + 28px); }
+      .gc-viewport::-webkit-scrollbar { display: none; }
+      .gc-track { display: flex; align-items: center; gap: calc(var(--gc-h) * 0.1); width: max-content; padding-inline: 4.5rem; }
+      /* small size = 80 % of the big one; the middle one is scaled up by 1.25 */
+      .gc-item { flex: 0 0 auto; height: calc(var(--gc-h) * 0.8); width: calc(var(--gc-h) * 0.6); padding: 0; margin: 0; background: var(--sand-dark); border: 0; border-radius: 4px; cursor: zoom-in; scroll-snap-align: start; scroll-margin-left: 4.5rem; overflow: hidden; transition: transform 0.35s ease, box-shadow 0.35s ease; }
+      .gc-item.is-active { transform: scale(1.25); box-shadow: 0 6px 22px rgba(0, 0, 0, 0.3); position: relative; z-index: 1; }
+      .gc-item img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+      .gc-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; width: 2.8rem; height: 2.8rem; border: 0; border-radius: 50%; background: var(--brown-dark); color: var(--white); font-size: 1.8rem; line-height: 1; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+      .gc-arrow:hover, .gc-arrow:focus-visible { background: var(--brown); }
+      .gc-prev { left: 0.75rem; }
+      .gc-next { right: 0.75rem; }
+      @media (max-width: 600px) { .gc-track { padding-inline: 1rem; } .gc-item { scroll-margin-left: 1rem; } .gc-arrow { width: 2.4rem; height: 2.4rem; } }
+      @media (prefers-reduced-motion: reduce) { .gc-item { transition: none; } .gc-viewport { scroll-behavior: auto; } }
+    </style>
   </head>
   <body>
     <!-- ═══════════════════════════════════════════════
@@ -708,96 +726,107 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════
-       PHOTO GALLERY STRIP
-       To add photos: copy a .gallery-strip__item block
-       To remove: delete a block
+       PHOTO GALLERY (carousel)
+       One row of equal-size photo tiles, newest on the LEFT. The photo in the middle of the visible row is shown bigger.
+       Endless loop. Nothing moves by itself: arrows / swipe / scroll move it, a click/tap enlarges the photo (lightbox in main.js).
+       To add a photo: copy one .gc-item button and put it FIRST (newest = left).
+       Put the image file in assets/images/photo-gallery/.
   ════════════════════════════════════════════════════ -->
-    <div class="gallery-strip" aria-label="Fotogalerie">
-      <div class="gallery-strip__item">
-        <img
-          src="assets/images/photo-gallery/photo-bildergalerie1.jpg"
-          alt="Kinder in Gambia"
-          loading="lazy"
-        />
+    <section class="gallery-carousel" aria-label="Fotogalerie" data-carousel>
+      <button type="button" class="gc-arrow gc-prev" aria-label="Vorheriges Foto">&#8249;</button>
+      <div class="gc-viewport">
+        <div class="gc-track">
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-01-2026.jpg" width="194" height="415" alt="Belebte Marktstraße in Gambia von oben" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-02-2026.jpg" width="747" height="1600" alt="Frau mit Rollstuhl an ihrem Verkaufsstand" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-03-2026.jpg" width="747" height="1600" alt="Drei Kinder essen gemeinsam aus einer Schüssel" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-04-2026.jpg" width="747" height="1600" alt="Gemeinsames Essen aus einer großen Reisschüssel" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-05-2026.jpg" width="747" height="1600" alt="Kind mit einem Fahrradreifen" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-06-2026.jpg" width="747" height="1600" alt="Wandschild mit der Aufschrift One Love, One Heart" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-07-2026.jpg" width="747" height="1600" alt="Baum mit Vögeln an der Küste" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-08-2026.jpg" width="1600" height="747" alt="Rinder am Strand" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-09-2026.jpg" width="747" height="1600" alt="Frau mit Kind auf dem Rücken und einer Schale in der Hand" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-10-2026.jpg" width="1600" height="747" alt="Zwei Mädchen im Hof" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-11-2026.jpg" width="747" height="1600" alt="Familie vor ihrem Haus mit einem Sack Reis" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-12-2026.jpg" width="747" height="1600" alt="Marktstand mit Mangos und Papayas" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-13-2026.jpg" width="747" height="1600" alt="Ein Korb vor einer alten Markthalle" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-14-2026.jpg" width="1600" height="747" alt="Trockene Flusslandschaft in Gambia" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-15-2026.jpg" width="747" height="1600" alt="Frau in festlicher traditioneller Kleidung mit Schmuck" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-16-2026.jpg" width="747" height="1600" alt="Kochen über offenem Feuer" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-17-2026.jpg" width="747" height="1600" alt="Gekochtes Gericht im Topf auf dem Feuer" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-18-2026.jpg" width="1285" height="1600" alt="Mütter mit Kindern und Lebensmittelspenden auf einer Veranda" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-19-2026.jpg" width="720" height="885" alt="Frauen schneiden Gemüse in einer Küche" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-20-2026.jpg" width="1600" height="1200" alt="Mann mit Fahrrad winkt in die Kamera" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-21-2026.jpg" width="1600" height="747" alt="Reisgericht in einer Schale" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-22-2026.jpg" width="747" height="1600" alt="Kinder mit einem Sack Zwiebeln und einem Ölkanister" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-23-2026.jpg" width="747" height="1600" alt="Zwei Personen mit Kartons in einer Klinik" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-24-2026.jpg" width="747" height="1600" alt="Kinder spielen auf einem Dorfweg" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-25-2026.jpg" width="1459" height="1600" alt="Kinder essen gemeinsam aus einer Schüssel" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-26-2026.jpg" width="1200" height="1600" alt="Frau mit Stoffen auf dem Kopf am Strand" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-27-2026.jpg" width="747" height="1600" alt="Kinder in Schuluniform" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-28-2026.jpg" width="747" height="1600" alt="Drei Kinder mit roten Heften" loading="lazy" />
+        </button>
+        <button type="button" class="gc-item" aria-label="Foto vergrößern">
+          <img src="assets/images/photo-gallery/photo-galerie-29-2026.jpg" width="747" height="1600" alt="Zwei Mädchen in blauer Schuluniform mit Heften" loading="lazy" />
+        </button>
+        </div>
       </div>
-      <div class="gallery-strip__item">
-        <img
-          src="assets/images/photo-gallery/photo-bildergalerie2.jpg"
-          alt="Frau mit Früchten am Strand"
-          loading="lazy"
-        />
-      </div>
-      <div class="gallery-strip__item">
-        <img
-          src="assets/images/photo-gallery/photo-bildergalerie3.jpg"
-          alt="Handgemachte Produkte von ILA SINNING"
-          loading="lazy"
-        />
-      </div>
-      <div class="gallery-strip__item">
-        <img
-          src="assets/images/photo-gallery/photo-bildergalerie4.jpg"
-          alt="Frauen beim Kochen"
-          loading="lazy"
-        />
-      </div>
-      <div class="gallery-strip__item">
-        <img
-          src="assets/images/photo-gallery/photo-bildergalerie5.jpg"
-          alt="Kind mit Lebensmitteln"
-          loading="lazy"
-        />
-      </div>
-      <div class="gallery-strip__item">
-        <img
-          src="assets/images/photo-gallery/photo-bildergalerie6.jpg"
-          alt="Kind mit Lebensmitteln"
-          loading="lazy"
-        />
-      </div>
-      <div class="gallery-strip__item">
-        <img
-          src="assets/images/photo-gallery/photo-bildergalerie7.jpg"
-          alt="Kind mit Lebensmitteln"
-          loading="lazy"
-        />
-      </div>
-      <div class="gallery-strip__item">
-        <img
-          src="assets/images/photo-gallery/photo-bildergalerie8.jpg"
-          alt="Kind mit Lebensmitteln"
-          loading="lazy"
-        />
-      </div>
-      <div class="gallery-strip__item">
-        <img
-          src="assets/images/photo-gallery/photo-bildergalerie9.jpg"
-          alt="Kind mit Lebensmitteln"
-          loading="lazy"
-        />
-      </div>
-      <div class="gallery-strip__item">
-        <img
-          src="assets/images/photo-gallery/photo-bildergalerie10.jpg"
-          alt="Kind mit Lebensmitteln"
-          loading="lazy"
-        />
-      </div>
-      <div class="gallery-strip__item">
-        <img
-          src="assets/images/photo-gallery/photo-bildergalerie11.jpg"
-          alt="Kind mit Lebensmitteln"
-          loading="lazy"
-        />
-      </div>
-      <div class="gallery-strip__item">
-        <img
-          src="assets/images/photo-gallery/photo-bildergalerie12.jpg"
-          alt="Kind mit Lebensmitteln"
-          loading="lazy"
-        />
-      </div>
-    </div>
+      <button type="button" class="gc-arrow gc-next" aria-label="Nächstes Foto">&#8250;</button>
+    </section>
 
     <!-- ═══════════════════════════════════════════════
        FOOTER

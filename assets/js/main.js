@@ -108,10 +108,10 @@ window.switchLang = function(lang) {
 
 /* ─────────────────────────────────────────────
    5. SIMPLE LIGHTBOX FOR GALLERY
-   Click a gallery item to enlarge the image.
+   Click a gallery item (.gallery-strip__item or .gc-item) to enlarge the image.
    ───────────────────────────────────────────── */
 function initLightbox() {
-  const items = document.querySelectorAll('.gallery-strip__item');
+  const items = document.querySelectorAll('.gallery-strip__item, .gc-item');
   if (!items.length) return;
 
   // Create lightbox overlay
@@ -133,13 +133,13 @@ function initLightbox() {
   overlay.appendChild(img);
   document.body.appendChild(overlay);
 
-  items.forEach(item => {
-    item.addEventListener('click', () => {
-      const src = item.querySelector('img').src;
-      img.src = src;
-      overlay.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-    });
+  // One handler for all gallery items, so items added later (carousel copies) work too
+  document.addEventListener('click', e => {
+    const item = e.target.closest('.gallery-strip__item, .gc-item');
+    if (!item) return;
+    img.src = item.querySelector('img').src;
+    overlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
   });
 
   overlay.addEventListener('click', () => {
@@ -157,3 +157,95 @@ function initLightbox() {
 }
 
 document.addEventListener('DOMContentLoaded', initLightbox);
+
+
+/* ─────────────────────────────────────────────
+   6. HOME PAGE PHOTO CAROUSEL (endless loop)
+   One row of photos (newest first, starting at the left). The photo in
+   the middle of the visible row is shown bigger (.is-active). Nothing
+   moves by itself: the arrows, swiping or scrolling move it. Clicking
+   a photo enlarges it (lightbox above).
+
+   Endless loop: copies of the last photos are placed in front of the
+   first one and copies of the first photos after the last one. When the
+   movement comes to rest, the row silently jumps by exactly one full set
+   of photos - that looks identical, so it never ends in either direction
+   and every photo (also the last one) can reach the middle.
+   ───────────────────────────────────────────── */
+function initGalleryCarousel() {
+  const root = document.querySelector('[data-carousel]');
+  if (!root) return;
+  const view = root.querySelector('.gc-viewport');
+  const track = root.querySelector('.gc-track');
+  const real = Array.from(root.querySelectorAll('.gc-item'));
+  if (!view || !track || real.length < 2) return;
+  const N = real.length;
+
+  // Layout distance from one photo to the next (not affected by the enlarged tile)
+  const pitch = real[1].offsetLeft - real[0].offsetLeft;
+
+  // Copies in front of / behind the real photos; enough to fill the widest screen
+  const K = Math.min(N, Math.ceil(Math.max(window.screen.width || 0, window.innerWidth) / pitch) + 2);
+  const copy = el => {
+    const c = el.cloneNode(true);
+    c.setAttribute('aria-hidden', 'true');
+    c.tabIndex = -1;
+    return c;
+  };
+  real.slice(-K).forEach(el => track.insertBefore(copy(el), real[0]));
+  real.slice(0, K).forEach(el => track.appendChild(copy(el)));
+  const all = Array.from(track.querySelectorAll('.gc-item'));
+
+  const margin = parseFloat(getComputedStyle(real[0]).scrollMarginLeft) || 0;
+  const home = () => real[0].offsetLeft - margin;          // scroll position with the first photo at the left
+  const period = () => N * pitch;                          // width of one full set of photos
+  const jump = x => view.scrollTo({ left: x, behavior: 'instant' });
+
+  jump(home());                                            // start: first photo at the left, row filled
+
+  // Index (in `all`) of the tile whose centre is closest to the middle of the viewport
+  function nearest() {
+    const vr = view.getBoundingClientRect(), mid = vr.left + vr.width / 2;
+    let best = 0, dist = Infinity;
+    all.forEach((el, i) => {
+      const r = el.getBoundingClientRect(), d = Math.abs(r.left + r.width / 2 - mid);
+      if (d < dist) { dist = d; best = i; }
+    });
+    return best;
+  }
+  let active = -1;
+  function mark() {
+    const n = nearest();
+    if (n === active) return;
+    if (active >= 0) all[active].classList.remove('is-active');
+    all[n].classList.add('is-active');
+    active = n;
+  }
+
+  // Keep the scroll position inside one set of photos by jumping a full set (invisible)
+  function normalize(force) {
+    const x = view.scrollLeft, lo = home(), P = period();
+    const nearLeftEnd = x < pitch, nearRightEnd = x > view.scrollWidth - view.clientWidth - pitch;
+    if (x < lo && (force || nearLeftEnd || settled)) jump(x + P);
+    else if (x >= lo + P && (force || nearRightEnd || settled)) jump(x - P);
+    mark();
+  }
+
+  // "settled" = movement has stopped (no scroll event for a moment)
+  let settled = false, timer = null;
+  view.addEventListener('scroll', () => {
+    settled = false;
+    mark();
+    clearTimeout(timer);
+    timer = setTimeout(() => { settled = true; normalize(); settled = false; }, 120);
+  }, { passive: true });
+  window.addEventListener('resize', mark);
+
+  // Arrows move the row by one photo, in both directions without end
+  root.querySelector('.gc-next').addEventListener('click', () => view.scrollBy({ left: pitch }));
+  root.querySelector('.gc-prev').addEventListener('click', () => view.scrollBy({ left: -pitch }));
+
+  mark();
+}
+
+document.addEventListener('DOMContentLoaded', initGalleryCarousel);
