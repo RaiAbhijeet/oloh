@@ -106,42 +106,68 @@ update fixed it. If you ever see a footer's Legal column end abruptly right
 after `href="../datenschutz/index.html"` with no `data-de`/`data-en`/link
 text, that's the same bug — fix it the same way.
 
+Footer links are relative, so they must be adjusted to the page's depth when
+copying the footer: `pages/projekte/index.html` from the root `index.html`
+becomes `../../pages/projekte/index.html` from `pages/aktuelles/` and
+`../../../pages/projekte/index.html` from `pages/projekte/schule/` (same for
+`assets/...` image paths). Until October 2026 the "Seiten" links on 11
+subpages were copied unadjusted from `index.html` and led to 404s;
+`tests/check_site.py` now catches this.
+
 ## 5. Git workflow
 
 1. **Never commit content changes directly to `main`.** Create a feature
    branch first, e.g. `content-update-<short-date-or-topic>`.
 2. Make all edits on that branch.
-3. Test locally (see README — no build step; open `index.html` directly in
-   a browser, or run a tiny static server, e.g. `python -m http.server` from
-   the repo root, then click through every changed page in both DE and EN).
-   Check:
+3. Run the automated checks: `python tests/check_site.py` (stdlib only, no
+   install). It fails on broken internal links/images, unclosed tags,
+   unpaired or HTML-containing `data-de`/`data-en`, incomplete footers and
+   sitemap URLs that don't exist; WARNINGs (fallback text ≠ `data-de`) are
+   worth fixing but don't fail. The same script runs automatically:
+   - **locally on every commit** once you've run
+     `git config core.hooksPath .githooks` in your clone;
+   - **on GitHub** (`.github/workflows/site-checks.yml`) on every push to
+     any branch, on every PR into `main`, and after merging into `main`.
+     Don't merge a PR whose "Site checks" run is red.
+4. Then test manually (see README — no build step; open `index.html`
+   directly in a browser, or run a tiny static server, e.g.
+   `python -m http.server` from the repo root, then click through every
+   changed page in both DE and EN). Check:
    - Both language toggles (top-right DE/EN buttons) on every page you
      touched.
    - All links you added/changed actually resolve (relative path depth
      matters — count `../` carefully, see README §4).
    - Footer renders fully and identically on every page.
    - No layout breakage / no visual theme drift.
-4. Report back to the owner what changed and how to test it, and only merge
+5. Report back to the owner what changed and how to test it, and only merge
    to `main` after she confirms it looks right (either she reviews the
    branch/PR, or explicitly tells you to merge).
-5. Use descriptive commit messages (what content changed, which page).
+6. Use descriptive commit messages (what content changed, which page).
+7. Before starting, `git fetch` and branch from the current `origin/main` —
+   the live site is sometimes edited directly on GitHub (e.g. the topbar
+   email change in October 2026).
 
 ## 6. Reference info (source of truth lives in the code, but noted here since it's not obvious from files alone)
 
-- Contact email used sitewide: `ilasinning@yahoo.de`
+- Contact email: `ilasinning@yahoo.de` on most pages, but the topbar on
+  `index.html` and `pages/spenden/` was switched to `ilasinning@yahoo.com`
+  directly on GitHub in October 2026. Which one is correct is still open —
+  ask the owner before changing either.
 - Legal address: Wiesenstr. 17, 58452 Witten (see `Beitrittserklärung.pdf`)
 - Org name in full: "One Love – One Heart e.V. — Gambia – Gomera – Germany"
 - The `changes/` folder is a scratch/inbox area for source documents the
-  owner supplies — treat its contents as **input**, not something to link
-  to or publish directly (the one exception made so far: the blank
-  `Beitrittserklärung.pdf` membership-application template, which is a
-  distributable form with no personal data in it, copied to
-  `assets/downloads/Beitrittserklaerung-One-Love-One-Heart.pdf` and linked
-  from the Mitmachen page).
+  owner supplies — it's in `.gitignore`, so its contents never reach the
+  repo. Treat them as **input**, not something to link to or publish
+  directly, and empty the folder once a batch is live (the one exception
+  made so far: the blank `Beitrittserklärung.pdf` membership-application
+  template, which is a distributable form with no personal data in it,
+  copied to `assets/downloads/Beitrittserklaerung-One-Love-One-Heart.pdf` —
+  not linked from any page yet; it's meant for the Mitmachen page).
 
 ---
 
 _Keep this file up to date if the workflow changes. Last updated: August 2026
 during the first German-content sync (Aktuelles, Produkte, Spenden,
 Patenschaften/Schule/Bildung, Gesundheit/Ernährung, ILA SINNING,
-Beitrittserklärung)._
+Beitrittserklärung); October 2026: added automated site checks, fixed
+footer link depth._
