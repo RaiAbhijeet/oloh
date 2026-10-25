@@ -371,6 +371,19 @@ p {
   background-color: var(--sand-dark);
 }
 
+/* Text-only hero (no cover photo): dark-brown band, much lower than the full hero */
+.hero--compact {
+  min-height: 0;
+  background-color: var(--brown-dark);
+}
+.hero--compact .hero-content {
+  max-width: 900px;
+  padding: 1.75rem 5%;
+}
+.hero--compact .hero-eyebrow { margin-bottom: 0.75rem; }
+.hero--compact h1 { margin-bottom: 0.6rem; }
+.hero--compact p { margin-bottom: 0; }
+
 .hero-bg {
   position: absolute;
   inset: 0;
