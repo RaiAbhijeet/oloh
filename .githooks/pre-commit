@@ -1,0 +1,13 @@
+#!/bin/sh
+# Runs the site checks before every local commit.
+# Enable once per clone with:  git config core.hooksPath .githooks
+# Skip in an emergency with:   git commit --no-verify
+
+PY=python3
+command -v "$PY" >/dev/null 2>&1 || PY=python
+
+"$PY" "$(git rev-parse --show-toplevel)/tests/check_site.py" || {
+  echo
+  echo "Site checks failed - fix the ERRORs above before committing."
+  exit 1
+}
