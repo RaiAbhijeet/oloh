@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Spenden — One Love One Heart e.V.</title>
-  <meta name="description" content="Unterstützen Sie One Love One Heart e.V. mit einer Spende. Spendenkonto, PayPal und eBay Charity."/>
+  <meta name="description" content="Unterstützen Sie One Love One Heart e.V. mit einer Spende. Spendenkonto und Informationen, wohin Ihre Spende geht."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../../assets/css/main.css"/>
@@ -13,6 +13,8 @@
     .check-list li{position:relative;padding:0.45rem 0 0.45rem 1.8rem;line-height:1.5;}
     .check-list li::before{content:"\2713";position:absolute;left:0;top:0.45rem;color:var(--brown);font-weight:700;}
     .donate-photo{width:100%;height:auto;max-height:420px;object-fit:cover;border-radius:12px;display:block;}
+    .donate-section .donate-bank{margin:0 auto 2rem;}
+    .donate-section .donate-bank p{margin:0 auto 0.35rem;color:rgba(255,255,255,0.9);}
   </style>
 </head>
 <body>
@@ -45,58 +47,21 @@
 
   <section class="donate-section" style="min-height:50vh;display:flex;flex-direction:column;justify-content:center;">
     <h2 data-de="Jetzt spenden" data-en="Donate Now">Jetzt spenden</h2>
-    <p data-de="Jede Spende — egal wie groß — macht einen echten Unterschied im Leben von Menschen in Gambia."
-       data-en="Every donation — no matter how large — makes a real difference in the lives of people in Gambia.">
-      Jede Spende — egal wie groß — macht einen echten Unterschied.
+    <p data-de="Ihre Spende erreicht die Menschen direkt — transparent, persönlich und mit Herz."
+       data-en="Your donation reaches people directly — transparently, personally, and with heart.">
+      Ihre Spende erreicht die Menschen direkt — transparent, persönlich und
+      mit Herz.
     </p>
 
-    <div class="donate-options">
-
-      <!-- BANK TRANSFER -->
-      <div class="donate-option-card">
-        <h4 data-de="Spendenkonto" data-en="Bank Transfer">Spendenkonto</h4>
-        <p style="font-size:0.82rem;margin-top:0.75rem;color:rgba(255,255,255,0.7);">
-          <strong data-de="Kontoinhaber:" data-en="Account holder:">Kontoinhaber:</strong><br>
-          ONE LOVE – ONE HEART e.V.<br>
-          Commerzbank Witten<br><br>
-          <strong>IBAN:</strong><br>
-          DE84 4524 0056 0420 3816 00<br><br>
-          <strong>BIC:</strong><br>
-          COBADEFFXXX<br><br>
-          <strong data-de="Verwendungszweck:" data-en="Reference:">Verwendungszweck:</strong><br>
-          Spende
-        </p>
-      </div>
-
-      <!-- PAYPAL -->
-      <div class="donate-option-card">
-        <h4>PayPal</h4>
-        <p style="color:rgba(255,255,255,0.7);font-size:0.85rem;margin-top:0.75rem;"
-           data-de="Schnell, sicher und einfach über PayPal spenden."
-           data-en="Donate quickly, securely and easily via PayPal.">
-          Schnell und sicher über PayPal.
-        </p>
-        <!-- UPDATE with real PayPal donation link -->
-        <a href="https://www.paypal.com/donate/?hosted_button_id=XXXXXXXXXX"
-           class="btn btn-white" style="margin-top:1rem;"
-           target="_blank" rel="noopener">
-          PayPal →
-        </a>
-      </div>
-
-      <!-- EBAY CHARITY -->
-      <div class="donate-option-card">
-        <h4>eBay Charity</h4>
-        <p style="color:rgba(255,255,255,0.7);font-size:0.85rem;margin-top:0.75rem;"
-           data-de="Kaufen oder verkaufen Sie bei eBay und unterstützen Sie uns dabei."
-           data-en="Buy or sell on eBay and support us at the same time.">
-          Kaufen &amp; dabei Gutes tun.
-        </p>
-        <!-- eBay Charity shop is still being set up (owner, Oct 2026). Replace this label with the real link once it exists. -->
-        <p style="color:rgba(255,255,255,0.7);font-size:0.85rem;margin-top:1rem;font-style:italic;"
-           data-de="(im Aufbau)" data-en="(coming soon)">(im Aufbau)</p>
-      </div>
-
+    <!-- Bank details (same as on the home page) -->
+    <div class="donate-bank">
+      <p data-de="Kontonummer ONE LOVE – ONE HEART eV"
+         data-en="Account ONE LOVE – ONE HEART eV">
+        Kontonummer ONE LOVE – ONE HEART eV
+      </p>
+      <p>Commerzbank Witten</p>
+      <p>IBAN DE84 4524 0056 0420 3816 00</p>
+      <p>BIC COBADEFFXXX</p>
     </div>
 
     <p style="color:rgba(255,255,255,0.5);font-size:0.8rem;margin-top:1rem;"
@@ -119,7 +84,7 @@
           </ul>
           <p data-de="Wir sind gemeinnützig und erstellen gerne eine Zuwendungsbestätigung fürs Finanzamt" data-en="We are a registered non-profit and are happy to issue a donation receipt for the tax office.">Wir sind gemeinnützig und erstellen gerne eine Zuwendungsbestätigung fürs Finanzamt</p>
         </div>
-        <img class="donate-photo" src="../../assets/images/photo-spenden-kind-geld-2026.jpg" alt="Kind in Gambia mit Geldscheinen in der Hand" loading="lazy"/>
+        <img class="donate-photo" src="../../assets/images/photo-spenden-kind-geld-2026.jpg" alt="Kind in Gambia mit Geldscheinen in der Hand" style="object-position:center 10%;" loading="lazy"/>
       </div>
     </div>
   </section>
