@@ -116,6 +116,13 @@ subpages were copied unadjusted from `index.html` and led to 404s;
 
 ## 5. Git workflow
 
+Quick reference — the release flow for every change:
+
+```
+git push --force origin <feature-branch>:dev    # client sees it at /dev/
+# client approves → open a PR to main → merge → live
+```
+
 0. **Commit identity for this repo only:** all commits must use
    `abhijeet.rai101@gmail.com` (name `RaiAbhijeet`). Set it with
    `git config --local user.email "abhijeet.rai101@gmail.com"` — **never**
