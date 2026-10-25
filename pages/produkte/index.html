@@ -3,10 +3,17 @@
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Produkte — One Love One Heart e.V.</title>
-  <meta name="description" content="Handgemachte Produkte aus dem Frauenprojekt ILA SINNING — Chutneys, Saucen, Früchte und mehr."/>
+  <meta name="description" content="Handgemachte Produkte aus dem Frauenprojekt ILA SINNING — Marmeladen, Textilien, Batik, Upcycling und Honig."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../../assets/css/main.css"/>
+  <style>
+    .product-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;}
+    .product-gallery img,.product-photo{width:100%;height:260px;object-fit:cover;border-radius:12px;display:block;}
+    .product-photo{height:auto;max-height:420px;}
+    .product-gallery--wide{grid-template-columns:1fr;}
+    .product-gallery--wide img{height:auto;max-height:420px;}
+  </style>
 </head>
 <body>
   <div id="topbar">
@@ -42,53 +49,103 @@
 
   <section class="section section--sand">
     <div class="container">
-      <div class="text-center" style="margin-bottom:2.5rem;">
+      <div class="text-center" style="max-width:760px;margin:0 auto;">
         <span class="section-label" data-de="Frauenprojekt ILA SINNING" data-en="Women's Project ILA SINNING">Frauenprojekt ILA SINNING</span>
-        <h2 data-de="Produkte &amp; Erzeugnisse" data-en="Products &amp; Goods">Produkte &amp; Erzeugnisse</h2>
-        <p style="max-width:580px;margin:0 auto;"
-           data-de="Alle Produkte werden von Frauen des ILA SINNING Projekts hergestellt. Kaufen bedeutet direkte Unterstützung."
-           data-en="All products are made by women of the ILA SINNING project. Buying means direct support.">
-          Alle Produkte werden von Frauen des ILA SINNING Projekts hergestellt.
-        </p>
+        <h2 data-de="Unsere ILA SINNING Produkte" data-en="Our ILA SINNING Products">Unsere ILA SINNING Produkte</h2>
       </div>
-
-      <!-- PRODUCT GRID: Add/remove .project-card blocks to add/remove products -->
-      <div class="project-cards">
-
-        <article class="project-card reveal">
-          <div class="project-card__img-wrap">
-            <img src="../../assets/images/photo-jars.jpg" alt="Handgemachte Chutneys und Saucen" loading="lazy"/>
-            <span class="project-card__badge" data-de="Bestseller" data-en="Bestseller">Bestseller</span>
-          </div>
-          <div class="project-card__body">
-            <h3 class="project-card__title" data-de="Chutneys &amp; Saucen" data-en="Chutneys &amp; Sauces">Chutneys &amp; Saucen</h3>
-            <p class="project-card__desc" data-de="Handgemacht nach traditionellen Rezepten. Würzig, frisch und direkt aus Gambia." data-en="Handmade using traditional recipes. Spicy, fresh, and straight from Gambia.">Handgemacht nach traditionellen Rezepten. Würzig, frisch und direkt aus Gambia.</p>
-          </div>
-          <div class="project-card__footer">
-            <span style="font-size:0.82rem;color:var(--text-muted);" data-de="Preis auf Anfrage" data-en="Price on request">Preis auf Anfrage</span>
-            <a href="mailto:ilasinning@yahoo.com?subject=Bestellung Chutneys" class="project-card__link" data-de="Bestellen →" data-en="Order →">Bestellen →</a>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-card__img-wrap">
-            <img src="../../assets/images/photo-fruits.jpg" alt="Frische Früchte aus Gambia" loading="lazy"/>
-          </div>
-          <div class="project-card__body">
-            <h3 class="project-card__title" data-de="Frische Früchte" data-en="Fresh Fruits">Frische Früchte</h3>
-            <p class="project-card__desc" data-de="Saisonale Früchte aus Gambia — Mangos, Papayas, Zitronen und mehr." data-en="Seasonal fruits from Gambia — mangoes, papayas, lemons and more.">Saisonale Früchte aus Gambia — Mangos, Papayas, Zitronen und mehr.</p>
-          </div>
-          <div class="project-card__footer">
-            <span style="font-size:0.82rem;color:var(--text-muted);" data-de="Saisonal verfügbar" data-en="Seasonally available">Saisonal verfügbar</span>
-            <a href="mailto:ilasinning@yahoo.com" class="project-card__link" data-de="Anfragen →" data-en="Enquire →">Anfragen →</a>
-          </div>
-        </article>
-
-        <!-- ADD MORE PRODUCTS HERE — copy the article block above -->
-
+      <div class="product-gallery product-gallery--wide" style="margin-top:2rem;">
+        <img src="../../assets/images/photo-produkte-header-2026.jpg" alt="Produkte des Frauenprojekts ILA SINNING" loading="lazy"/>
+      </div>
+      <div class="grid-2" style="margin-top:2.5rem;">
+        <figure style="margin:0;">
+          <img class="product-photo" src="../../assets/images/photo-produkte-mercadillo-2026.jpg" alt="ILA SINNING Marktstand auf dem Mercadillo im Valle Gran Rey, La Gomera" loading="lazy"/>
+          <figcaption style="margin-top:.8rem;" data-de="ILA SINNING-Produkte gibt es auf dem Mercadillo im Valle Gran Rey auf La Gomera/Kanaren …" data-en="ILA SINNING products are available at the Mercadillo in Valle Gran Rey on La Gomera, Canary Islands …">ILA SINNING-Produkte gibt es auf dem Mercadillo im Valle Gran Rey auf La Gomera/Kanaren …</figcaption>
+        </figure>
+        <figure style="margin:0;">
+          <img class="product-photo" src="../../assets/images/photo-produkte-wiesenviertelfest-2026.jpg" alt="ILA SINNING Stand auf dem Wiesenviertelfest in Witten" loading="lazy"/>
+          <figcaption style="margin-top:.8rem;" data-de="… genauso wie auf dem Wiesenviertelfest in Witten" data-en="… just like at the Wiesenviertelfest in Witten">… genauso wie auf dem Wiesenviertelfest in Witten</figcaption>
+        </figure>
+      </div>
+      <p class="text-center" style="margin-top:2rem;font-weight:600;" data-de="Aktuelle Produkte bitte per Mail an ilasinning@yahoo.com erfragen" data-en="Please ask for currently available products by email at ilasinning@yahoo.com">Aktuelle Produkte bitte per Mail an ilasinning@yahoo.com erfragen</p>
+      <div class="text-center" style="margin-top:1rem;">
+        <a href="mailto:ilasinning@yahoo.com" class="btn btn-primary" data-de="Per Mail anfragen" data-en="Ask by email">Per Mail anfragen</a>
       </div>
     </div>
   </section>
+
+
+  <section class="section section--white">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:2rem;">
+        <h2 class="reveal" data-de="Marmeladen, je nach Saison aus Papaya, Orange, Cashew, Limone und Mango" data-en="Jams, depending on the season made from papaya, orange, cashew, lime and mango">Marmeladen, je nach Saison aus Papaya, Orange, Cashew, Limone und Mango</h2>
+      </div>
+        <div class="product-gallery">
+          <img src="../../assets/images/photo-marmelade-1-2026.jpg" alt="Selbstgemachte ILA SINNING Marmelade im Glas" loading="lazy"/>
+          <img src="../../assets/images/photo-marmelade-2-2026.jpg" alt="Selbstgemachte ILA SINNING Marmelade im Glas" loading="lazy"/>
+          <img src="../../assets/images/photo-marmelade-3-2026.jpg" alt="Selbstgemachte ILA SINNING Marmelade im Glas" loading="lazy"/>
+          <img src="../../assets/images/photo-marmelade-frau-2026.jpg" alt="Frau mit Marmeladengläsern" loading="lazy"/>
+          <img src="../../assets/images/photo-marmelade-4-2026.jpg" alt="Marmeladengläser des ILA SINNING Projekts" loading="lazy"/>
+          <img src="../../assets/images/photo-marmelade-5-2026.jpg" alt="Marmeladengläser des ILA SINNING Projekts" loading="lazy"/>
+          <img src="../../assets/images/photo-marmelade-gomera-2026.jpg" alt="Marmeladenglas aus La Gomera" loading="lazy"/>
+        </div>
+    </div>
+  </section>
+
+  <section class="section section--sand">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:2rem;">
+        <h2 class="reveal" data-de="Textilien aus der ILA SINNING Schneiderei" data-en="Textiles from the ILA SINNING tailoring workshop">Textilien aus der ILA SINNING Schneiderei</h2>
+      </div>
+        <div class="product-gallery">
+          <img src="../../assets/images/photo-textil-rucksack-1-2026.jpg" alt="Rucksack aus bunten Stoffen der ILA SINNING Schneiderei" loading="lazy"/>
+          <img src="../../assets/images/photo-textil-kissen-boot-2026.jpg" alt="Kissen mit Bootsmotiv aus der ILA SINNING Schneiderei" loading="lazy"/>
+          <img src="../../assets/images/photo-textil-kissen-strand-2026.jpg" alt="Kissen mit Strandmotiv aus der ILA SINNING Schneiderei" loading="lazy"/>
+          <img src="../../assets/images/photo-textil-rucksack-2-2026.jpg" alt="Rucksack aus der ILA SINNING Schneiderei" loading="lazy"/>
+          <img src="../../assets/images/photo-textil-tasche-palme-2026.jpg" alt="Tasche mit Palmenmotiv aus der ILA SINNING Schneiderei" loading="lazy"/>
+          <img src="../../assets/images/photo-textil-kissen-muscheln-2026.jpg" alt="Kissen mit Muschelmotiv aus der ILA SINNING Schneiderei" loading="lazy"/>
+          <img src="../../assets/images/photo-textil-kissen-gruen-2026.jpg" alt="Grünes Kissen aus der ILA SINNING Schneiderei" loading="lazy"/>
+          <img src="../../assets/images/photo-textil-kissen-gelb-2026.jpg" alt="Gelbes Kissen aus der ILA SINNING Schneiderei" loading="lazy"/>
+          <img src="../../assets/images/photo-textil-kissen-braun-2026.jpg" alt="Braunes Kissen aus der ILA SINNING Schneiderei" loading="lazy"/>
+          <img src="../../assets/images/photo-textil-kissen-set-2026.jpg" alt="Kissen-Set aus der ILA SINNING Schneiderei" loading="lazy"/>
+        </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:2rem;">
+        <h2 class="reveal" data-de="Aus unserer ILA SINNING Batik-Werkstatt" data-en="From our ILA SINNING batik workshop">Aus unserer ILA SINNING Batik-Werkstatt</h2>
+      </div>
+        <div class="product-gallery">
+          <img src="../../assets/images/photo-batik-blau-2026.jpg" alt="Blauer Batikstoff aus der ILA SINNING Batik-Werkstatt" loading="lazy"/>
+          <img src="../../assets/images/photo-batik-streifen-2026.jpg" alt="Gestreifter Batikstoff aus der ILA SINNING Batik-Werkstatt" loading="lazy"/>
+        </div>
+    </div>
+  </section>
+
+  <section class="section section--sand">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:2rem;">
+        <h2 class="reveal" data-de="Die Upcycling-Werkstatt" data-en="The upcycling workshop">Die Upcycling-Werkstatt</h2>
+      </div>
+        <div class="product-gallery">
+          <img src="../../assets/images/photo-upcycling-bluse-2026.jpg" alt="Upcycling-Bluse aus der ILA SINNING Upcycling-Werkstatt" loading="lazy"/>
+          <img src="../../assets/images/photo-upcycling-jeans-2026.jpg" alt="Upcycling-Jeans aus der ILA SINNING Upcycling-Werkstatt" loading="lazy"/>
+        </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:2rem;">
+        <h2 class="reveal" data-de="Imkerei-Produkte (Honig)" data-en="Beekeeping products (honey)">Imkerei-Produkte (Honig)</h2>
+      </div>
+        <div class="product-gallery">
+          <img src="../../assets/images/photo-honig-2026.jpg" alt="Honig aus der ILA SINNING Imkerei" loading="lazy"/>
+        </div>
+    </div>
+  </section>
+
 
   <footer class="site-footer" role="contentinfo">
     <div class="footer-grid">

@@ -8,6 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../../assets/css/main.css"/>
+  <style>
+    .check-list{max-width:640px;margin:0 auto 1.5rem;text-align:left;}
+    .check-list li{position:relative;padding:0.45rem 0 0.45rem 1.8rem;line-height:1.5;}
+    .check-list li::before{content:"\2713";position:absolute;left:0;top:0.45rem;color:var(--brown);font-weight:700;}
+    .donate-photo{width:100%;height:auto;max-height:420px;object-fit:cover;border-radius:12px;display:block;}
+  </style>
 </head>
 <body>
 
@@ -50,13 +56,13 @@
       <div class="donate-option-card">
         <h4 data-de="Spendenkonto" data-en="Bank Transfer">Spendenkonto</h4>
         <p style="font-size:0.82rem;margin-top:0.75rem;color:rgba(255,255,255,0.7);">
-          <!-- UPDATE with real bank details -->
           <strong data-de="Kontoinhaber:" data-en="Account holder:">Kontoinhaber:</strong><br>
-          One Love One Heart e.V.<br><br>
+          ONE LOVE – ONE HEART e.V.<br>
+          Commerzbank Witten<br><br>
           <strong>IBAN:</strong><br>
-          DE[XX XXXX XXXX XXXX XXXX XX]<br><br>
+          DE84 4524 0056 0420 3816 00<br><br>
           <strong>BIC:</strong><br>
-          [XXXXXXXX]<br><br>
+          COBADEFFXXX<br><br>
           <strong data-de="Verwendungszweck:" data-en="Reference:">Verwendungszweck:</strong><br>
           Spende
         </p>
@@ -86,12 +92,9 @@
            data-en="Buy or sell on eBay and support us at the same time.">
           Kaufen &amp; dabei Gutes tun.
         </p>
-        <!-- UPDATE with real eBay charity link -->
-        <a href="https://www.ebay-kleinanzeigen.de/l-organisation/[XXXX].html"
-           class="btn btn-white" style="margin-top:1rem;"
-           target="_blank" rel="noopener">
-          eBay Charity →
-        </a>
+        <!-- eBay Charity shop is still being set up (owner, Oct 2026). Replace this label with the real link once it exists. -->
+        <p style="color:rgba(255,255,255,0.7);font-size:0.85rem;margin-top:1rem;font-style:italic;"
+           data-de="(im Aufbau)" data-en="(coming soon)">(im Aufbau)</p>
       </div>
 
     </div>
@@ -101,6 +104,53 @@
        data-en="* We can provide a donation receipt upon request.">
       * Auf Wunsch stellen wir Ihnen eine Spendenquittung aus.
     </p>
+  </section>
+
+  <section class="section section--sand">
+    <div class="container">
+      <div class="grid-2" style="align-items:center;">
+        <div>
+          <h2 data-de="Was für Spenden nehmen wir?" data-en="What kinds of donations do we accept?">Was für Spenden nehmen wir?</h2>
+          <ul class="check-list" style="margin:1rem 0;">
+            <li data-de="Einmalzuwendungen" data-en="One-off donations">Einmalzuwendungen</li>
+            <li data-de="Daueraufträge (nicht zweckgebunden)" data-en="Standing orders (not earmarked)">Daueraufträge (nicht zweckgebunden)</li>
+            <li data-de="Patenschaften für Schulkinder (zweckgebunden)" data-en="Sponsorships for schoolchildren (earmarked)">Patenschaften für Schulkinder (zweckgebunden)</li>
+            <li data-de="Sachspenden in der Region Augsburg und Dortmund/Bochum" data-en="Donations in kind in the Augsburg and Dortmund/Bochum area">Sachspenden in der Region Augsburg und Dortmund/Bochum</li>
+          </ul>
+          <p data-de="Wir sind gemeinnützig und erstellen gerne eine Zuwendungsbestätigung fürs Finanzamt" data-en="We are a registered non-profit and are happy to issue a donation receipt for the tax office.">Wir sind gemeinnützig und erstellen gerne eine Zuwendungsbestätigung fürs Finanzamt</p>
+        </div>
+        <img class="donate-photo" src="../../assets/images/photo-spenden-kind-geld-2026.jpg" alt="Kind in Gambia mit Geldscheinen in der Hand" loading="lazy"/>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="container">
+      <div class="text-center" style="max-width:760px;margin:0 auto 2rem;">
+        <h2 data-de="Wohin geht das Geld?" data-en="Where does the money go?">Wohin geht das Geld?</h2>
+        <p data-de="Nach Gambia. Wir haben außer den Kontoführungsgebühren und den jährlichen Kosten für die Website keine Ausgaben. Es fallen keine Verwaltungsgebühren an, da wir alles ehrenamtlich machen." data-en="To Gambia. Apart from bank account fees and the annual costs of the website, we have no expenses. There are no administrative costs, because we do everything on a voluntary basis.">Nach Gambia. Wir haben außer den Kontoführungsgebühren und den jährlichen Kosten für die Website keine Ausgaben. Es fallen keine Verwaltungsgebühren an, da wir alles ehrenamtlich machen.</p>
+        <h3 style="margin-top:1.5rem;" data-de="Wir finanzieren damit:" data-en="With it, we finance:">Wir finanzieren damit:</h3>
+      </div>
+      <ul class="check-list">
+            <li data-de="Schulbesuche" data-en="School attendance">Schulbesuche</li>
+            <li data-de="Ausbildungen" data-en="Vocational training">Ausbildungen</li>
+            <li data-de="Studien" data-en="University studies">Studien</li>
+            <li data-de="Miete Frauenwerkstatt ILA SINNING" data-en="Rent for the ILA SINNING women's workshop">Miete Frauenwerkstatt ILA SINNING</li>
+            <li data-de="Nahrungsmittelspenden (besonders in der Fastenzeit und zum Opferfest)" data-en="Food donations (especially during Ramadan and the Feast of Sacrifice)">Nahrungsmittelspenden (besonders in der Fastenzeit und zum Opferfest)</li>
+            <li data-de="Überlebensnotwendiges wie kleinere Dach- und Hausreparaturen vor der Regenzeit" data-en="Vital necessities such as minor roof and house repairs before the rainy season">Überlebensnotwendiges wie kleinere Dach- und Hausreparaturen vor der Regenzeit</li>
+            <li data-de="Brunnen" data-en="Wells">Brunnen</li>
+            <li data-de="Start-Ups" data-en="Start-ups">Start-Ups</li>
+            <li data-de="Schulfahrräder für Kinder" data-en="School bicycles for children">Schulfahrräder für Kinder</li>
+            <li data-de="Arztbesuche" data-en="Doctor's visits">Arztbesuche</li>
+            <li data-de="Anwendungen wie Röntgenaufnahmen, Physiotherapie und Laboruntersuchungen" data-en="Treatments such as X-rays, physiotherapy and laboratory tests">Anwendungen wie Röntgenaufnahmen, Physiotherapie und Laboruntersuchungen</li>
+            <li data-de="Medikamente und medizinische Hilfsmittel" data-en="Medicines and medical aids">Medikamente und medizinische Hilfsmittel</li>
+            <li data-de="… und nicht zuletzt den Transport der Sachspenden an den Abholort des Containers in Deutschland und vom Ankunftsort zu den Spendenempfängern einschließlich der Zollgebühren in Gambia / per Container" data-en="… and last but not least the transport of the donations in kind to the container collection point in Germany and from the arrival point to the recipients, including customs fees in Gambia / by container">… und nicht zuletzt den Transport der Sachspenden an den Abholort des Containers in Deutschland und vom Ankunftsort zu den Spendenempfängern einschließlich der Zollgebühren in Gambia / per Container</li>
+      </ul>
+      <figure style="max-width:640px;margin:2rem auto 0;text-align:center;">
+        <img class="donate-photo" src="../../assets/images/photo-spenden-brunnen-tanji-2026.jpg" alt="Aufbereitung eines versiegten Brunnens in Tanji" loading="lazy"/>
+        <figcaption style="margin-top:.8rem;font-size:.9rem;" data-de="Aufbereiten eines versiegten Brunnens in Tanji im Dezember 2023" data-en="Restoring a dried-up well in Tanji in December 2023">Aufbereiten eines versiegten Brunnens in Tanji im Dezember 2023</figcaption>
+      </figure>
+    </div>
   </section>
 
   <footer class="site-footer" role="contentinfo">
