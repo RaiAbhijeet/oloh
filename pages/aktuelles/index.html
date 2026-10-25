@@ -7,6 +7,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../../assets/css/main.css"/>
+  <style>
+    .news-photos { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+    .news-photos img { width: 100%; height: 200px; object-fit: cover; display: block; }
+    @media (max-width: 700px) { .news-photos img { height: 120px; } }
+  </style>
 </head>
 <body>
   <div id="topbar">
@@ -42,17 +47,20 @@
       <div class="project-cards">
 
         <article class="project-card reveal">
-          <div class="project-card__img-wrap">
-            <img src="../../assets/images/photo-cooking.jpg" alt="Neuigkeit" loading="lazy"/>
-            <span class="project-card__badge">November 2025</span>
+          <div class="news-photos">
+            <img src="../../assets/images/photo-container-gokart-2026.jpg" alt="Hilfsgüter für Gambia, darunter ein Go-Kart, vor der Verladung in den Container" loading="lazy"/>
+            <img src="../../assets/images/photo-container-beladen-2026.jpg" alt="Der Hilfscontainer wird beladen" loading="lazy"/>
+            <img src="../../assets/images/photo-container-lkw-2026.jpg" alt="Der beladene Container auf dem LKW" loading="lazy"/>
+            <span class="project-card__badge">2026</span>
           </div>
           <div class="project-card__body">
-            <h3 class="project-card__title">[Titel des Berichts / Neuigkeit einfügen]</h3>
-            <p class="project-card__desc">[Kurze Zusammenfassung des Berichts. Beschreiben Sie, was passiert ist, was erreicht wurde, oder was geplant ist. 2–3 Sätze reichen.]</p>
+            <h3 class="project-card__title" data-de="Unser Hilfscontainer von Augsburg nach Gambia 2026" data-en="Our aid container from Augsburg to The Gambia 2026">Unser Hilfscontainer von Augsburg nach Gambia 2026</h3>
+            <p class="project-card__desc" data-de="62 ccm und 40 Fuß Containerladung für die gambische Bevölkerung." data-en="A 62 cubic metre, 40-foot container load for the Gambian people.">62 ccm und 40 Fuß Containerladung für die gambische Bevölkerung.</p>
+            <p class="project-card__desc" data-de="Unsere Container werden mit der finanziellen Unterstützung durch Engagement Global verschickt." data-en="Our containers are shipped with the financial support of Engagement Global.">Unsere Container werden mit der finanziellen Unterstützung durch Engagement Global verschickt.</p>
           </div>
           <div class="project-card__footer">
-            <span style="font-size:0.78rem;color:var(--text-muted);">November 2025</span>
-            <span class="project-card__link" data-de="Mehr lesen →" data-en="Read more →">Mehr lesen →</span>
+            <span style="font-size:0.78rem;color:var(--text-muted);">2026</span>
+            <a class="project-card__link" href="https://www.engagement-global.de/de/tkz-transportkostenzuschuss" target="_blank" rel="noopener" data-de="Mehr zur Förderung →" data-en="More about the funding →">Mehr zur Förderung →</a>
           </div>
         </article>
 

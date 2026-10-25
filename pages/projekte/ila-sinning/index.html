@@ -14,6 +14,15 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../../../assets/css/main.css" />
+    <style>
+      .ila-photo-row { display: grid; gap: 1rem; }
+      .ila-photo-row--3 { grid-template-columns: repeat(3, 1fr); }
+      .ila-photo-row--2 { grid-template-columns: repeat(2, 1fr); }
+      .ila-photo-row img { width: 100%; height: 100%; max-height: 360px; object-fit: cover; border-radius: 6px; }
+      @media (max-width: 700px) {
+        .ila-photo-row--3, .ila-photo-row--2 { grid-template-columns: 1fr; }
+      }
+    </style>
   </head>
   <body>
     <div id="topbar">
@@ -100,7 +109,7 @@
       <div
         class="hero-bg"
         style="
-          background-image: url(&quot;../../assets/images/photo-jars.jpg&quot;);
+          background-image: url(&quot;../../../assets/images/photo-jars.jpg&quot;);
         "
       ></div>
       <div class="hero-overlay"></div>
@@ -132,46 +141,20 @@
         <div class="reveal">
           <img
             src="../../../assets/images/photo-jars.jpg"
-            alt="Fatou mit Produkten des Frauenprojekts"
-            style="
-              border-radius: 6px;
-              width: 100%;
-              object-fit: cover;
-              max-height: 420px;
-            "
+            alt="Frau mit selbstgemachter Marmelade aus dem Frauenprojekt"
+            style="border-radius: 6px; width: 100%; object-fit: cover; max-height: 420px;"
             loading="lazy"
           />
         </div>
         <div class="reveal">
-          <span
-            class="section-label"
-            data-de="ILA SINNING"
-            data-en="ILA SINNING"
-            >ILA SINNING</span
-          >
-          <h2
-            data-de="Wirtschaftliche Stärkung von Frauen"
-            data-en="Economic Empowerment of Women"
-          >
-            Wirtschaftliche Stärkung von Frauen
-          </h2>
-          <p
-            data-de="ILA SINNING bedeutet: Bau deine Zukunft auf. Der gambische Verein hat diesen Namen selbst gewählt. Viele Frauen möchten ein kleines Business aufbauen oder ein Handwerk erlernen; wir unterstützen sie dabei."
-            data-en="ILA SINNING means: build your future. The Gambian association chose this name itself. Many women want to build a small business or learn a craft; we support them."
-          >
-            ILA SINNING bedeutet: Bau deine Zukunft auf. Der gambische Verein
-            hat diesen Namen selbst gewählt. Viele Frauen möchten ein kleines
-            Business aufbauen oder ein Handwerk erlernen; wir unterstützen sie
-            dabei.
-          </p>
-          <p
-            data-de="Wir finanzieren Ausbildungen, ermöglichen Start-ups und stellen Materialien wie Nähmaschinen, Herde oder Fischverarbeitungs-Equipment zur Verfügung."
-            data-en="We finance training, enable start-ups and provide materials like sewing machines, stoves and fish processing equipment."
-          >
-            Wir finanzieren Ausbildungen, ermöglichen Start-ups und stellen
-            Materialien wie Nähmaschinen, Herde oder
-            Fischverarbeitungs-Equipment zur Verfügung.
-          </p>
+          <span class="section-label" data-de="ILA SINNING" data-en="ILA SINNING">ILA SINNING</span>
+          <h2 data-de="Wirtschaftliche Stärkung von Frauen" data-en="Economic Empowerment of Women">Wirtschaftliche Stärkung von Frauen</h2>
+          <p data-de="ILA SINNING bedeutet: Bau deine Zukunft auf. ILA SINNING ist unser Frauenprojekt." data-en="ILA SINNING means: build your future. ILA SINNING is our women's project.">ILA SINNING bedeutet: Bau deine Zukunft auf. ILA SINNING ist unser Frauenprojekt.</p>
+          <p data-de="Viele Frauen wollen sich ein kleines Business aufbauen oder ein Handwerk erlernen. ONE LOVE – ONE HEART e.V. unterstützt sie dabei, unabhängig zu werden." data-en="Many women want to build a small business or learn a craft. ONE LOVE – ONE HEART e.V. supports them in becoming independent.">Viele Frauen wollen sich ein kleines Business aufbauen oder ein Handwerk erlernen. ONE LOVE – ONE HEART e.V. unterstützt sie dabei, unabhängig zu werden.</p>
+          <p data-de="Wir finanzieren ihre schulische, universitäre oder handwerkliche Ausbildung." data-en="We finance their schooling, university or vocational training.">Wir finanzieren ihre schulische, universitäre oder handwerkliche Ausbildung.</p>
+          <p data-de="Wir ermöglichen Start-Ups." data-en="We make start-ups possible.">Wir ermöglichen Start-Ups.</p>
+          <p data-de="Wir stellen Materialien und Produktionsmittel zur Verfügung." data-en="We provide materials and means of production.">Wir stellen Materialien und Produktionsmittel zur Verfügung.</p>
+          <p data-de="Wir arbeiten dezentral, mit Frauen aus verschiedenen Regionen." data-en="We work decentrally, with women from different regions.">Wir arbeiten dezentral, mit Frauen aus verschiedenen Regionen.</p>
         </div>
       </div>
     </section>
@@ -180,94 +163,38 @@
       <div class="container grid-2">
         <div class="reveal" style="order: 2">
           <img
-            src="../../../assets/images/photo-cooking.jpg"
-            alt="Fatou am Nähen in Gambia"
-            style="
-              border-radius: 6px;
-              width: 100%;
-              object-fit: cover;
-              max-height: 420px;
-            "
+            src="../../../assets/images/photo-ila-schneiderin-fatou-2026.jpg"
+            alt="Fatou beim Nähen in Gambia"
+            style="border-radius: 6px; width: 100%; object-fit: cover; max-height: 420px;"
             loading="lazy"
           />
+          <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.6rem;font-style:italic;" data-de="Fatou will nähen" data-en="Fatou wants to sew">Fatou will nähen</p>
         </div>
         <div class="reveal" style="order: 1">
-          <span
-            class="section-label"
-            data-de="Schneiderinnenprojekt"
-            data-en="Tailoring Project"
-            >Schneiderinnenprojekt</span
-          >
-          <h2 data-de="Nähen &amp; Upcycling" data-en="Sewing &amp; Upcycling">
-            Nähen &amp; Upcycling
-          </h2>
-          <p
-            data-de="ONE LOVE – ONE HEART bringt Nähmaschinen dorthin, wo sie gebraucht werden, auch in Gegenden ohne Strom. Ein lokaler Schneider unterstützt Fatou beim Nähenlernen und erhält ein bescheidenes Gehalt."
-            data-en="ONE LOVE – ONE HEART brings sewing machines where they are needed, even in areas without electricity. A local tailor helps Fatou learn to sew and receives a modest salary."
-          >
-            ONE LOVE – ONE HEART bringt Nähmaschinen dorthin, wo sie gebraucht
-            werden, auch in Gegenden ohne Strom. Ein lokaler Schneider
-            unterstützt Fatou beim Nähenlernen und erhält ein bescheidenes
-            Gehalt.
-          </p>
-          <p
-            data-de="Da Europa mit Kleidung überschwemmt ist, setzen wir auf Upcycling. So entstehen Unikate – einzigartige Afro-Design-Kunstwerke, die vor Ort, in Deutschland und auf La Gomera verkauft werden können."
-            data-en="Because Europe is flooded with clothing, we focus on upcycling. Unique Afro-design pieces are created, which can be sold locally, in Germany and on La Gomera."
-          >
-            Da Europa mit Kleidung überschwemmt ist, setzen wir auf Upcycling.
-            So entstehen Unikate – einzigartige Afro-Design-Kunstwerke, die vor
-            Ort, in Deutschland und auf La Gomera verkauft werden können.
-          </p>
+          <span class="section-label" data-de="Schneiderinnen-Projekt" data-en="Tailoring Project">Schneiderinnen-Projekt</span>
+          <h2 data-de="Nähen &amp; Upcycling" data-en="Sewing &amp; Upcycling">Nähen &amp; Upcycling</h2>
+          <p data-de="ONE LOVE – ONE HEART e.V. bildet Schneiderinnen aus." data-en="ONE LOVE – ONE HEART e.V. trains seamstresses.">ONE LOVE – ONE HEART e.V. bildet Schneiderinnen aus.</p>
+          <p data-de="Wir finanzieren die Schule, die Ausbildung, unterstützen die Familie, helfen mit Rat und Tat, damit die Ausbildung gelingt." data-en="We finance the school and the training, support the family and help with advice and practical support so that the training succeeds.">Wir finanzieren die Schule, die Ausbildung, unterstützen die Familie, helfen mit Rat und Tat, damit die Ausbildung gelingt.</p>
+          <p data-de="Wir bringen die Nähmaschinen dorthin, wo sie gebraucht werden, auch in Gegenden ohne Strom." data-en="We bring the sewing machines to where they are needed, even to areas without electricity.">Wir bringen die Nähmaschinen dorthin, wo sie gebraucht werden, auch in Gegenden ohne Strom.</p>
+          <p data-de="Wir sorgen dafür, dass die Frauen praktische Anleitung im Schneidern bekommen." data-en="We make sure the women receive practical instruction in tailoring.">Wir sorgen dafür, dass die Frauen praktische Anleitung im Schneidern bekommen.</p>
+          <p data-de="Da Gambia von europäischer Kleidung überschwemmt wird, verlegen wir uns mehr auf Upcycling. Dabei entstehen Unikate – einzigartige Afro-Design-Kunstwerke! Die könnt ihr vor Ort, in Deutschland in unserem ebay-Charity-Shop ILA SINNING und auf La Gomera kaufen." data-en="Because Gambia is flooded with European clothing, we are focusing more on upcycling. This creates one-of-a-kind pieces – unique Afro-design works of art! You can buy them on site, in Germany in our eBay charity shop ILA SINNING, and on La Gomera.">Da Gambia von europäischer Kleidung überschwemmt wird, verlegen wir uns mehr auf Upcycling. Dabei entstehen Unikate – einzigartige Afro-Design-Kunstwerke! Die könnt ihr vor Ort, in Deutschland in unserem ebay-Charity-Shop ILA SINNING und auf La Gomera kaufen.</p>
         </div>
       </div>
     </section>
 
     <section class="section section--sand">
-      <div class="container grid-2">
-        <div class="reveal">
-          <img
-            src="../../../assets/images/photo-fruits.jpg"
-            alt="Herstellung von Marmelade in Gambia"
-            style="
-              border-radius: 6px;
-              width: 100%;
-              object-fit: cover;
-              max-height: 420px;
-            "
-            loading="lazy"
-          />
+      <div class="container">
+        <div class="reveal" style="max-width: 820px; margin: 0 auto 2rem">
+          <span class="section-label" data-de="Jam-Projekt" data-en="Jam Project">Jam-Projekt</span>
+          <h2 data-de="Marmelade nach Gambischer Art" data-en="Jam the Gambian Way">Marmelade nach Gambischer Art</h2>
+          <p data-de="ONE LOVE – ONE HEART bringt Wissen dorthin, wo es gerne aufgenommen wird. Die Kulturtechnik des Marmeladekochens gibt es in Gambia auch, nur ganz anders. Das Obst wird solange gekocht, bis das Wasser verdampft ist. Pektin ist unbekannt. Wir führen es ein. Die Frauen lernen, wie Marmelade haltbar gemacht wird. Wir vertreiben sie an die Hotels und auch im Direktverkauf am Strand." data-en="ONE LOVE – ONE HEART brings knowledge to where it is gladly received. The cultural technique of making jam exists in Gambia too, only in a very different way. The fruit is cooked until the water has evaporated. Pectin is unknown. We are introducing it. The women learn how to preserve jam. We distribute it to hotels and also sell it directly on the beach.">ONE LOVE – ONE HEART bringt Wissen dorthin, wo es gerne aufgenommen wird. Die Kulturtechnik des Marmeladekochens gibt es in Gambia auch, nur ganz anders. Das Obst wird solange gekocht, bis das Wasser verdampft ist. Pektin ist unbekannt. Wir führen es ein. Die Frauen lernen, wie Marmelade haltbar gemacht wird. Wir vertreiben sie an die Hotels und auch im Direktverkauf am Strand.</p>
         </div>
-        <div class="reveal">
-          <span
-            class="section-label"
-            data-de="Jam-Projekt"
-            data-en="Jam Project"
-            >Jam-Projekt</span
-          >
-          <h2
-            data-de="Marmelade nach Gambischer Art"
-            data-en="Jam the Gambian Way"
-          >
-            Marmelade nach Gambischer Art
-          </h2>
-          <p
-            data-de="Wir bringen Wissen dorthin, wo es gerne aufgenommen wird. Gemüse und Obst wird so lange gekocht, bis das Wasser verdampft ist, denn Pektin ist hier unbekannt. Frauen lernen, Marmelade haltbar zu machen."
-            data-en="We bring knowledge where it is gladly received. Fruits and vegetables are cooked until the water evaporates because pectin is unknown here. Women learn how to preserve jam."
-          >
-            Wir bringen Wissen dorthin, wo es gerne aufgenommen wird. Gemüse und
-            Obst wird so lange gekocht, bis das Wasser verdampft ist, denn
-            Pektin ist hier unbekannt. Frauen lernen, Marmelade haltbar zu
-            machen.
-          </p>
-          <p
-            data-de="Die Marmelade kann in Gambia von Tourist*innen gekauft werden oder in Hotels. Das Projekt schafft Einkommen und neues Wissen in der Region."
-            data-en="The jam can be sold to tourists in Gambia or in hotels. The project creates income and new skills in the region."
-          >
-            Die Marmelade kann in Gambia von Tourist*innen gekauft werden oder
-            in Hotels. Das Projekt schafft Einkommen und neues Wissen in der
-            Region.
-          </p>
+        <div class="reveal ila-photo-row ila-photo-row--3">
+          <img src="../../../assets/images/photo-ila-marmelade-kochen-2026.jpg" alt="Marmelade wird im ILA SINNING Projekt auf Gasflamme eingekocht" loading="lazy" />
+          <img src="../../../assets/images/photo-ila-marmelade-frau-kind-2026.jpg" alt="Frau mit Kind beim Marmeladeprojekt von ILA SINNING" loading="lazy" />
+          <img src="../../../assets/images/photo-ila-marmelade-glaeser-2026.jpg" alt="Gläser mit selbst gekochter Marmelade aus dem ILA SINNING Projekt" loading="lazy" />
         </div>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.6rem;font-style:italic;text-align:center;" data-de="Im ILA SINNING Projekt wird Marmelade auf Gasflamme eingekocht" data-en="In the ILA SINNING project, jam is cooked over a gas flame">Im ILA SINNING Projekt wird Marmelade auf Gasflamme eingekocht</p>
       </div>
     </section>
 
@@ -275,47 +202,58 @@
       <div class="container grid-2">
         <div class="reveal" style="order: 2">
           <img
-            src="../../../assets/images/photo-jars.jpg"
-            alt="Batik und Handwerk in Gambia"
-            style="
-              border-radius: 6px;
-              width: 100%;
-              object-fit: cover;
-              max-height: 420px;
-            "
+            src="../../../assets/images/photo-ila-batik-fatouma-2026.jpg"
+            alt="Fatouma vor ihren Batik-Produkten"
+            style="border-radius: 6px; width: 100%; object-fit: cover; max-height: 420px;"
             loading="lazy"
           />
+          <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.6rem;font-style:italic;" data-de="Foto: Fatouma vor ihren Produkten" data-en="Photo: Fatouma in front of her products">Foto: Fatouma vor ihren Produkten</p>
         </div>
         <div class="reveal" style="order: 1">
-          <span
-            class="section-label"
-            data-de="Batik-Projekt"
-            data-en="Batik Project"
-            >Batik-Projekt</span
-          >
-          <h2
-            data-de="Handwerk, Alphabetisierung &amp; Selbstständigkeit"
-            data-en="Craft, Literacy &amp; Independence"
-          >
-            Handwerk, Alphabetisierung &amp; Selbstständigkeit
-          </h2>
-          <p
-            data-de="Junge Frauen werden im Handwerk ausgebildet und erhalten gleichzeitig Alphabetisierungsunterricht sowie Englisch. Nach der Ausbildung arbeiten sie selbstständig weiter und können ihre Produkte selbst verkaufen."
-            data-en="Young women are trained in crafts and at the same time receive literacy and English lessons. After training, they continue to work independently and can sell their products themselves."
-          >
-            Junge Frauen werden im Handwerk ausgebildet und erhalten
-            gleichzeitig Alphabetisierungsunterricht sowie Englisch. Nach der
-            Ausbildung arbeiten sie selbstständig weiter und können ihre
-            Produkte selbst verkaufen.
-          </p>
-          <p
-            data-de="Die Produkte können in Gambia, in Deutschland oder auf La Gomera gekauft werden. Der Erlös finanziert weitere Ausbildungen und ermöglicht weitere Start-ups."
-            data-en="Products can be bought in Gambia, Germany or on La Gomera. The proceeds finance further training and enable more start-ups."
-          >
-            Die Produkte können in Gambia, in Deutschland oder auf La Gomera
-            gekauft werden. Der Erlös finanziert weitere Ausbildungen und
-            ermöglicht weitere Start-ups.
-          </p>
+          <span class="section-label" data-de="Batik-Projekt" data-en="Batik Project">Batik-Projekt</span>
+          <h2 data-de="Handwerk, Alphabetisierung &amp; Selbstständigkeit" data-en="Craft, Literacy &amp; Independence">Handwerk, Alphabetisierung &amp; Selbstständigkeit</h2>
+          <p data-de="ONE LOVE – ONE HEART lässt junge Frauen im Handwerk ausbilden. Gleichzeitig werden sie an der Ausbildungsstätte alphabetisiert und lernen Englisch, die Amtssprache. Nach der Ausbildung arbeiten sie selbstständig weiter. Sie können ihre Produkte an uns verkaufen oder Aufträge von anderen annehmen, ganz wie sie möchten. Kaufen kann man die Einzelstücke entweder in Gambia, in Deutschland über ebay-Charity ILA SINNING oder auf La Gomera." data-en="ONE LOVE – ONE HEART has young women trained in a craft. At the same time, they learn to read and write at the training centre and learn English, the official language. After their training, they continue to work independently. They can sell their products to us or take orders from others, whichever they prefer. The one-of-a-kind pieces can be bought in Gambia, in Germany via eBay charity ILA SINNING, or on La Gomera.">ONE LOVE – ONE HEART lässt junge Frauen im Handwerk ausbilden. Gleichzeitig werden sie an der Ausbildungsstätte alphabetisiert und lernen Englisch, die Amtssprache. Nach der Ausbildung arbeiten sie selbstständig weiter. Sie können ihre Produkte an uns verkaufen oder Aufträge von anderen annehmen, ganz wie sie möchten. Kaufen kann man die Einzelstücke entweder in Gambia, in Deutschland über ebay-Charity ILA SINNING oder auf La Gomera.</p>
+          <p data-de="Mit dem Erlös aus dem Verkauf ermöglichen wir weitere Ausbildungen." data-en="With the proceeds from the sales we make further training possible.">Mit dem Erlös aus dem Verkauf ermöglichen wir weitere Ausbildungen.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--sand">
+      <div class="container">
+        <div class="reveal text-center" style="margin-bottom: 2rem">
+          <span class="section-label" data-de="Start-Ups" data-en="Start-Ups">Start-Ups</span>
+          <h2 data-de="Unsere Start-Ups" data-en="Our Start-Ups">Unsere Start-Ups</h2>
+        </div>
+        <div class="reveal ila-photo-row ila-photo-row--2">
+          <img src="../../../assets/images/photo-ila-startup-fischtrocknen-1-2026.jpg" alt="Frauen in Sanyang beim Fischtrocknen" loading="lazy" />
+          <img src="../../../assets/images/photo-ila-startup-fischtrocknen-2-2026.jpg" alt="Zum Trocknen ausgelegter Fisch in Sanyang" loading="lazy" />
+        </div>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.6rem;font-style:italic;text-align:center;" data-de="Frauen in Sanyang beim Fischtrocknen. ONE LOVE – ONE HEART e.V. finanziert das Equipment. Ein großer Beitrag zur Ernährung der Familie." data-en="Women in Sanyang drying fish. ONE LOVE – ONE HEART e.V. finances the equipment. A great contribution to feeding the family.">Frauen in Sanyang beim Fischtrocknen. ONE LOVE – ONE HEART e.V. finanziert das Equipment. Ein großer Beitrag zur Ernährung der Familie.</p>
+
+        <div style="height: 2rem"></div>
+        <div class="reveal ila-photo-row ila-photo-row--2">
+          <img src="../../../assets/images/photo-ila-startup-huehnerfarm-start-2026.jpg" alt="Aufbau einer Hühnerfarm in Marakissa" loading="lazy" />
+          <img src="../../../assets/images/photo-ila-startup-huehnerfarm-2026.jpg" alt="Hühnerfarm in Marakissa" loading="lazy" />
+        </div>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.6rem;font-style:italic;text-align:center;" data-de="Eine Hühnerfarm in Marakissa wird gegründet. ONE LOVE – ONE HEART e.V. stellt das Equipment und die Küken bereit. Die Alleinerziehende finanziert damit das Einkommen für sich, ihre Tochter und ihre Mutter." data-en="A chicken farm is being set up in Marakissa. ONE LOVE – ONE HEART e.V. provides the equipment and the chicks. This allows the single mother to earn an income for herself, her daughter and her mother.">Eine Hühnerfarm in Marakissa wird gegründet. ONE LOVE – ONE HEART e.V. stellt das Equipment und die Küken bereit. Die Alleinerziehende finanziert damit das Einkommen für sich, ihre Tochter und ihre Mutter.</p>
+
+        <div style="height: 2rem"></div>
+        <div class="reveal ila-photo-row ila-photo-row--2">
+          <img src="../../../assets/images/photo-ila-startup-marktstand-tanji-2026.jpg" alt="Marktstand in Tanji" loading="lazy" />
+          <img src="../../../assets/images/photo-ila-startup-laden-2026.jpg" alt="Renovierter Laden" loading="lazy" />
+        </div>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.6rem;font-style:italic;text-align:center;" data-de="Stand auf dem Markt in Tanji. Die erste Finanzierungsspritze kam von ONE LOVE – ONE HEART e.V." data-en="A stall at the market in Tanji. The first injection of funding came from ONE LOVE – ONE HEART e.V.">Stand auf dem Markt in Tanji. Die erste Finanzierungsspritze kam von ONE LOVE – ONE HEART e.V.</p>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.6rem;font-style:italic;text-align:center;" data-de="Ein verfallener Laden wird renoviert und wieder betrieben. Jetzt werden nicht mehr nur Erdnüsse, sondern auch Schuhe, Waschmittel, Obst und Holzkohle verkauft." data-en="A dilapidated shop is being renovated and run again. Now it sells not only peanuts, but also shoes, detergent, fruit and charcoal.">Ein verfallener Laden wird renoviert und wieder betrieben. Jetzt werden nicht mehr nur Erdnüsse, sondern auch Schuhe, Waschmittel, Obst und Holzkohle verkauft.</p>
+      </div>
+    </section>
+
+    <section class="section section--brown">
+      <div class="container text-center reveal">
+          <h2 data-de="Werde Förderer! Werde Ausbildungspate!" data-en="Become a supporter! Become a training sponsor!">Werde Förderer! Werde Ausbildungspate!</h2>
+          <p data-de="Unterstütze uns, Gambierinnen zu unterstützen!" data-en="Support us in supporting Gambian women!">Unterstütze uns, Gambierinnen zu unterstützen!</p>
+        <div style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap">
+          <a href="../../spenden/index.html" class="btn btn-white" data-de="Jetzt spenden" data-en="Donate now">Jetzt spenden</a>
+          <a href="../../mitmachen/index.html" class="btn btn-outline" data-de="Mitmachen" data-en="Get involved">Mitmachen</a>
         </div>
       </div>
     </section>
