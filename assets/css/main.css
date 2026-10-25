@@ -877,9 +877,9 @@ p {
 
 .legal-block p,
 .legal-block li {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--text-muted);
-  line-height: 1.8;
+  line-height: 1.7;
 }
 
 .legal-block ul {
@@ -1224,4 +1224,34 @@ p {
 @media (prefers-reduced-motion: reduce) {
   .gc-item { transition: none; }
   .gc-viewport { scroll-behavior: auto; }
+}
+
+/* ─────────────────────────────────────────────
+   12. SHARED TEXT PIECES (same look on every page)
+   ───────────────────────────────────────────── */
+/* photo captions */
+figcaption {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
+/* list with check marks (Mitmachen, Spenden, Schule) - same size as normal text */
+.check-list {
+  max-width: 640px;
+  margin: 1rem 0;
+  text-align: left;
+}
+.check-list li {
+  position: relative;
+  padding: 0.45rem 0 0.45rem 1.8rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.check-list li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  top: 0.45rem;
+  color: var(--brown);
+  font-weight: 700;
 }
