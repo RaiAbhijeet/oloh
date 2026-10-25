@@ -42,6 +42,14 @@
       .gc-item { flex: 0 0 auto; height: calc(var(--gc-h) * 0.8); width: calc(var(--gc-h) * 0.6); padding: 0; margin: 0; background: var(--sand-dark); border: 0; border-radius: 4px; cursor: zoom-in; scroll-snap-align: start; scroll-margin-left: 4.5rem; overflow: hidden; transition: transform 0.35s ease, box-shadow 0.35s ease; }
       .gc-item.is-active { transform: scale(1.25); box-shadow: 0 6px 22px rgba(0, 0, 0, 0.3); position: relative; z-index: 1; }
       .gc-item img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+      /* Home page "Wer wir sind ... und was wir machen": two equal columns, stack on phones */
+      .who-grid { max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+      .who-title { font-size: clamp(1.2rem, 2.2vw, 1.55rem); line-height: 1.3; margin: 0 0 0.6rem; }
+      .who-sub { margin: 0 0 1.2rem; font-size: 1.05rem; }
+      .who-sub a { color: inherit; text-decoration: none; }
+      .who-sub a:hover, .who-sub a:focus-visible { text-decoration: underline; }
+      .who-photo { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center 30%; border-radius: 6px; }
+      @media (max-width: 768px) { .who-grid { grid-template-columns: 1fr; gap: 2.5rem; } .who-photo { max-width: 420px; } }
       .gc-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; width: 2.8rem; height: 2.8rem; border: 0; border-radius: 50%; background: var(--brown-dark); color: var(--white); font-size: 1.8rem; line-height: 1; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
       .gc-arrow:hover, .gc-arrow:focus-visible { background: var(--brown); }
       .gc-prev { left: 0.75rem; }
@@ -598,64 +606,58 @@
     </div>
 
     <!-- ═══════════════════════════════════════════════
-       ABOUT SNIPPET (Wer wir sind — preview)
+       WER WIR SIND ... UND WAS WIR MACHEN (two columns: Germany | Gambia)
+       Each column: heading, subtitle (links to the matching page), photo.
   ════════════════════════════════════════════════════ -->
-    <section class="about-section" id="ueber-uns" aria-labelledby="about-title">
-      <div class="about-grid">
+    <section class="about-section" id="ueber-uns" aria-label="Wer wir sind und was wir machen">
+      <div class="who-grid">
         <div class="reveal">
-          <span class="section-label" data-de="Wer wir sind" data-en="About Us"
-            >Wer wir sind</span
-          >
           <h2
-            id="about-title"
-            data-de="Was führt uns nach Gambia?"
-            data-en="What Brings Us to Gambia?"
+            class="who-title"
+            data-de="ONE LOVE – ONE HEART e.V. Deutschland …"
+            data-en="ONE LOVE – ONE HEART e.V. Germany …"
           >
-            Was führt uns nach Gambia?
+            ONE LOVE – ONE HEART e.V. Deutschland …
           </h2>
-          <blockquote
-            class="about-quote"
-            data-de="Meet the locals, live with the locals!"
-            data-en="Meet the locals, live with the locals!"
-          >
-            "Meet the locals, live with the locals!"
-          </blockquote>
-          <p
-            data-de="Wir, das ist eine Gruppe europäischer und gambischer Vereinsmitglieder. Unsere NGO 'One Love - One Heart e.V.' gibt es unter diesem Namen sowohl in Gambia als auch in Deutschland. Wir haben entschieden, uns mit unserem Projekt an der Smiling Coast of Africa niederzulassen, denn das englischsprachige Land wird nicht umsonst so genannt — die Freundlichkeit der Menschen hier ist sprichwörtlich!"
-            data-en="We are a group of European and Gambian association members. Our NGO 'One Love – One Heart e.V.' exists under this name both in Gambia and in Germany. We have chosen to base our project on the Smiling Coast of Africa — this English-speaking country is not called so for nothing; the friendliness of the people here is proverbial!"
-          >
-            Wir, das ist eine Gruppe europäischer und gambischer
-            Vereinsmitglieder. Unsere NGO "One Love - One Heart e.V." gibt es
-            unter diesem Namen sowohl in Gambia als auch in Deutschland.
+          <p class="who-sub">
+            <a
+              href="pages/wer-wir-sind/index.html"
+              data-de="Wer wir sind …"
+              data-en="Who we are …"
+              >Wer wir sind …</a
+            >
           </p>
-          <p
-            data-de="Wir verstehen uns als ein schwarz-weißes Gemeinschaftsprojekt mit der Utopie, auf Augenhöhe zu agieren."
-            data-en="We see ourselves as a Black-and-White community project with the utopia of acting as equals."
-          >
-            Wir verstehen uns als ein schwarz-weißes Gemeinschaftsprojekt mit
-            der Utopie, auf Augenhöhe zu agieren.
-          </p>
-          <a
-            href="pages/wer-wir-sind/index.html"
-            class="btn btn-outline"
-            style="margin-top: 1rem"
-            data-de="Mehr über uns"
-            data-en="More About Us"
-            >Mehr über uns</a
-          >
-        </div>
-
-        <!-- Photo: replace src to change the About image -->
-        <div class="reveal">
           <img
-            src="assets/images/photo-food.jpg"
-            alt="Kind aus Gambia mit Lebensmitteln, die durch das Projekt bereitgestellt wurden"
-            style="
-              border-radius: 6px;
-              width: 100%;
-              object-fit: cover;
-              max-height: 480px;
-            "
+            class="who-photo"
+            src="assets/images/photo-wer-wir-sind-2026.jpg"
+            width="270"
+            height="276"
+            alt="Zwei Frauen des Vereins in Gambia"
+            loading="lazy"
+          />
+        </div>
+        <div class="reveal">
+          <h2
+            class="who-title"
+            data-de="… und ONE LOVE – ONE HEART Project Gambia"
+            data-en="… and ONE LOVE – ONE HEART Project Gambia"
+          >
+            … und ONE LOVE – ONE HEART Project Gambia
+          </h2>
+          <p class="who-sub">
+            <a
+              href="pages/projekte/index.html"
+              data-de="… und was wir machen"
+              data-en="… and what we do"
+              >… und was wir machen</a
+            >
+          </p>
+          <img
+            class="who-photo"
+            src="assets/images/photo-was-wir-machen-2026.jpg"
+            width="486"
+            height="512"
+            alt="Mitglieder des Vereins in Gambia"
             loading="lazy"
           />
         </div>
