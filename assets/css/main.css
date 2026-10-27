@@ -1190,8 +1190,7 @@ p {
   border: 0;
   border-radius: 4px;
   cursor: zoom-in;
-  scroll-snap-align: start;
-  scroll-margin-left: 4.5rem;
+  scroll-snap-align: center;
   overflow: hidden;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
@@ -1231,8 +1230,8 @@ p {
 .gallery-carousel--on-section { background: transparent; padding-top: 0; }
 .gallery-carousel--faces .gc-item img { object-position: center 15%; }
 @media (max-width: 600px) {
+  .gallery-carousel { --gc-h: 100vw; }   /* one photo (60 vw) in the middle, a small peek of its neighbours */
   .gc-track { padding-inline: 1rem; }
-  .gc-item { scroll-margin-left: 1rem; }
   .gc-arrow { width: 2.75rem; height: 2.75rem; }
   .gc-item.is-active { transform: none; box-shadow: none; }
   .gc-viewport { padding-block: 1rem; }
@@ -1280,3 +1279,6 @@ figcaption {
   .ila-img-wrap:hover img,
   .gallery-strip__item:hover img { filter: grayscale(0%); }
 }
+
+/* bank details: always white (phones turn digit strings into coloured links) */
+.donate-bank p, .donate-bank a { color: var(--white); text-decoration: none; }

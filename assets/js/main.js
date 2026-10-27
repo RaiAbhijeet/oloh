@@ -79,11 +79,12 @@ window.addEventListener('scroll', () => {
    will switch text content on toggle.
    Usage: <span data-de="Hallo" data-en="Hello">Hallo</span>
    ───────────────────────────────────────────── */
-let currentLang = localStorage.getItem('oloh-lang') || 'de';
+let currentLang = 'de';
+try { currentLang = sessionStorage.getItem('oloh-lang') || 'de'; } catch (e) {}   // German on every new visit; the choice is kept only while browsing the site
 
 function applyLanguage(lang) {
   currentLang = lang;
-  localStorage.setItem('oloh-lang', lang);
+  try { sessionStorage.setItem('oloh-lang', lang); } catch (e) {}
 
   document.querySelectorAll('[data-de][data-en]').forEach(el => {
     el.textContent = el.getAttribute(`data-${lang}`);
@@ -196,12 +197,11 @@ function initGalleryCarousel() {
   real.slice(0, K).forEach(el => track.appendChild(copy(el)));
   const all = Array.from(track.querySelectorAll('.gc-item'));
 
-  const margin = parseFloat(getComputedStyle(real[0]).scrollMarginLeft) || 0;
-  const home = () => real[0].offsetLeft - margin;          // scroll position with the first photo at the left
+  const home = () => real[0].offsetLeft + real[0].offsetWidth / 2 - view.clientWidth / 2;  // scroll position with the first photo in the middle
   const period = () => N * pitch;                          // width of one full set of photos
   const jump = x => view.scrollTo({ left: x, behavior: 'instant' });
 
-  jump(home());                                            // start: first photo at the left, row filled
+  jump(home());                                            // start: first photo in the middle, row filled
 
   // Index (in `all`) of the tile whose centre is closest to the middle of the viewport
   function nearest() {
